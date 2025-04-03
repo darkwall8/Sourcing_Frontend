@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0096C7;
+  --color-usual_gray: #FAFBFF;
+  --color-usual_purple: #4318FF;
+  --color-usual_yellow: #FBBF24;
+  --color-usual_light_purple: #D5DAF1;
+}
+
+.usual_gradient {
+  @apply bg-linear-to-r from-[#29C3FF] to-[#2764E7]
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
