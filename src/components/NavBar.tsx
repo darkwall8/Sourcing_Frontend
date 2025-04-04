@@ -29,7 +29,7 @@ function NavBar() {
       <div className="!p-4">
         <div className="w-fit h-screen flex flex-col gap-24">
           <div className="flex items-center gap-4">
-            <img src="/logo/sourcing_logo.svg" alt="logo" className="w-24" />
+            <img src="/logo/sourcing_logo.svg" alt="logo" className="w-16" />
             <p>SOURCING</p>
             <p>v.01</p>
           </div>
