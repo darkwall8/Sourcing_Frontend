@@ -25,7 +25,4 @@ export default tseslint.config(
       ],
     },
   },
-  parseOptions: {
-    sourceType: 'module'
-  }
 )
