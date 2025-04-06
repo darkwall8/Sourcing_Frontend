@@ -1,3 +1,5 @@
+import { LocalStorageManager } from "./functions/LocalStorageManager";
+
 export default class API {
   private _devApiUrl: string = "http://localhost:";
   private _imagePath: string = "http://localhost:/"
@@ -9,33 +11,24 @@ export default class API {
     return this._imagePath;
   }
 
-  async getData(url: string, token?: string | null) {
+  async getData(url: string) {
     let response = null;
-    if(token) {
-      response = await fetch(url, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
-        },
-      })
-    } else {
-      response = await fetch(url, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          // Authorization: token ? "Bearer " + token : "",
-        },
-      })
-    }
+
+    response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${LocalStorageManager.getItem("token")}`,
+      },
+    })
+
     const responseJson = await response.json();
     return responseJson;
   }
 
   async postData(
     url: string,
-    datas?: any,
-    token?: string | null,
+    data?: JSON | FormData,
     isMultipart?: boolean
   ) {
     let response: Response;
@@ -44,26 +37,18 @@ export default class API {
       response = await fetch(url, {
         method: "POST",
         headers: {
-          Authorization: token ? `Bearer ${token}` : "",
+          Authorization: `Bearer ${LocalStorageManager.getItem("token")}`,
         },
-        body: datas as BodyInit,
-      });
-    } else if (token) {
-      response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(datas),
+        body: data as BodyInit,
       });
     } else {
       response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${LocalStorageManager.getItem("token")}`,
         },
-        body: JSON.stringify(datas),
+        body: JSON.stringify(data),
       });
     }
     const responseJson = await response.json();
@@ -72,8 +57,7 @@ export default class API {
 
   async putData(
     url: string,
-    datas: any,
-    token: string | null,
+    data: JSON | FormData,
     isMultipart?: boolean
   ) {
     let response: Response;
@@ -81,40 +65,32 @@ export default class API {
       response = await fetch(url, {
         method: "PUT",
         headers: {
-          Authorization: token ? `Bearer ${token}` : "",
+          Authorization: `Bearer ${LocalStorageManager.getItem("token")}`,
         },
-        body: datas as BodyInit,
-      });
-    } else if (token) {
-      response = await fetch(url, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(datas),
+        body: data as BodyInit,
       });
     } else {
       response = await fetch(url, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${LocalStorageManager.getItem("token")}`,
         },
-        body: datas ? JSON.stringify(datas) : null,
+        body: JSON.stringify(data),
       });
     }
     const responseJson = await response.json();
     return responseJson;
   }
 
-  async deleteData(url: string, token?: string | null, datas?: any) {
+  async deleteData(url: string, data?: JSON) {
     const response = await fetch(url, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        Authorization: token ? "Bearer " + token : "",
+        Authorization: `Bearer ${LocalStorageManager.getItem("token")}`,
       },
-      body: datas,
+      body: JSON.stringify(data),
     });
     const responseJson = await response.json();
     return responseJson;
