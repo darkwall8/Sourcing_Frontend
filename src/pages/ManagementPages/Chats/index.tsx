@@ -5,7 +5,9 @@ function Chats() {
     const { t } = useTranslation();
 
     return (
-        <div>Chats</div>
+        <>
+            {/* <div className="" data-canbetest="true">Chats</div> */}
+        </>
     )
 }
 

@@ -5,7 +5,9 @@ function Home(){
     const { t } = useTranslation();
 
     return (
-        <div className="">Home</div>
+        <>
+            {/* <div className="" data-canbetest="true">Home</div> */}
+        </>
     )
 }
 

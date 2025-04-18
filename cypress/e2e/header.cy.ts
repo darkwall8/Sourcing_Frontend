@@ -1,8 +1,16 @@
-describe.skip('header', () => {
-  it('test login page only if exists', () => {
-    cy.request({ url: '/login', failOnStatusCode: false }).then((response) => {
-      if (response.status === 200) {
-        cy.visit('/')
+describe.skip('header component', () => {
+  it('test header only if exists', () => {
+
+    cy.visit('/')
+
+    let shouldTest = false;
+
+    cy.get('body').then(($body) => {
+      if ($body.find('[data-canbetest="true"]').length > 0) {
+        shouldTest = true;
+      }
+    }).then(() => {
+      if (shouldTest) {
 
         cy.contains("Connectez vous").click();
         // Should be on a new URL whitch include /login
@@ -14,10 +22,9 @@ describe.skip('header', () => {
         cy.contains("Rejoignez nous!").click();
         // Should be on a new URL whitch include /registration
         cy.url().should("include", "/registration");
-
       } else {
-        cy.log("Page /login non disponible, test ignoré")
+        cy.log("Page non disponible, test ignoré");
       }
-    })
-  })
-})
+    });
+  });
+});

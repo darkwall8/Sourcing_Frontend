@@ -5,7 +5,9 @@ function DashBoard() {
     const { t } = useTranslation();
 
     return (
-        <div className="bg-usual_gray">DashBoard</div>
+        <>
+            {/* <div className="bg-usual_gray" data-canbetest="true">DashBoard</div> */}
+        </>
     )
 }
 

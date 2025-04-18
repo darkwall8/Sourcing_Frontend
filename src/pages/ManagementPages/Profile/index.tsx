@@ -5,7 +5,9 @@ function Profile() {
     const { t } = useTranslation();
 
     return (
-        <div>Profile</div>
+        <>
+            {/* <div className="" data-canbetest="true">Profile</div> */}
+        </>
     )
 }
 

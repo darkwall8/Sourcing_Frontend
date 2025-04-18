@@ -5,7 +5,9 @@ function Registration(){
     const { t } = useTranslation();
 
     return (
-        <div>Registration</div>
+        <>
+            {/* <div className="" data-canbetest="true">Registration</div> */}
+        </>
     )
 }
 

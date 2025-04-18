@@ -1,13 +1,20 @@
-describe('chat page', () => {
-  it('test chat page only if exists', () => {
-    cy.request({ url: '/chats', failOnStatusCode: false }).then((response) => {
-      if (response.status === 200) {
-        it('passes', () => {
-          cy.visit('/chats')
-        })
-      } else {
-        cy.log("Page non disponible, test ignoré")
+describe('chats page', () => {
+  it('test chats page only if exists', () => {
+
+    cy.visit('/chats')
+
+    let shouldTest = false;
+
+    cy.get('body').then(($body) => {
+      if ($body.find('[data-canbetest="true"]').length > 0) {
+        shouldTest = true;
       }
-    })
-  })
-})
+    }).then(() => {
+      if (shouldTest) {
+        // TO DO: implement the logic
+      } else {
+        cy.log("Page non disponible, test ignoré");
+      }
+    });
+  });
+});

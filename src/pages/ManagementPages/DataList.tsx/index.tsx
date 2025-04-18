@@ -5,7 +5,9 @@ function DataList() {
     const { t } = useTranslation();
 
     return (
-        <div>DataList</div>
+        <>
+            {/* <div className="" data-canbetest="true">DataList</div> */}
+        </>
     )
 }
 
