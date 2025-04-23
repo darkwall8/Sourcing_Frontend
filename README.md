@@ -1,55 +1,61 @@
-# React + TypeScript + Vite
+# Sourcing_frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sourcing est une application permettant la mise en relation entre les etudiants et les entreprises poru facilite le processus de recherche de stage academique et professionnel.
 
-Currently, two official plugins are available:
+# Stack Technique
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Framework: ReactJs
+* CSS: Tailwindcss
+* Autres: Fetch, useContext
+* Traduction: i18n
+* Test e2e: Cypress
+* Test Unitaire: Vitest
 
-## Expanding the ESLint configuration
+# Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Cloner le projet:
+  * https://github.com/darkwall8/Sourcing_Frontend.git
+* Acceder au dossier du projet:
+  * cd Sourcing_Frontend
+* Installer les dependances:
+  * npm install
+* Lancer le serveur:
+  * npm run dev
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+# Structure du projet
+
+```
+cypress/
+public/
+	|--icons/
+	|--images/
+	|--locales/
+	|--logo
+src/
+	|--assets/
+	|--components/
+		|--__test__/
+		|--common/
+		|--layouts/
+		|--ui/
+	|--pages/
+	|--utils/
+		|--Cointext/
+		|--functions/
+		|--Hooks/
+		API.ts
+	i18m.tsx
+	main.tsx
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Fonctionnalites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* [ ] Home page
+* [ ] Login page and Header
+* [ ] Company register
+* [ ] Student register
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# Sourcing_Frontend
+# Contribuer
+
+Pas necessaire pour le moment
