@@ -10,7 +10,7 @@ describe('header component', () => {
     cy.contains("Sourcing").click();
     cy.url().should("eq", Cypress.config().baseUrl + "/");
 
-    cy.contains("Rejoignez nous !").click();
+    cy.contains("Rejoignez nous!").click();
     // Should be on a new URL whitch include /registration
     cy.url().should("include", "/registration");
 
