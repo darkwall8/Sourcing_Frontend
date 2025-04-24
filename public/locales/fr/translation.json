@@ -1,3 +1,13 @@
 {
-    "greeting": "Salut"
+    "greeting": "Salut",
+    "entreprise":{
+        "question":"Vous êtes une entreprise ??",
+        "intro":"Ces fonctionnalités devraient vous intéresser:",
+        "list1":"Sourcing vous permet de trouver efficacement des stagiaires dans tous les domaines de la tech",
+        "list2":"Publier des appels d'offres sur des projets intéressants",
+        "list3":"Discuter avec d'autres entreprises pour s'informer sur un étudiants grâce à son historique"
+    },
+    "student":{
+        "question":"Vous êtes un étudiant ??"
+    }
 }
