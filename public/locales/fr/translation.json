@@ -1,3 +1,5 @@
 {
-    "greeting": "Salut"
+    "greeting": "Salut",
+    "connect": "Connectez vous",
+    "rejoin":"Rejoignez nous !"
 }
