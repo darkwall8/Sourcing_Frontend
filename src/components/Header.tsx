@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import LogoSourcing from "/logo/sourcing_logo.svg"
+import LogoSourcing from "/logo/sourcing_logo.svg";
 import { useNavigate } from "react-router-dom";
 
 function Header(){
