@@ -7,5 +7,5 @@ i18next.use(LanguageDetector).use(initReactI18next).use(Backend).init({
   returnObjects: true,
   fallbackLng: "fr",
   debug: true,
-  //   lng: "en", //Default language as english
+    lng: "fr", //Default language french
 });
