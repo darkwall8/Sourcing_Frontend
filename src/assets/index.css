@@ -5,6 +5,7 @@
   --color-usual_gray: #FAFBFF;
   --color-usual_purple: #4318FF;
   --color-usual_light_purple: #D5DAF1;
+  --breakpoint-phone: 426px
 }
 
 .usual_gradient {
