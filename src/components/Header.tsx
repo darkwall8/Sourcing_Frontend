@@ -29,7 +29,7 @@ function Header(){
                 <div className='w-20 max-phone:w-15'>
                     <img src={LogoSourcing} alt="sourcing_logo"/> 
                 </div>
-                <p className="text-primary text-2xl max-phone:text-xl">
+                <p className="text-primary text-2xl max-phone:text-xl font-bold">
                     Sourcing
                 </p>
             </div>
