@@ -1,5 +1,7 @@
 {
     "greeting": "Salut",
+    "connect": "Connectez vous",
+    "rejoin":"Rejoignez nous !",
     "entreprise":{
         "question":"Vous êtes une entreprise ??",
         "intro":"Ces fonctionnalités devraient vous intéresser:",
