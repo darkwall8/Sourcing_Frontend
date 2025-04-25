@@ -7,9 +7,20 @@
         "intro":"Ces fonctionnalités devraient vous intéresser:",
         "list1":"Sourcing vous permet de trouver efficacement des stagiaires dans tous les domaines de la tech",
         "list2":"Publier des appels d'offres sur des projets intéressants",
-        "list3":"Discuter avec d'autres entreprises pour s'informer sur un étudiants grâce à son historique"
+        "list3":"Discuter avec d'autres entreprises pour s'informer sur un étudiants grâce à son historique",
+        "text1":"Entreprises nous font actuellement confiance pour la recherche de stagiaires",
+        "text2":"D’avis favorables quant à la recherche de stagiaires sur la plateforme",
+        "text3":"Des entreprises ont pu trouver des stagiaires rapidement"
     },
     "student":{
-        "question":"Vous êtes un étudiant ??"
+        "question":"Vous êtes un étudiant ??",
+        "intro":"Le saviez vous ?",
+        "list1":"Avec sourcing vous pouvez savoir qu’elles sont les entreprises qui prennent des stagiaires selon vos critères",
+        "list2":"Sourcing vous mets au courant de toutes les offres qui répondent à vos critères ",
+        "list3":"Avec sourcing plus besoin de relancer manuellement programmer juste vos relances et on le fait pour vous",
+        "list4":"Vous préférez du développement d’application ? de l’administration système ? en 1 clic vous avez toutes les entreprises intéressées par ce profil",
+        "text1":"Etudiants font actuellement confiance à sourcing dans leur recherche de stage",
+        "text2":"Des étudiants en recherche sur la plateforme ont réussi à avoir un stage correspondant à leurs attentes",
+        "text3":"Des universités recomandent sourcing à leurs étudiants" 
     }
 }
