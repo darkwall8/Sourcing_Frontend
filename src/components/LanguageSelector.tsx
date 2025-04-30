@@ -9,7 +9,7 @@ const languageOptions: languageOption[] = [
     language: "English",
     code: "en",
   },
-  { language: "French", code: "fr" },
+  { language: "Français", code: "fr" },
 ];
 
 const LanguageSelector = () => {

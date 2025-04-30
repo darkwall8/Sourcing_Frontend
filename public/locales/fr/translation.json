@@ -2,7 +2,7 @@
     "greeting": "Salut",
     "connect": "Connectez vous",
     "rejoin":"Rejoignez nous !",
-    "entreprise":{
+    "enterprise":{
         "question":"Vous êtes une entreprise ??",
         "intro":"Ces fonctionnalités devraient vous intéresser:",
         "list1":"Sourcing vous permet de trouver efficacement des stagiaires dans tous les domaines de la tech",

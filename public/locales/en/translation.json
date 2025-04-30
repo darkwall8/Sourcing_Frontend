@@ -2,7 +2,7 @@
     "greeting": "Hello",
     "connect": "Log in",
     "rejoin":"Join us !",
-    "entreprise":{
+    "enterprise":{
         "question":"Are you a company ??",
         "list1": "Sourcing allows you to efficiently find interns in all tech fields",
         "list2": "Publish calls for tender on interesting projects",
