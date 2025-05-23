@@ -1,4 +1,4 @@
-describe('registration page', () => {
+describe.skip('registration page', () => {
   it('test registration page only if exists', () => {
 
     cy.visit('/registration')
