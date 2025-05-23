@@ -24,7 +24,7 @@ function Header(){
     }
 
     return (
-        <div data-canbetest="true" className=" flex items-center justify-between mt-4 m-5 hover:cursor-pointer max-sm:flex-col max-sm:gap-3">
+        <div data-canbetest="true" className="w-full flex items-center justify-between mt-4 m-5 hover:cursor-pointer max-sm:flex-col max-sm:gap-3">
             <div className='flex items-center' onClick={redirectHome}>
                 <div className='w-20 max-phone:w-15'>
                     <img src={LogoSourcing} alt="sourcing_logo"/> 

@@ -1,5 +1,21 @@
 {
     "greeting": "Salut",
     "connect": "Connectez vous",
-    "rejoin":"Rejoignez nous !"
+    "rejoin":"Rejoignez nous !",
+
+    "Registration_page": "___Registration_pages___",
+    "welcome": "Bienvenue, sur ",
+    "register_as_a_student": "S'inscrire en tant qu'etudiant",
+    "register_as_a_company": "S'inscrire en tant qu'entreprise",
+    "continue": "Continuer",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": ""
 }
