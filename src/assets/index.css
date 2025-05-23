@@ -6,12 +6,34 @@
   --color-usual_gray: #FAFBFF;
   --color-usual_purple: #4318FF;
   --color-usual_light_purple: #D5DAF1;
-  --breakpoint-phone: 426px
+  --animate-fade-right: fade-right 1500ms 1000ms both;
+  --animate-fade-left: fade-left 1500ms 1000ms both;
+  --animate-fade-up: fade-up 1500ms 1000ms both;
+  /* --animate-fade-down: fade-down 1500ms 1500ms both; */
 }
 
 .usual_gradient {
   @apply bg-linear-to-r from-[#29C3FF] to-[#2764E7]
 }
+
+@keyframes fade-right {
+  0% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes fade-left {
+  0% { opacity: 0; transform: translateX(100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes fade-up {
+  0% { opacity: 0; transform: translatey(100%); }
+  100% { opacity: 1; transform: translatey(0); }
+}
+/*
+@keyframes fade-down {
+  0% { opacity: 0; transform: translatey(-100%); }
+  100% { opacity: 1; transform: translatey(0); }
+}
+*/
 
 * {
   margin: 0;
