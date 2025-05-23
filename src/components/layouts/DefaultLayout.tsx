@@ -4,9 +4,9 @@ import Header from "../Header";
 
 function DefaultLayout() {
     return (
-        <div>
+        <div className={"h-screen w-screen lg:overflow-hidden"}>
             <Header />
-            <main>
+            <main className={"h-11/12"}>
                 <Outlet />
             </main>
         </div>
