@@ -33,21 +33,7 @@ function Header(){
                     Sourcing
                 </p>
             </div>
-            <div className="flex gap-1.5 max-md:flex-col max-md:gap-3">
-                <button 
-                    className="text-primary text-lg border rounded-lg bg-white hover:cursor-pointer pl-5 pr-5 p-2 shadow-lg max-phone:text-sm"
-                    onClick={redirectLogin}
-                >
-                    {t("connect")}
-                </button>
-                <button
-                    className="text-white text-lg border rounded-lg bg-primary hover:cursor-pointer pl-5 pr-5 p-2 shadow-lg max-phone:text-sm"
-                    onClick={redirectRegistration}
-                >
-                    {t("rejoin")}
-                </button>
-            </div>
-        </div> 
+        </>
     )
 }
 
