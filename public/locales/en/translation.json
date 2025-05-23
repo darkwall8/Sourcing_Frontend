@@ -1,26 +1,11 @@
 {
     "greeting": "Hello",
     "connect": "Log in",
-    "rejoint":"Join us !",
-    "enterprise":{
-        "question":"Are you a company ??",
-        "intro": "These features should interest you:",
-        "list1": "Sourcing allows you to efficiently find interns in all tech fields",
-        "list2": "Publish calls for tender on interesting projects",
-        "list3": "Discuss with other companies to get information about a student through their history",
-        "text1": "Companies currently trust us for finding interns",
-        "text2": "Positive reviews regarding finding interns on the platform",
-        "text3": "Companies have been able to find interns quickly"
-    },
-    "student":{
-        "question": "Are you a student ??",
-        "intro": "Did you know?",
-        "list1": "With Sourcing, you can find out which companies are hiring interns based on your criteria",
-        "list2": "Sourcing keeps you updated on all offers that match your criteria",
-        "list3": "With Sourcing, no need for manual follow-ups—just schedule your reminders and we’ll handle it for you",
-        "list4": "Do you prefer app development? System administration? With one click, you get all the companies interested in your profile",
-        "text1": "Students currently trust Sourcing for their internship search",
-        "text2": "Students have found an internship that meets their expectations thanks to the platform",
-        "text3": "Universities recommend Sourcing to their students"
-    }
+    "rejoin":"Join us !",
+
+    "Registration_page": "___Registration_pages___",
+    "welcome": "Welcome, to ",
+    "register_as_a_student": "Register as a student",
+    "register_as_a_company": "Register as a company",
+    "continue": "Continue"
 }

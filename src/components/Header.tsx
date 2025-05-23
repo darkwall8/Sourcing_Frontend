@@ -24,32 +24,14 @@ function Header(){
     }
 
     return (
-        <>
-            <div className="w-full">
-                <div data-canbetest="true" className="sticky top-0 z-20 w-full py-1 flex items-center justify-between p-3 max-md:flex-col max-md:gap-5">
-                    <div className='flex items-center hover:cursor-pointer' onClick={redirectHome}>
-                        <div className='lg:w-25 md:w-22.5 w-20'>
-                            <img src={LogoSourcing} alt="sourcing_logo"/> 
-                        </div>
-                        <p className="text-primary text-lg md:text-xl lg:text-3xl font-bold">
-                            Sourcing
-                        </p>
-                    </div>
-                    <div className="flex gap-1.5 max-md:flex-col max-md:gap-3">
-                        <button 
-                            className="text-primary lg:text-lg border rounded-lg bg-white hover:cursor-pointer pl-5 pr-5 p-2 shadow-lg max-phone:text-sm"
-                            onClick={redirectLogin}
-                        >
-                            {t("connect")}
-                        </button>
-                        <button
-                            className="text-white lg:text-lg border rounded-lg bg-primary hover:cursor-pointer pl-5 pr-5 p-2 shadow-lg max-phone:text-sm"
-                            onClick={redirectRegistration}
-                        >
-                            {t("rejoint")}
-                        </button>
-                    </div>
-                </div> 
+        <div data-canbetest="true" className="w-full flex items-center justify-between mt-4 m-5 hover:cursor-pointer max-sm:flex-col max-sm:gap-3">
+            <div className='flex items-center' onClick={redirectHome}>
+                <div className='w-20 max-phone:w-15'>
+                    <img src={LogoSourcing} alt="sourcing_logo"/> 
+                </div>
+                <p className="text-primary text-2xl max-phone:text-xl">
+                    Sourcing
+                </p>
             </div>
         </>
     )

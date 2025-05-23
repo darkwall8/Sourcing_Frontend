@@ -1,4 +1,4 @@
-// import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "primereact/resources/themes/lara-light-cyan/theme.css"
 import './assets/index.css'
 import "./i18n.tsx"
 import 'leaflet/dist/leaflet.css';
