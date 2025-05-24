@@ -1,55 +1,30 @@
-import {useState, useEffect, useCallback, useRef} from 'react';
-import { useTranslation } from "react-i18next";
-import  Check  from "/icons/check.svg";
-import HomeCompany from "/images/home_company_image.svg";
-import HomeStudent from "/images/home_student_image.svg";
-import IconCompany from "/icons/company.svg";
-import IconHappy from "/icons/happy.svg";
-import IconVector from "/icons/Vector-2.svg";
-import IconStudent from "/icons/students.svg";
-import IconSchool from "/icons/school.svg";
+import EnterpriseSection from "./Section/EnterpriseSection";
+import StudentSection from "./Section/StudentSection";
+import { PageScroll } from "./Hooks/PageScroll.ts";
+import PageIndicator from "./components/PageIndicator";
+import { MediaQuery } from "./Hooks/MediaQuery.ts"
+import { useState, useEffect } from 'react'; // Ajout
 
 function Home(){
-    const { t } = useTranslation();
-    const [currentPage, setCurrentPage] = useState(0);
-    const [isScrolling, setIsScrolling] = useState(false);
-    const currentPageRef = useRef(0);
+    const LargeScreen = MediaQuery('(min-width: 1024px)');
+    const {currentPage, scrollToPage}= PageScroll(LargeScreen)
+    const [visitedPages, setVisitedPages] = useState<Set<number>>(new Set([0])); // Nouvel état
 
     useEffect(() => {
-        currentPageRef.current = currentPage;
-    }, [currentPage]);
-
-    const scrollToPage = useCallback((pageIndex: number) => {
-        if (isScrolling || pageIndex < 0 || pageIndex > 1) return;
-
-        setIsScrolling(true);
-        setCurrentPage(pageIndex);
-
-        setTimeout(() => {
-            setIsScrolling(false);
-        }, 1000);
-    }, [isScrolling]);
-
-    const handleWheel = useCallback((e: WheelEvent) => {
-        e.preventDefault();
-        if (isScrolling) return;
-
-        const current = currentPageRef.current;
-
-        if (e.deltaY > 0 && current < 1) {
-            scrollToPage(current + 1);
-        } else if (e.deltaY < 0 && current > 0) {
-            scrollToPage(current - 1);
+        if (!LargeScreen) {
+            window.scrollTo(0, 0); // Force le scroll visuel vers le haut
         }
-    }, [isScrolling, scrollToPage]);
+    }, [LargeScreen]);
+
 
     useEffect(() => {
-        window.addEventListener('wheel', handleWheel, { passive: false });
-
-        return () => {
-            window.removeEventListener('wheel', handleWheel);
-        };
-    }, [handleWheel]);
+        setVisitedPages(prev => {
+            if (prev.has(currentPage)) return prev;
+            const newSet = new Set(prev);
+            newSet.add(currentPage);
+            return newSet;
+        });
+    }, [currentPage]);
 
     return (
         LargeScreen ? (
