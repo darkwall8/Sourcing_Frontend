@@ -2,7 +2,7 @@ import studentIcon from "/icons/students.svg"
 import companyIcon from "/icons/company.svg"
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import StudentRegistration from "./StudentRegistration";
+import StudentRegistration from "./StudentRegistration/StudentRegistration";
 import CompanyRegistration from "./CompanyRegistration";
 
 function Registration(){
