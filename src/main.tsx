@@ -1,4 +1,4 @@
-import "primereact/resources/themes/lara-light-cyan/theme.css"
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 import './assets/index.css'
 import "./i18n.tsx"
 import 'leaflet/dist/leaflet.css';
@@ -20,7 +20,6 @@ import Chats from './pages/ManagementPages/Chats/index.tsx'
 import ProtectedRoute from './components/layouts/ProtectedRoute.tsx'
 import { AuthProvider } from './utils/Context/AuthContext.tsx'
 import { StudentInscriptionProvider } from "./utils/Context/StudentInscriptionContext.tsx";
-import { CompanyInscriptionProvider } from './utils/Context/CompanyInscriptionContext.tsx';
 
 createRoot(document.getElementById('root')!).render(
   // <StrictMode>
@@ -28,39 +27,37 @@ createRoot(document.getElementById('root')!).render(
     <AuthProvider>
       <Router>
         <StudentInscriptionProvider>
-          <CompanyInscriptionProvider>
-            <Routes>
+          <Routes>
 
+            <Route
+              element={<ProtectedRoute needToBeAuthenticated={false} />}
+            >
               <Route
-                element={<ProtectedRoute needToBeAuthenticated={false} />}
+                element={ <DefaultLayout /> }
               >
-                <Route
-                  element={ <DefaultLayout /> }
-                >
-                  <Route path="/" element={<Home />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/registration" element={<Registration />} />
-                </Route>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/registration" element={<Registration />} />
               </Route>
+            </Route>
 
-              <Route
-                element={
-                <ProtectedRoute needToBeAuthenticated={true} />
-              }
-              >
-                <Route element={<AuthLayout />} >
-                  <Route path="/dashboard" element={<DashBoard />} />
-                  <Route path="/datalist" element={<DataList />} />
-                  <Route path="/profile" element={<Profile />} />
-                  <Route path="/setting" element={<Settings />} />
-                  <Route path="/chats" element={<Chats />} />
-                </Route>
+            <Route
+              element={
+              <ProtectedRoute needToBeAuthenticated={true} />
+            }
+            >
+              <Route element={<AuthLayout />} >
+                <Route path="/dashboard" element={<DashBoard />} />
+                <Route path="/datalist" element={<DataList />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/setting" element={<Settings />} />
+                <Route path="/chats" element={<Chats />} />
               </Route>
+            </Route>
 
-              <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
 
-            </Routes>
-          </CompanyInscriptionProvider>
+          </Routes>
         </StudentInscriptionProvider>
       </Router>
     </AuthProvider>
