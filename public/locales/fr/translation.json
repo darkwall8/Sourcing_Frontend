@@ -1,7 +1,7 @@
 {
     "greeting": "Salut",
     "connect": "Connectez vous",
-    "rejoin":"Rejoignez nous !",
+    "rejoint":"Rejoignez nous !",
     "enterprise":{
         "question":"Vous êtes une entreprise ??",
         "intro":"Ces fonctionnalités devraient vous intéresser:",
@@ -20,7 +20,7 @@
         "list3":"Avec sourcing plus besoin de relancer manuellement programmer juste vos relances et on le fait pour vous",
         "list4":"Vous préférez du développement d’application ? de l’administration système ? en 1 clic vous avez toutes les entreprises intéressées par ce profil",
         "text1":"Etudiants font actuellement confiance à sourcing dans leur recherche de stage",
-        "text2":"Des étudiants en recherche sur la plateforme ont réussi à avoir un stage correspondant à leurs attentes",
+        "text2":"Des étudiants ont trouvé un stage à la hauteur de leurs attentes grâce à la plateforme",
         "text3":"Des universités recomandent sourcing à leurs étudiants" 
     }
 }

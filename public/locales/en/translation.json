@@ -1,9 +1,10 @@
 {
     "greeting": "Hello",
     "connect": "Log in",
-    "rejoin":"Join us !",
+    "rejoint":"Join us !",
     "enterprise":{
         "question":"Are you a company ??",
+        "intro": "These features should interest you:",
         "list1": "Sourcing allows you to efficiently find interns in all tech fields",
         "list2": "Publish calls for tender on interesting projects",
         "list3": "Discuss with other companies to get information about a student through their history",
@@ -19,7 +20,7 @@
         "list3": "With Sourcing, no need for manual follow-ups—just schedule your reminders and we’ll handle it for you",
         "list4": "Do you prefer app development? System administration? With one click, you get all the companies interested in your profile",
         "text1": "Students currently trust Sourcing for their internship search",
-        "text2": "Students searching on the platform have successfully found internships matching their expectations",
+        "text2": "Students have found an internship that meets their expectations thanks to the platform",
         "text3": "Universities recommend Sourcing to their students"
     }
 }

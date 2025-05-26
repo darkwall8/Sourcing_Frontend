@@ -5,8 +5,10 @@ import Header from "../Header";
 function DefaultLayout() {
     return (
         <div className={"h-screen w-screen min-lg:overflow-hidden overflow-x-hidden"}>
-            <Header />
-            <main className={"h-11/12"}>
+            <div className="h-fit">
+                <Header />
+            </div>
+            <main className={"h-full"}>
                 <Outlet />
             </main>
         </div>
