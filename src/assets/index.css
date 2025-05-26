@@ -9,7 +9,6 @@
   --animate-fade-right: fade-right 1500ms 1000ms both;
   --animate-fade-left: fade-left 1500ms 1000ms both;
   --animate-fade-up: fade-up 1500ms 1000ms both;
-  /* --animate-fade-down: fade-down 1500ms 1500ms both; */
 }
 
 .usual_gradient {
@@ -28,12 +27,6 @@
   0% { opacity: 0; transform: translatey(100%); }
   100% { opacity: 1; transform: translatey(0); }
 }
-/*
-@keyframes fade-down {
-  0% { opacity: 0; transform: translatey(-100%); }
-  100% { opacity: 1; transform: translatey(0); }
-}
-*/
 
 * {
   margin: 0;
