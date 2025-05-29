@@ -2,6 +2,11 @@
     "greeting": "Hello",
     "connect": "Log in",
     "rejoint":"Join us !",
+   "Registration_page": "___Registration_pages___",
+    "welcome": "Welcome, to ",
+    "register_as_a_student": "Register as a student",
+    "register_as_a_company": "Register as a company",
+    "continue": "Continue",
     "enterprise":{
         "question":"Are you a company ??",
         "intro": "These features should interest you:",
