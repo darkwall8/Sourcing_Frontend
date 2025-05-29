@@ -27,7 +27,7 @@ function Login() {
     return (
         <div className="relative flex justify-center items-center bg-primary w-screen h-screen" data-canbetest="true">
             <div className="flex items-end absolute pl-24 pb-20 -left-20 -top-50 w-96 h-96 bg-white rounded-full">
-                <NavLink to={"/"} className="flex items-center">
+                <NavLink to={"/"} className="flex items-center relative z-30">
                     <img className="w-24" src={logo} alt="logo" />
                     <p className="font-semibold text-3xl text-primary">Sourcing</p>
                 </NavLink>
