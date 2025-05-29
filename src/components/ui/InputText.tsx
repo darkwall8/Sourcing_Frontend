@@ -23,7 +23,6 @@ function InputText({
   const inputId = `input-${label.replace(/\s+/g, "-").toLowerCase()}`;
   const [showPassword, setShowPassword] = useState(false);
 
-  // Vérifie les critères du mot de passe
   const validatePassword = (password: string) => {
     const isLengthValid = password.length >= 10;
     const startsWithUppercase = /\b\w*[A-Z]\w*\b/.test(password);
@@ -65,12 +64,12 @@ function InputText({
         )}
       </div>
 
-      {/* Message d'erreur général */}
+      {/* Error message */}
       {showValidationErrors && isRequired && !value && (
         <span className="text-xs text-red-500">Ce champ est obligatoire</span>
       )}
 
-      {/* Messages de validation du mot de passe */}
+      {/* Password validation error */}
       {type === "password" && value && showValidationErrors && (
         <div className="text-xs text-gray-600 mt-1 space-y-1">
           <p className={passwordValidation!.isLengthValid ? "text-green-600" : "text-red-500"}>

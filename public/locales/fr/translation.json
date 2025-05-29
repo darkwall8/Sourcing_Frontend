@@ -8,6 +8,12 @@
     "continue": "Continuer",
     "preview": "Precedent",
     "finish": "Terminer",
+    "regex_10_caracter": "Au moins 10 caractères",
+    "regex_less_one_uppercase_letter": "Contient au moins une majuscule",
+    "regex_one_number": "Contient un chiffre",
+    "regex_one_symbol": "Contient un symbole",
+    "required": "Ce champ est requis",
+    "invalid_email": "Email invalide",
     "student_registration": {
         "welcome": "Bienvenue, sur ",
         "register_as_a_student": "S'inscrire en tant qu'étudiant",
@@ -38,11 +44,7 @@
         "your_email": "Votre email",
         "your_password": "Votre mot de passe",
         "email_placeholder": "Entrez votre adresse email",
-        "password_placeholder": "Entrez votre mot de passe",
-        "regex_10_caracter": "Au moins 10 caractères",
-        "regex_less_one_uppercase_letter": "Contient au moins une majuscule",
-        "regex_one_number": "Contient un chiffre",
-        "regex_one_symbol": "Contient un symbole"
+        "password_placeholder": "Entrez votre mot de passe"
     },
     "company_registration": {
         "basic_info": "Informations de base",
