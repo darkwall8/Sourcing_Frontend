@@ -1,19 +1,18 @@
 import { useState } from "react";
 import Button from "../../../../components/ui/Button";
-// import InputDropdown from "../../../../components/ui/InputDropdown";
-// import InputText from "../../../../components/ui/InputText";
-// import { useStudentInscription } from "../../../../utils/Context/StudentInscriptionContext";
+import InputText from "../../../../components/ui/InputText";
+import { useStudentInscription } from "../../../../utils/Context/StudentInscriptionContext";
 import image from "/images/undraw_hello.svg"
 import { useTranslation } from "react-i18next";
 
 function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit: (stepIndex: number) => void, stepIndex: number } ) {
 
     const { t } = useTranslation();
-    // const {  } = useStudentInscription();
+    const { studentEmail, studentPassword, setStudentEmail, setStudentPassword } = useStudentInscription();
 
     const [isValidatedValues, setIsValidatedValues] =useState(false);
     const isValid = () => {
-        // return !!studentName.trim() && !!studentSurname.trim() && !!studentCountry && !!studentSchoolLevel;
+        return !!studentEmail.trim() && !!studentPassword.trim();
       };
 
     function submit() {
@@ -30,12 +29,13 @@ function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit:
         <div className="flex justify-between">
             <form className="flex flex-col justify-between">
                 <div className="flex flex-col gap-4">
-                    {/* <InputText label={t("your_name")} placeholder={t("name_placeholder")} isRequired={true} value={studentName} handleChange={setStudentName} showValidationErrors={isValidatedValues} />
-                    <InputText label={t("your_surname")} placeholder={t("surname_placeholder")} isRequired={true} value={studentSurname} handleChange={setStudentSurname} showValidationErrors={isValidatedValues} />
-                    <InputDropdown label={t("your_residence_country")} placeholder={t("country_placeholder")} isRequired={true} value={studentCountry} handleChange={setStudentCountry} showValidationErrors={isValidatedValues} options={countries} />
-                    <InputDropdown label={t("your_school_level")} placeholder={t("school_level_placeholder")} isRequired={true} value={studentSchoolLevel} handleChange={setStudentSchoolLevel} showValidationErrors={isValidatedValues} options={[]} /> */}
+                    <InputText label={t("student_registration.your_email")} placeholder={t("student_registration.email_placeholder")} isRequired={true} value={studentEmail} handleChange={setStudentEmail} showValidationErrors={isValidatedValues} />
+                    <InputText label={t("student_registration.your_password")} type="password" placeholder={t("student_registration.password_placeholder")} isRequired={true} value={studentPassword} handleChange={setStudentPassword} showValidationErrors={isValidatedValues} />
                 </div>
-                <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={true} />
+                <div className="flex gap-4">
+                    <Button label={t("preview")} handleClick={() => handleSubmit(stepIndex - 1)} styleIndex={1} isActivated={true} />
+                    <Button label={t("finish")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
+                </div>
             </form>
             <div className="">
                 <img src={image} alt="" />
