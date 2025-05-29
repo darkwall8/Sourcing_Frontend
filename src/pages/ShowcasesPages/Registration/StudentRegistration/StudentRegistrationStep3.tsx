@@ -1,19 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import image from "/images/undraw_file-bundle.svg"
 import { useTranslation } from "react-i18next";
-// import InputText from "../../../../components/ui/InputText";
-// import InputDropdown from "../../../../components/ui/InputDropdown";
+import InputText from "../../../../components/ui/InputText";
 import Button from "../../../../components/ui/Button";
-// import { useStudentInscription } from "../../../../utils/Context/StudentInscriptionContext";
+import { useStudentInscription } from "../../../../utils/Context/StudentInscriptionContext";
+import InputFile from "../../../../components/ui/InputFile";
 
 function StudentRegistrationStep3( { handleSubmit, stepIndex } : { handleSubmit: (stepIndex: number) => void, stepIndex: number } ) {
 
     const { t } = useTranslation();
-    // const {  } = useStudentInscription();
+    const { studentCV, studentGitHubLink, studentPortfolioLink, studentLinkedInLink, setStudentCV, setStudentGitHubLink, setStudentPortfolioLink, setStudentLinkedInLink } = useStudentInscription();
 
     const [isValidatedValues, setIsValidatedValues] =useState(false);
     const isValid = () => {
-        // return !!studentName.trim() && !!studentSurname.trim() && !!studentCountry && !!studentSchoolLevel;
+        return !!studentCV && !!studentGitHubLink.trim() && !!studentPortfolioLink.trim() && !!studentLinkedInLink.trim();
       };
 
     function submit() {
@@ -25,17 +25,24 @@ function StudentRegistrationStep3( { handleSubmit, stepIndex } : { handleSubmit:
         }
     }
 
+    useEffect(() => {
+        console.log(studentCV)
+    }, [studentCV])
+
 
     return (
         <div className="flex justify-between">
             <form className="flex flex-col justify-between">
                 <div className="flex flex-col gap-4">
-                    {/* <InputText label={t("your_name")} placeholder={t("name_placeholder")} isRequired={true} value={studentName} handleChange={setStudentName} showValidationErrors={isValidatedValues} />
-                    <InputText label={t("your_surname")} placeholder={t("surname_placeholder")} isRequired={true} value={studentSurname} handleChange={setStudentSurname} showValidationErrors={isValidatedValues} />
-                    <InputDropdown label={t("your_residence_country")} placeholder={t("country_placeholder")} isRequired={true} value={studentCountry} handleChange={setStudentCountry} showValidationErrors={isValidatedValues} options={countries} />
-                    <InputDropdown label={t("your_school_level")} placeholder={t("school_level_placeholder")} isRequired={true} value={studentSchoolLevel} handleChange={setStudentSchoolLevel} showValidationErrors={isValidatedValues} options={[]} /> */}
+                    <InputFile label={t("student_registration.your_cv")} placeholder={t("student_registration.cv_placeholder")} isRequired={false} file={studentCV} handleChange={setStudentCV} />
+                    <InputText label={t("student_registration.your_github_link")} placeholder={t("student_registration.github_placeholder")} isRequired={true} value={studentGitHubLink} handleChange={setStudentGitHubLink} showValidationErrors={isValidatedValues} />
+                    <InputText label={t("student_registration.your_portfolio")} placeholder={t("student_registration.portfolio_placeholder")} isRequired={true} value={studentPortfolioLink} handleChange={setStudentPortfolioLink} showValidationErrors={isValidatedValues} />
+                    <InputText label={t("student_registration.your_linkedin")} placeholder={t("student_registration.linkedin_placeholder")} isRequired={true} value={studentLinkedInLink} handleChange={setStudentLinkedInLink} showValidationErrors={isValidatedValues} />
                 </div>
-                <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={true} />
+                <div className="flex gap-4">
+                    <Button label={t("preview")} handleClick={() => handleSubmit(stepIndex - 1)} styleIndex={1} isActivated={true} />
+                    <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
+                </div>
             </form>
             <div className="">
                 <img src={image} alt="" />
