@@ -9,7 +9,7 @@ function StudentSection({ shouldAnimate }: { shouldAnimate: boolean }) {
     const { t } = useTranslation();
 
     return (
-        <div id="student" className="lg:h-full space-y-10 md:m-auto max-[1025px]:-mt-8 p-5">
+        <div id="student" className="lg:h-full flex flex-col gap-16 justify-between space-y-10 md:m-auto max-[1025px]:-mt-8 p-5">
             <div id="student_presentation" className="flex flex-col-reverse justify-center lg:space-x-15 xl:space-x-50 gap-10 md:flex-row">
                 <div id="student_text" className={`flex flex-col gap-7 justify-center max-lg:items-center max-lg:m-auto md:w-100 lg:w-150 ${shouldAnimate ? 'lg:animate-fade-right' : ''}`}>
                     <div className="flex flex-col gap-3">
