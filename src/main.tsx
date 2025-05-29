@@ -38,9 +38,9 @@ createRoot(document.getElementById('root')!).render(
                   element={ <DefaultLayout /> }
                 >
                   <Route path="/" element={<Home />} />
-                  <Route path="/login" element={<Login />} />
                   <Route path="/registration" element={<Registration />} />
                 </Route>
+                <Route path="/login" element={<Login />} />
               </Route>
 
               <Route
