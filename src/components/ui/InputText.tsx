@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 function InputText({
   label,
@@ -18,6 +19,7 @@ function InputText({
   handleChange: (e: string) => void;
   showValidationErrors?: boolean;
 }) {
+  const { t } = useTranslation();
   const inputId = `input-${label.replace(/\s+/g, "-").toLowerCase()}`;
   const [showPassword, setShowPassword] = useState(false);
 
@@ -72,16 +74,16 @@ function InputText({
       {type === "password" && value && showValidationErrors && (
         <div className="text-xs text-gray-600 mt-1 space-y-1">
           <p className={passwordValidation!.isLengthValid ? "text-green-600" : "text-red-500"}>
-            • Au moins 10 caractères
+            • { t("regex_10_caracter") }
           </p>
           <p className={passwordValidation!.startsWithUppercase ? "text-green-600" : "text-red-500"}>
-            • Contient au moins une majuscule
+            • { t("regex_less_one_uppercase_letter") }
           </p>
           <p className={passwordValidation!.hasNumber ? "text-green-600" : "text-red-500"}>
-            • Contient un chiffre
+            • { t("regex_one_number") }
           </p>
           <p className={passwordValidation!.hasSymbol ? "text-green-600" : "text-red-500"}>
-            • Contient un symbole
+            • { t("regex_one_symbol") }
           </p>
         </div>
       )}
