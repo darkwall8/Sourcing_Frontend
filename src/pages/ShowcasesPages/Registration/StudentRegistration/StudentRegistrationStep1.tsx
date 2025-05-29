@@ -26,7 +26,7 @@ function StudentRegistrationStep1( { handleSubmit, stepIndex } : { handleSubmit:
     ]
     const [isValidatedValues, setIsValidatedValues] =useState(false);
     const isValid = () => {
-        return !!studentName.trim() && !!studentSurname.trim() && !!studentCountry && !!studentSchoolLevel;
+        return !!studentName.trim() && !!studentSurname.trim() && !!studentCountry.trim() && !!studentSchoolLevel.trim();
       };
 
     function submit() {
@@ -63,10 +63,10 @@ function StudentRegistrationStep1( { handleSubmit, stepIndex } : { handleSubmit:
         <div className="flex justify-between">
             <form className="flex flex-col justify-between">
                 <div className="flex flex-col gap-4">
-                    <InputText label={t("your_name")} placeholder={t("name_placeholder")} isRequired={true} value={studentName} handleChange={setStudentName} showValidationErrors={isValidatedValues} />
-                    <InputText label={t("your_surname")} placeholder={t("surname_placeholder")} isRequired={true} value={studentSurname} handleChange={setStudentSurname} showValidationErrors={isValidatedValues} />
-                    <InputDropdown label={t("your_residence_country")} placeholder={t("country_placeholder")} isRequired={true} value={studentCountry} handleChange={setStudentCountry} showValidationErrors={isValidatedValues} options={countries} />
-                    <InputDropdown label={t("your_school_level")} placeholder={t("school_level_placeholder")} isRequired={true} value={studentSchoolLevel} handleChange={setStudentSchoolLevel} showValidationErrors={isValidatedValues} options={schoolLevelList} />
+                    <InputText label={t("student_registration.your_name")} placeholder={t("student_registration.name_placeholder")} isRequired={true} value={studentName} handleChange={setStudentName} showValidationErrors={isValidatedValues} />
+                    <InputText label={t("student_registration.your_surname")} placeholder={t("student_registration.surname_placeholder")} isRequired={true} value={studentSurname} handleChange={setStudentSurname} showValidationErrors={isValidatedValues} />
+                    <InputDropdown label={t("student_registration.your_residence_country")} placeholder={t("student_registration.country_placeholder")} isRequired={true} value={studentCountry} handleChange={setStudentCountry} showValidationErrors={isValidatedValues} options={countries} />
+                    <InputDropdown label={t("student_registration.your_school_level")} placeholder={t("student_registration.school_level_placeholder")} isRequired={true} value={studentSchoolLevel} handleChange={setStudentSchoolLevel} showValidationErrors={isValidatedValues} options={schoolLevelList} />
                 </div>
                 <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
             </form>
