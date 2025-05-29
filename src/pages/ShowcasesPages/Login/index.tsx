@@ -29,7 +29,7 @@ function Login() {
             <div className="flex items-end absolute pl-24 pb-20 -left-20 -top-50 w-96 h-96 bg-white rounded-full">
                 <NavLink to={"/"} className="flex items-center">
                     <img className="w-24" src={logo} alt="logo" />
-                    <p className="font-semibold text-3xl text-primary">SOURCING</p>
+                    <p className="font-semibold text-3xl text-primary">Sourcing</p>
                 </NavLink>
             </div>
             <div className="relative border-2 border-white rounded-full p-32">
