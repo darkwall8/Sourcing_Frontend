@@ -5,9 +5,9 @@ import PageIndicator from "./components/PageIndicator";
 import { MediaQuery } from "./Hooks/MediaQuery.ts"
 import { useState, useEffect } from 'react'; // Ajout
 
-function Home(){
+function Home() {
     const LargeScreen = MediaQuery('(min-width: 1024px)');
-    const {currentPage, scrollToPage}= PageScroll(LargeScreen)
+    const { currentPage, scrollToPage } = PageScroll(LargeScreen)
     const [visitedPages, setVisitedPages] = useState<Set<number>>(new Set([0])); // Nouvel état
 
     useEffect(() => {
@@ -28,9 +28,9 @@ function Home(){
 
     return (
         LargeScreen ? (
-            <div className="lg:overflow-hidden">
+            <div className="lg:overflow-hidden h-full">
                 <div
-                    className={LargeScreen ? "lg:duration-1500 lg:ease-in-out hidden md:block" : ""}
+                    className={LargeScreen ? "lg:duration-1500 h-full lg:ease-in-out hidden md:block" : ""}
                     style={{
                         transform: LargeScreen ?
 

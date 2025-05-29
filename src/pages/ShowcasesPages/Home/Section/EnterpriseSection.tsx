@@ -9,7 +9,7 @@ function EnterpriseSection({ shouldAnimate }: { shouldAnimate: boolean }) {
     const { t } = useTranslation();
 
     return (
-        <div id="enterprise" className="xl:h-full space-y-10 md:space-y-12 p-5 lg:pt-0 ">
+        <div id="enterprise" className="xl:h-full flex flex-col justify-between space-y-10 md:space-y-12 p-5 lg:pt-0 ">
             <div id="enterprise_presentation" className="flex flex-col justify-center lg:space-x-15 xl:space-x-50 gap-10  md:flex-row">
                 <div className={`w-100 lg:w-120 aspect-square max-md:m-auto ${shouldAnimate ? 'xl:animate-fade-right' : ''}`}>
                     <img src={HomeCompany} alt="Company Image"/>
