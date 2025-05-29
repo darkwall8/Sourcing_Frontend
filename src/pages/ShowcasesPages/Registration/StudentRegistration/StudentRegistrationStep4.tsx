@@ -4,6 +4,8 @@ import InputText from "../../../../components/ui/InputText";
 import { useStudentInscription } from "../../../../utils/Context/StudentInscriptionContext";
 import image from "/images/undraw_hello.svg"
 import { useTranslation } from "react-i18next";
+import InputEmail from "../../../../components/ui/InputEmail";
+import { isValidEmail, isValidPassword } from "../../../../utils/validation";
 
 function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit: (stepIndex: number) => void, stepIndex: number } ) {
 
@@ -12,8 +14,8 @@ function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit:
 
     const [isValidatedValues, setIsValidatedValues] =useState(false);
     const isValid = () => {
-        return !!studentEmail.trim() && !!studentPassword.trim();
-      };
+        return isValidEmail(studentEmail) && isValidPassword(studentPassword);
+    };
 
     function submit() {
         setIsValidatedValues(true);
@@ -29,7 +31,7 @@ function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit:
         <div className="flex justify-between">
             <form className="flex flex-col justify-between">
                 <div className="flex flex-col gap-4">
-                    <InputText label={t("student_registration.your_email")} placeholder={t("student_registration.email_placeholder")} isRequired={true} value={studentEmail} handleChange={setStudentEmail} showValidationErrors={isValidatedValues} />
+                    <InputEmail label={t("student_registration.your_email")} placeholder={t("student_registration.email_placeholder")} isRequired={true} value={studentEmail} handleChange={setStudentEmail} showValidationErrors={isValidatedValues} />
                     <InputText label={t("student_registration.your_password")} type="password" placeholder={t("student_registration.password_placeholder")} isRequired={true} value={studentPassword} handleChange={setStudentPassword} showValidationErrors={isValidatedValues} />
                 </div>
                 <div className="flex gap-4">
