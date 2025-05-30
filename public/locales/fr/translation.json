@@ -133,6 +133,15 @@
         "datalist": {},
         "profile": {},
         "settings": {},
+        "feedback": {
+            "advice": "Donnez votre avis",
+            "describe_your_experience": "S'il vous plaie decrivez nous votre experience",
+            "star": "etoile",
+            "additional_comment": "Commentaire supplementaire",
+            "comment_placeholder": "Mon commentaire !!",
+            "submit_feedback": "Envoyer le commentaire",
+            "": ""
+        },
         "": "",
         "": "",
         "": "",
