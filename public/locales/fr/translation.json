@@ -118,5 +118,27 @@
         "your_company_has_opportunity_after_internship": "Opportunité d'embauche après le stage ?",
         "company_intern_benefit_placeholder": "Entrez les avantages proposés",
         "company_description_placeholder": "Décrivez votre entreprise"
+    },
+    "search": "Rechercher",
+    "dashboard": {
+        "navbar": {
+            "dashboard_nav": "Dashboard",
+            "company_nav": "Entreprises",
+            "chat_nav": "Chat",
+            "profile_nav": "Profil",
+            "settings_nav": "Paramètres",
+            "": ""
+        },
+        "chat": {},
+        "datalist": {},
+        "profile": {},
+        "settings": {},
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": ""
     }
 }
