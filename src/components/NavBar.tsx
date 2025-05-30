@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
+import { useAuth } from "../utils/Context/AuthContext";
 
 function NavBar() {
   const currentPath = useLocation().pathname;
   const { t } = useTranslation();
+  const { accountRole } = useAuth();
 
   const [menu, setMenu] = useState([
-    { title: "Dashboard", icon: "/icons/dashboard.svg", route: "/", isSelected: false },
-    { title: "Entreprises", icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
-    { title: "Chat", icon: "/icons/chat.svg", route: "/chats", isSelected: false },
-    { title: "Profil", icon: "/icons/profile.svg", route: "/profile", isSelected: false },
-    { title: "Paramètres", icon: "/icons/setting.svg", route: "/setting", isSelected: false },
+    { title: t("dashboard.navbar.dashboard_nav"), icon: "/icons/dashboard.svg", route: "/dashboard", isSelected: false },
+    { title: t("dashboard.navbar.company_nav"), icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
+    { title: t("dashboard.navbar.chat_nav"), icon: "/icons/chat.svg", route: "/chats", isSelected: false },
+    { title: t("dashboard.navbar.profile_nav"), icon: "/icons/profile.svg", route: "/profile", isSelected: false },
+    { title: t("dashboard.navbar.settings_nav"), icon: "/icons/setting.svg", route: "/setting", isSelected: false },
   ]);
 
   // 🛠️ Met à jour automatiquement les items sélectionnés quand `currentPath` change
@@ -25,13 +27,15 @@ function NavBar() {
   }, [currentPath]); // ⬅️ Exécuté à chaque changement d'URL
 
   return (
-    <div className="h-screen w-[20vw]">
+    <div className="h-screen min-w-fit border-r-2 border-usual_light_purple">
       <div className="!p-4">
         <div className="w-fit h-screen flex flex-col gap-24">
           <div className="flex items-center gap-4">
-            <img src="/logo/sourcing_logo.svg" alt="logo" className="w-16" />
-            <p>SOURCING</p>
-            <p>v.01</p>
+            <div className="flex items-center">
+              <img src="/logo/sourcing_logo.svg" alt="logo" className="w-16" />
+              <p className="hidden md:block font-semibold text-primary">SOURCING</p>
+            </div>
+            <p className="hidden md:block">v.01</p>
           </div>
 
           <div className="flex flex-col gap-2">

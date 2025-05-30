@@ -7,7 +7,7 @@ function AuthLayout() {
     return (
         <div className="w-full flex h-screen overflow-hidden">
             <NavBar />
-            <main className="w-full min-h-screen pb-4 px-4 bg-usual_gray">
+            <main className="w-full min-h-screen pb-4 bg-usual_gray">
                 <DashBoardHeader />
                 <Outlet />
             </main>
