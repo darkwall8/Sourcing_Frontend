@@ -10,7 +10,7 @@ function NavBar() {
 
   const [menu, setMenu] = useState([
     { title: t("dashboard.navbar.dashboard_nav"), icon: "/icons/dashboard.svg", route: "/dashboard", isSelected: false },
-    { title: t("dashboard.navbar.company_nav"), icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
+    { title: accountRole == "student" ? t("dashboard.navbar.company_nav") : t("dashboard.navbar.student_nav"), icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
     { title: t("dashboard.navbar.chat_nav"), icon: "/icons/chat.svg", route: "/chats", isSelected: false },
     { title: t("dashboard.navbar.profile_nav"), icon: "/icons/profile.svg", route: "/profile", isSelected: false },
     { title: t("dashboard.navbar.settings_nav"), icon: "/icons/setting.svg", route: "/setting", isSelected: false },

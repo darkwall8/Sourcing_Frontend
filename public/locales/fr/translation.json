@@ -124,13 +124,30 @@
         "navbar": {
             "dashboard_nav": "Dashboard",
             "company_nav": "Entreprises",
+            "student_nav": "Etudiants",
             "chat_nav": "Chat",
             "profile_nav": "Profil",
             "settings_nav": "Paramètres",
             "": ""
         },
         "chat": {},
-        "datalist": {},
+        "datalist": {
+            "student_list": "Liste des etudiants",
+            "student_name": "Nom",
+            "student_surname": "Prenom",
+            "student_phone": "Numero",
+            "student_email": "Email",
+            "student_country": "Pays",
+            "is_internship_search": "Recherche de stage",
+            "company_list": "Liste des entreprises",
+            "company_name": "Nom de l'entreprise",
+            "company_domain": "Domaine",
+            "company_phone": "Numero",
+            "company_email": "Email",
+            "company_country": "Pays",
+            "is_intern_search": "Recherche de stagiaires",
+            "": ""
+        },
         "profile": {},
         "settings": {},
         "feedback": {
