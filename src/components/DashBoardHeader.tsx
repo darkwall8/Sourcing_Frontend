@@ -9,7 +9,7 @@ function DashBoardHeader() {
     const [searchValue,setSearchValue ] = useState("")
 
     return (
-        <div className="w-full h-24 border-b-2 flex px-8 border-usual_light_purple items-center justify-between">
+        <div className="w-full h-full border-b-2 flex px-8 border-usual_light_purple items-center justify-between">
             <p>{ t("greeting") } Wilfried</p>
             <SearchBar handleChange={setSearchValue} value={searchValue} />
             <LanguageSelector />

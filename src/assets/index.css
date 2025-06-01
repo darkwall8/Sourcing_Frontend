@@ -6,6 +6,8 @@
   --color-usual_gray: #FAFBFF;
   --color-usual_purple: #4318FF;
   --color-usual_light_purple: #D5DAF1;
+  --color-usual_green: #00B087;
+  --color-usual_red: #DF0404;
   --animate-fade-right: fade-right 1500ms 1000ms both;
   --animate-fade-left: fade-left 1500ms 1000ms both;
   --animate-fade-up: fade-up 1500ms 1000ms both;
