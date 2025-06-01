@@ -25,7 +25,7 @@ function NavBar() {
   }, [currentPath]); // ⬅️ Exécuté à chaque changement d'URL
 
   return (
-    <div className="h-screen min-w-fit">
+    <div className="h-screen w-[20vw]">
       <div className="!p-4">
         <div className="w-fit h-screen flex flex-col gap-24">
           <div className="flex items-center gap-4">
