@@ -133,7 +133,10 @@
             "settings_nav": "Settings",
             "": ""
         },
-        "chat": {},
+        "chat": {
+            "write_your_message": "Write your message",
+            "no_message": "No message"
+        },
         "datalist": {
             "student_list": "Student list",
             "student_name": "Last name",
