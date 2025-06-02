@@ -1,4 +1,4 @@
-// import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 import './assets/index.css'
 import "./i18n.tsx"
 import 'leaflet/dist/leaflet.css';
@@ -38,9 +38,9 @@ createRoot(document.getElementById('root')!).render(
                   element={ <DefaultLayout /> }
                 >
                   <Route path="/" element={<Home />} />
-                  <Route path="/login" element={<Login />} />
                   <Route path="/registration" element={<Registration />} />
                 </Route>
+                <Route path="/login" element={<Login />} />
               </Route>
 
               <Route
