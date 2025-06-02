@@ -4,6 +4,7 @@ import InputText from "../../../../components/ui/InputText";
 import image from "/images/undraw_building.svg"
 import { useTranslation } from "react-i18next";
 import { useCompanyInscription } from "../../../../utils/Context/CompanyInscriptionContext";
+import { isValidEmail } from "../../../../utils/validation";
 
 function CompanyRegistrationStep1( { handleSubmit } : { handleSubmit: (stepIndex: "next" | "prev") => void } ) {
 
@@ -12,7 +13,7 @@ function CompanyRegistrationStep1( { handleSubmit } : { handleSubmit: (stepIndex
 
     const [isValidatedValues, setIsValidatedValues] =useState(false);
     const isValid = () => {
-        return !!companyName.trim() && !! companyPhoneNumber.trim() && !!companyDomain.trim() && !!companyEmail.trim();
+        return !!companyName.trim() && !! companyPhoneNumber.trim() && !!companyDomain.trim() && isValidEmail(companyEmail);
       };
 
     function submit() {
