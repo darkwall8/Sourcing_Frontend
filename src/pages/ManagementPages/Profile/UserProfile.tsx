@@ -47,6 +47,7 @@ function UserProfile() {
         return isValidPassword(studentPassword);
     };
     const [isDisplayPasswordPopUp, setIsDisplayPasswordPopUp] = useState(false)
+    const [isValidatedPasswordValues, setIsValidatedPasswordValues] = useState(false);
     const [studentName, setStudentName] = useState<string>("")
     const [studentSurname, setStudentSurname] = useState<string>("")
     const [studentCountry, setStudentCountry] = useState<string>("")
@@ -71,7 +72,7 @@ function UserProfile() {
         }
     }
     function handleSubmitPassword() {
-        setIsValidatedValues(true);
+        setIsValidatedPasswordValues(true);
         if(isValidStudentPassword()) {
             // 
             setIsValidatedValues(false);
@@ -186,7 +187,7 @@ function UserProfile() {
             <Popup isDisplayed={isDisplayPasswordPopUp} onDisplayChange={setIsDisplayPasswordPopUp} >
                 <form className="flex flex-col gap-4">
                     <InputText label={t("dashboard.profile.your_last_password")} type="password" placeholder={t("dashboard.profile.last_password_placeholder")} isRequired={true} value={studentLastPassword} handleChange={setStudentLastPassword} showValidationErrors={false} />
-                    <InputText label={t("dashboard.profile.your_new_password")} type="password" placeholder={t("dashboard.profile.new_password_placeholder")} isRequired={true} value={studentPassword} handleChange={setStudentPassword} showValidationErrors={isValidatedValues} />
+                    <InputText label={t("dashboard.profile.your_new_password")} type="password" placeholder={t("dashboard.profile.new_password_placeholder")} isRequired={true} value={studentPassword} handleChange={setStudentPassword} showValidationErrors={isValidatedPasswordValues} />
                     <div className="bg-primary text-white font-semibold flex justify-center items-center rounded-md h-10 cursor-pointer hover:bg-primary/80" onClick={() => handleSubmitPassword()}>{ t("dashboard.profile.update") }</div>
                 </form>
             </Popup>

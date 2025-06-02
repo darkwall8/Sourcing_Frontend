@@ -43,6 +43,7 @@ function CompanyProfile() {
     ]
     const [isDisplayPasswordPopUp, setIsDisplayPasswordPopUp] = useState(false)
     const [isValidatedValues, setIsValidatedValues] = useState(false);
+    const [isValidatedPasswordValues, setIsValidatedPasswordValues] = useState(false);
     const [companyName, setCompanyName] = useState<string>("")
     const [companyPhoneNumber, setCompanyPhoneNumber] = useState<string>("")
     const [companyDomain, setCompanyDomain] = useState<string>("")
@@ -74,7 +75,7 @@ function CompanyProfile() {
         }
     }
     function handleSubmitPassword() {
-        setIsValidatedValues(true);
+        setIsValidatedPasswordValues(true);
         if(isValidCompanyPassword()) {
             // 
             setIsValidatedValues(false);
@@ -212,7 +213,7 @@ function CompanyProfile() {
             <Popup isDisplayed={isDisplayPasswordPopUp} onDisplayChange={setIsDisplayPasswordPopUp} >
                 <form className="flex flex-col gap-4">
                     <InputText label={t("dashboard.profile.your_last_password")} type="password" placeholder={t("dashboard.profile.last_password_placeholder")} isRequired={true} value={companyLastPassword} handleChange={setcompanyLastPassword} showValidationErrors={false} />
-                    <InputText label={t("dashboard.profile.your_new_password")} type="password" placeholder={t("dashboard.profile.new_password_placeholder")} isRequired={true} value={companyPassword} handleChange={setCompanyPassword} showValidationErrors={isValidatedValues} />
+                    <InputText label={t("dashboard.profile.your_new_password")} type="password" placeholder={t("dashboard.profile.new_password_placeholder")} isRequired={true} value={companyPassword} handleChange={setCompanyPassword} showValidationErrors={isValidatedPasswordValues} />
                     <div className="bg-primary text-white font-semibold flex justify-center items-center rounded-md h-10 cursor-pointer hover:bg-primary/80" onClick={() => handleSubmitPassword()}>{ t("dashboard.profile.update") }</div>
                 </form>
             </Popup>
