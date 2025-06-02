@@ -151,7 +151,13 @@
             "is_intern_search": "Recherche de stagiaires",
             "": ""
         },
-        "profile": {},
+        "profile": {
+            "update": "Mettre a jour",
+            "your_last_password": "Ancien mot de passe",
+            "your_new_password": "Nouveau mot de passe",
+            "last_password_placeholder": "Entrez votre ancien mot de passe",
+            "new_password_placeholder": "Entrez votre nouveau mot de passe"
+        },
         "settings": {},
         "feedback": {
             "advice": "Donnez votre avis",

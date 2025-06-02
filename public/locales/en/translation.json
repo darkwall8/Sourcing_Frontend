@@ -154,7 +154,9 @@
             "is_intern_search": "Looking for interns",
             "": ""
         },
-        "profile": {},
+        "profile": {
+            "update": "Update"
+        },
         "settings": {},
         "feedback": {
             "advice": "Give your feedback",

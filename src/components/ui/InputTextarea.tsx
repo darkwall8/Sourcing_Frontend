@@ -25,7 +25,7 @@ function InputTextArea({
       </label>
       <textarea
         className={`w-full p-2 border rounded-lg outline-primary resize-none min-h-[100px] ${
-          hasError ? "border-red-500" : "border-gray-300"
+          hasError ? "border-red-500" : "border-gray-400"
         }`}
         placeholder={placeholder}
         value={value}

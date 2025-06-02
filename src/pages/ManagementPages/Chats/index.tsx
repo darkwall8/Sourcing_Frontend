@@ -5,13 +5,9 @@ import { useTranslation } from "react-i18next";
 function Chats() {
 
     const chatList = [
-        { title: "AGL", subtitle: "Manufacture,Logistics and Importation", icon: "/icons/chat.svg" },
-        { title: "MTN", subtitle: "", icon: "/icons/chat.svg" },
-        { title: "SOCOPAO", subtitle: "", icon: "/icons/chat.svg" },
-        { title: "Camrail", subtitle: "", icon: "/icons/chat.svg" },
-        { title: "HYSACAM", subtitle: "", icon: "/icons/chat.svg" },
-        { title: "UCAC-ICAM", subtitle: "", icon: "/icons/chat.svg" },
-        { title: "ORANGE CM", subtitle: "", icon: "/icons/chat.svg" }
+        { title: "AGL", subtitle: "Manufacture,Logistics and Importation", icon: "/images/agl.jpeg" },
+        { title: "MTN", subtitle: "", icon: "/images/mtn.png" },
+        { title: "SOCOPAO", subtitle: "", icon: "/icons/chat.svg" }
     ];
 
     interface ChatMessages {
@@ -27,11 +23,7 @@ function Chats() {
             { from: "me", text: "Merci, j'aimerais en savoir plus sur vos services." }
         ],
         MTN: [{ from: "them", text: "Bonjour, comment pouvons-nous vous aider chez MTN ?" }],
-        SOCOPAO: [],
-        Camrail: [],
-        HYSACAM: [],
-        "UCAC-ICAM": [],
-        "ORANGE CM": []
+        SOCOPAO: []
     };
 
     const { t } = useTranslation();
