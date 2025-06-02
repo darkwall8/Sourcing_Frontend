@@ -10,12 +10,10 @@ type PopupProps = {
 function Popup({ isDisplayed = false, onDisplayChange, children } : PopupProps) {
   const [displayPopUp, setDisplayPopUp] = useState(isDisplayed);
 
-  // Synchroniser displayPopUp avec isDisplayed
   useEffect(() => {
     setDisplayPopUp(isDisplayed);
   }, [isDisplayed]);
 
-  // Gestion scroll & échap
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -27,7 +25,6 @@ function Popup({ isDisplayed = false, onDisplayChange, children } : PopupProps) 
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  // Empêche le scroll de fond
   useEffect(() => {
     if (displayPopUp) {
       document.body.classList.add("noscroll");
