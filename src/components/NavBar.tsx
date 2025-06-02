@@ -8,13 +8,22 @@ function NavBar() {
   const { t } = useTranslation();
   const { accountRole } = useAuth();
 
-  const [menu, setMenu] = useState([
-    { title: t("dashboard.navbar.dashboard_nav"), icon: "/icons/dashboard.svg", route: "/dashboard", isSelected: false },
-    { title: accountRole == "student" ? t("dashboard.navbar.company_nav") : t("dashboard.navbar.student_nav"), icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
-    { title: t("dashboard.navbar.chat_nav"), icon: "/icons/chat.svg", route: "/chats", isSelected: false },
-    { title: t("dashboard.navbar.profile_nav"), icon: "/icons/profile.svg", route: "/profile", isSelected: false },
-    { title: t("dashboard.navbar.settings_nav"), icon: "/icons/setting.svg", route: "/setting", isSelected: false },
-  ]);
+  const [menu, setMenu] = useState(
+    accountRole == "company" ?
+    [
+      { title: "dashboard.navbar.dashboard_nav", icon: "/icons/dashboard.svg", route: "/dashboard", isSelected: false },
+      { title: "dashboard.navbar.student_nav", icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
+      { title: "dashboard.navbar.chat_nav", icon: "/icons/chat.svg", route: "/chats", isSelected: false },
+      { title: "dashboard.navbar.profile_nav", icon: "/icons/profile.svg", route: "/profile", isSelected: false },
+      { title: "dashboard.navbar.settings_nav", icon: "/icons/setting.svg", route: "/setting", isSelected: false },
+    ]
+    : [
+        { title: "dashboard.navbar.dashboard_nav", icon: "/icons/dashboard.svg", route: "/dashboard", isSelected: false },
+        { title: "dashboard.navbar.company_nav", icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
+        { title: "dashboard.navbar.profile_nav", icon: "/icons/profile.svg", route: "/profile", isSelected: false },
+        { title: "dashboard.navbar.settings_nav", icon: "/icons/setting.svg", route: "/setting", isSelected: false },
+    ]
+);
 
   // 🛠️ Met à jour automatiquement les items sélectionnés quand `currentPath` change
   useEffect(() => {
@@ -64,7 +73,7 @@ function NavBar() {
                     }}
                   />
                 </div>
-                <p className="hidden md:inline">{items.title}</p>
+                <p className="hidden md:inline">{t(items.title)}</p>
               </NavLink>
             ))}
           </div>
