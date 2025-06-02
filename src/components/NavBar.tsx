@@ -25,7 +25,6 @@ function NavBar() {
     ]
 );
 
-  // 🛠️ Met à jour automatiquement les items sélectionnés quand `currentPath` change
   useEffect(() => {
     setMenu((prevMenu) =>
       prevMenu.map((item) => ({
@@ -33,7 +32,7 @@ function NavBar() {
         isSelected: item.route === currentPath,
       }))
     );
-  }, [currentPath]); // ⬅️ Exécuté à chaque changement d'URL
+  }, [currentPath]);
 
   return (
     <div className="h-screen min-w-fit border-r-2 border-usual_light_purple">
