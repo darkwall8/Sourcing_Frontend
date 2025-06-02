@@ -130,7 +130,9 @@
             "settings_nav": "Paramètres",
             "": ""
         },
-        "chat": {},
+        "chat": {
+            "write_your_message": "Ecrivez votre message"
+        },
         "datalist": {
             "student_list": "Liste des etudiants",
             "student_name": "Nom",
