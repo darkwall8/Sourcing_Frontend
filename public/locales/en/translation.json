@@ -155,7 +155,18 @@
             "": ""
         },
         "profile": {},
-        "settings": {},
+        "enterprise_settings": {
+            "setting1": "Receive notifications from interesting profiles",
+            "setting2": "Receive notifications for these domains",
+            "setting3": "Receive notifications about our new features",
+            "setting4": "Make your profile visible to companies"
+        },
+        "student_settings": {
+            "setting1": "Receive notifications from companies based on your preferences",
+            "setting2": "Receive notifications for these domains",
+            "setting3": "Receive notifications about our new features",
+            "setting4": "Make your profile visible to companies"
+        },
         "feedback": {
             "advice": "Give your feedback",
             "describe_your_experience": "Please describe your experience",

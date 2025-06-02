@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import Toggle from "../../../components/ui/Toggle.tsx";
-import settings_icon from "/icons/settings.svg";
+import settings_icon from "/icons/settings.svg"
 
-function CompanySettings() {
+function StudentSettings() {
 
     const { t } = useTranslation();
 
@@ -20,24 +20,24 @@ function CompanySettings() {
 
             <div className={"flex items-center justify-center flex-col gap-4"}>
                 <div className={"flex items-center gap-10 h-20"}>
-                    <span>{t("dashboard.eenterprise_settings.setting1")}</span>
+                    <span>{t("dashboard.student_settings.setting1")}</span>
                     <div> <Toggle/> </div>
                 </div>
                 <div className={"w-70 border border-gray-200"}></div>
                 <div className={"flex items-center gap-10 h-20"}>
-                    <span>{t("dashboard.enterprise_settings.setting2")}</span>
+                    <span>{t("dashboard.student_settings.setting2")}</span>
                     <div className={"h-5 w-7 bg-primary justify-center items-center flex rounded "}>
                         <span className={"text-white"}> + </span>
                     </div>
                 </div>
                 <div className={"w-70 border border-gray-200"}></div>
                 <div className={"flex items-center gap-10 h-20"}>
-                    <span>{t("dashboard.enterprise_settings.setting3")}</span>
+                    <span>{t("dashboard.student_settings.setting3")}</span>
                     <div> <Toggle/> </div>
                 </div>
                 <div className={"w-70 border border-gray-200"}></div>
                 <div className={"flex items-center gap-10 h-20"}>
-                    <span>{t("dashboard.enterprise_settings.setting4")}</span>
+                    <span>{t("dashboard.student_settings.setting4")}</span>
                     <div> <Toggle/> </div>
                 </div>
             </div>
@@ -45,4 +45,4 @@ function CompanySettings() {
     )
 }
 
-export default CompanySettings;
+export default StudentSettings;
