@@ -155,7 +155,11 @@
             "": ""
         },
         "profile": {
-            "update": "Update"
+            "update": "Update",
+            "your_last_password": "Last password",
+            "your_new_password": "New password",
+            "last_password_placeholder": "Enter your last password",
+            "new_password_placeholder": "Enter your new password"
         },
         "settings": {},
         "feedback": {
