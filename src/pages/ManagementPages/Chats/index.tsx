@@ -12,10 +12,10 @@ function Chats() {
 
     interface ChatMessages {
         [companyName: string]: {
-          from: string;
-          text: string;
+            from: string;
+            text: string;
         }[];
-      }
+    }
 
     const initialMessages: ChatMessages = {
         AGL: [
@@ -84,24 +84,45 @@ function Chats() {
                     </div>
                 </header>
 
-                <div className="flex flex-col h-full gap-4 bg-gray-50 p-4 space-y-3 overflow-y-auto">
-                    {messages[currentCompany].length === 0 ? (
-                        <p className="text-center text-gray-400 italic">{ t("dashboard.chat.no_message") }</p>
-                    ) : (
-                        messages[currentCompany].map((msg, idx) => (
-                            <div className={`${msg.from == 'me' ? "flex justify-end" : "flex justify-start"}`}>
-                                <div
-                                    key={idx}
-                                    className={`max-w-3/4 px-4 py-2 rounded-lg ${msg.from === "me"
-                                            ? "bg-primary text-white w-fit ml-auto"
-                                            : "bg-white border w-fit border-gray-200 text-left"
-                                        }`}
-                                >
-                                    {msg.text}
+                <div className="flex flex-col h-full gap-1 bg-gray-50 p-4 space-y-3 overflow-y-auto">
+                    {messages[currentCompany].map((msg, idx) => {
+                        const isMe = msg.from === "me";
+
+                        return (
+                            <div key={idx} className={`flex ${isMe ? "justify-end" : "justify-start"}`}>
+                                <div className="relative max-w-[70%]">
+                                    <div
+                                        className={`relative px-4 py-2 rounded-md ${isMe
+                                                ? "bg-primary text-white ml-auto rounded-tr-none"
+                                                : "bg-white border border-gray-200 text-black rounded-bl-none"
+                                            }`}
+                                    >
+                                        {msg.text} <span className={`text-[10px] ${isMe ? "text-gray-300" : "text-gray-400"} pl-2`}>{"14h:30"}</span>
+                                        <div
+                                            className={`absolute top-0 ${isMe
+                                                    ? "right-0 translate-x-full"
+                                                    : "left-0 -translate-x-full"
+                                                }`}
+                                        >
+                                            <svg
+                                                viewBox="0 0 10 10"
+                                                width="12"
+                                                height="12"
+                                                className={`${isMe ? "fill-primary" : "fill-white"} drop-shadow`}
+                                            >
+                                                {isMe ? (
+                                                    <path d="M0,0 Q10,0 0,6 Z" />
+                                                ) : (
+                                                    <path d="M10,0 Q0,5 10,10 Z" />
+                                                )}
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        ))
-                    )}
+                        );
+                    })}
+
 
                 </div>
 
