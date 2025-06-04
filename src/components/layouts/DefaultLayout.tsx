@@ -4,11 +4,11 @@ import Header from "../Header";
 
 function DefaultLayout() {
     return (
-        <div className={"h-screen w-screen min-lg:overflow-hidden overflow-x-hidden"}>
-            <div className="h-2/12">
+        <div className={"h-screen w-screen flex flex-col md:overflow-hidden overflow-y-scroll"}>
+            <div className="h-fit">
                 <Header />
             </div>
-            <main className={"h-10/12"}>
+            <main className={"h-full md:overflow-hidden overflow-y-scroll"}>
                 <Outlet />
             </main>
         </div>
