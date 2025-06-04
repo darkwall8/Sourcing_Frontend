@@ -30,27 +30,27 @@ function StudentSettings() {
                     />
                     <p className={"text-primary font-bold"}>PARAMETRES GENERAUX</p>
                 </div>
-                <div className={"w-40 border-2 rounded border-primary"}></div>
+                <div className={"w-62 border-3 rounded border-primary -mt-1.5"}></div>
             </div>
 
-            <div className={"flex items-center justify-center flex-col gap-4 text-sm"}>
-                <div className={"flex items-center gap-10 h-20"}>
+            <div className={"m-auto flex items-center flex-col gap-4 w-200 p-5 text-sm"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-20"}>
                     <span>{t("dashboard.student_settings.setting1")}</span>
                     <div> <Toggle value={notificationProfrile} onChange={setnotificationProfrile}/> </div>
                 </div>
                 <div className={"w-70 border border-gray-200"}></div>
-                 <div className={"flex items-center gap-10 h-20"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-20"}>
                     <span>{t("dashboard.student_settings.setting2")}</span>
-                    <span className="flex gap-2">
+                    <div className="flex w-70 p-1 h-25 flex-wrap items-start overflow-y-auto">
                         {selectedDomains.map((domainTitle) => (
                             <span
                                 key={domainTitle}
-                                className="bg-primary text-white p-2 rounded w-fit flex items-center gap-1"
+                                className="bg-primary text-white p-2 rounded w-fit h-fit flex items-center gap-1 m-1"
                             >
                                 {domainTitle}
                             </span>
                         ))}
-                    </span>
+                    </div>
                     <div className={"h-5 w-7 bg-primary justify-center items-center flex rounded "}>
                         <div
                             className={"h-5 w-7 bg-primary justify-center items-center flex rounded hover:cursor-pointer hover:bg-[#0085af]"}
@@ -61,12 +61,12 @@ function StudentSettings() {
                     </div>
                 </div>
                 <div className={"w-70 border border-gray-200"}></div>
-                <div className={"flex items-center gap-10 h-20"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-20"}>
                     <span>{t("dashboard.student_settings.setting3")}</span>
                     <div> <Toggle value={notificationNouveaute} onChange={setNotificationNouveaute}/> </div>
                 </div>
                 <div className={"w-70 border border-gray-200"}></div>
-                <div className={"flex items-center gap-10 h-20"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-20"}>
                     <span>{t("dashboard.student_settings.setting4")}</span>
                     <div> <Toggle value={visibilite} onChange={setVisibilite}/> </div>
                 </div>
@@ -117,7 +117,7 @@ function StudentSettings() {
                     </div>
                 </Popup>
             </div>
-            
+
         </div>
     )
 }
