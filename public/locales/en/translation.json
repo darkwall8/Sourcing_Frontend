@@ -154,7 +154,6 @@
             "is_intern_search": "Looking for interns",
             "": ""
         },
-        "profile": {},
         "enterprise_settings": {
             "setting1": "Receive notifications from interesting profiles",
             "setting2": "Receive notifications for these domains",
@@ -167,6 +166,14 @@
             "setting3": "Receive notifications about our new features",
             "setting4": "Make your profile visible to companies"
         },
+        "profile": {
+            "update": "Update",
+            "your_last_password": "Last password",
+            "your_new_password": "New password",
+            "last_password_placeholder": "Enter your last password",
+            "new_password_placeholder": "Enter your new password"
+        },
+        "settings": {},
         "feedback": {
             "advice": "Give your feedback",
             "describe_your_experience": "Please describe your experience",

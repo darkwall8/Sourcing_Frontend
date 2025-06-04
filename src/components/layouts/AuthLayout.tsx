@@ -13,24 +13,24 @@ function AuthLayout() {
 
     return (
         <div className="w-screen flex h-screen overflow-hidden">
-            <div className="w-2/12">
+            <div className="w-fit">
                 <NavBar />
             </div>
-            <main className="w-10/12 min-h-screen pb-4 bg-usual_gray">
+            <main className="w-full min-h-screen pb-4 bg-usual_gray">
                 <div className="h-1/12">
                     <DashBoardHeader />
                 </div>
-                <div className="h-11/12">
+                <div className="relative h-11/12">
                     <Outlet />
+                    <div onClick={() => setIsDisplayFeedback(true)} className="absolute bottom-5 cursor-pointer rounded-md px-4 h-10 left-5 gap-2 flex items-center border-2 hover:bg-primary/5 border-gray-400">
+                        <img src={feedback} alt="feedback" />
+                    <p>Feedback</p>
+            </div>
                 </div>
             </main>
             <Popup isDisplayed={isDisplayFeed} onDisplayChange={setIsDisplayFeedback} >
                 <FeedBack />
             </Popup>
-            <div onClick={() => setIsDisplayFeedback(true)} className="absolute bottom-5 cursor-pointer rounded-md px-4 h-10 left-5 gap-2 flex items-center border-2 hover:bg-primary/5 border-gray-400">
-                <img src={feedback} alt="feedback" />
-                <p>Feedback</p>
-            </div>
         </div>
     )
 }

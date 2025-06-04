@@ -36,7 +36,7 @@ function Popup({ isDisplayed = false, onDisplayChange, children } : PopupProps) 
 
   return (
     <div
-      className={`fixed z-50 left-0 flex justify-center items-center top-0 w-screen transition-all duration-150 ease-in-out popup ${
+      className={`fixed z-50 top-0 left-0 flex justify-center items-center top-0 w-screen transition-all duration-150 ease-in-out popup ${
         displayPopUp ? "scale-100" : "scale-0"
       }`}
     >
