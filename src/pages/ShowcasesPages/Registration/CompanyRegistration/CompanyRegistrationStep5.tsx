@@ -27,8 +27,8 @@ function CompanyRegistrationStep5( { handleSubmit } : { handleSubmit: (stepIndex
 
 
     return (
-        <div className="flex justify-between h-full">
-            <form className="flex flex-col justify-between h-full">
+        <div className="flex justify-between h-full gap-4">
+            <form className="flex flex-col justify-between h-full text-xs w-full">
                 <div className="flex flex-col gap-4">
                     <InputFile label={t("company_registration.your_company_tax__comformity_certificate")} placeholder={t("company_registration.company_tax__comformity_certificate_placeholder")} isRequired={false} file={companyTaxConformityCertificate} handleChange={setCompanyTaxConformityCertificate} />
                     <InputText label={t("company_registration.your_company_statistical_declaration")} placeholder={t("company_registration.company_statistical_declaration_placeholder")} isRequired={true} value={companyStatisticalDeclarationNumber} handleChange={setCompanyStatisticalDeclarationNumber} showValidationErrors={isValidatedValues} />

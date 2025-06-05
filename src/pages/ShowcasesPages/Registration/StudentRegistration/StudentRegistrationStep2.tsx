@@ -50,8 +50,8 @@ function StudentRegistrationStep2( { handleSubmit, stepIndex } : { handleSubmit:
 
 
     return (
-        <div className="flex justify-between">
-            <form className="flex flex-col justify-between">
+        <div className="flex justify-between h-full gap-4">
+            <form className="flex flex-col h-full text-xs justify-between w-full">
                 <div className="flex flex-col gap-4 justify-between h-full">
                     <div className="flex flex-col gap-4">
                         <InputDropdown label={t("student_registration.your_specification")} placeholder={t("student_registration.specification_placeholder")} isRequired={true} value={studentSpecification} handleChange={setStudentSpecification} showValidationErrors={isValidatedValues} options={specificationList  } />
@@ -98,8 +98,8 @@ function StudentRegistrationStep2( { handleSubmit, stepIndex } : { handleSubmit:
                     <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>
             </form>
-            <div className="">
-                <img src={image} alt="" />
+            <div className="h-full">
+                <img className="h-full" src={image} alt="" />
             </div>
         </div>
     )

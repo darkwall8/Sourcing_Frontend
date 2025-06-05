@@ -28,8 +28,8 @@ function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit:
 
 
     return (
-        <div className="flex justify-between">
-            <form className="flex flex-col justify-between">
+        <div className="flex justify-between h-full gap-4">
+            <form className="flex flex-col justify-between text-xs w-full">
                 <div className="flex flex-col gap-4">
                     <InputEmail label={t("student_registration.your_email")} placeholder={t("student_registration.email_placeholder")} isRequired={true} value={studentEmail} handleChange={setStudentEmail} showValidationErrors={isValidatedValues} />
                     <InputText label={t("student_registration.your_password")} type="password" placeholder={t("student_registration.password_placeholder")} isRequired={true} value={studentPassword} handleChange={setStudentPassword} showValidationErrors={isValidatedValues} />

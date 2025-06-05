@@ -60,8 +60,8 @@ function StudentRegistrationStep1( { handleSubmit, stepIndex } : { handleSubmit:
 
 
     return (
-        <div className="flex justify-between">
-            <form className="flex flex-col justify-between">
+        <div className="flex justify-between h-full gap-4 overflow-hidden">
+            <form className="flex flex-col justify-between h-full text-xs w-full">
                 <div className="flex flex-col gap-4">
                     <InputText label={t("student_registration.your_name")} placeholder={t("student_registration.name_placeholder")} isRequired={true} value={studentName} handleChange={setStudentName} showValidationErrors={isValidatedValues} />
                     <InputText label={t("student_registration.your_surname")} placeholder={t("student_registration.surname_placeholder")} isRequired={true} value={studentSurname} handleChange={setStudentSurname} showValidationErrors={isValidatedValues} />
@@ -70,8 +70,8 @@ function StudentRegistrationStep1( { handleSubmit, stepIndex } : { handleSubmit:
                 </div>
                 <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
             </form>
-            <div className="">
-                <img src={image} alt="" />
+            <div className="h-full">
+                <img className="h-full" src={image} alt="" />
             </div>
         </div>
     )

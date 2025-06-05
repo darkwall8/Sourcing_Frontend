@@ -37,11 +37,11 @@ function StudentRegistration() {
     const currentComponent = stepList[currentStepIndex].component;
 
     return (
-        <div className="h-full w-full p-16 overflow-hidden">
-            <h1 className="text-5xl font-semibold">
+        <div className="h-full w-full flex flex-col px-6 py-6 overflow-hidden">
+            <h1 className="text-5xl font-semibold pb-6">
                 {t("student_registration.step")} {currentStepIndex + 1} {t("student_registration.to")} <span className="text-primary">{stepList.length}</span>
             </h1>
-            <div className="pt-16 relative">
+            <div className="relative h-full w-full overflow-hidden">
                 <AnimatePresence mode="wait" initial={false}>
                     <motion.div
                         key={currentStepIndex}
@@ -49,6 +49,7 @@ function StudentRegistration() {
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: direction === "next" ? -300 : 300, opacity: 0 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="h-full"
                     >
                         {currentComponent}
                     </motion.div>

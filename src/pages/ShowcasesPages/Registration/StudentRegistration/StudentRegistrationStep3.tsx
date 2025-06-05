@@ -31,8 +31,8 @@ function StudentRegistrationStep3( { handleSubmit, stepIndex } : { handleSubmit:
 
 
     return (
-        <div className="flex justify-between">
-            <form className="flex flex-col justify-between">
+        <div className="flex justify-between h-full gap-4">
+            <form className="flex flex-col justify-between h-full text-xs w-full">
                 <div className="flex flex-col gap-4">
                     <InputFile label={t("student_registration.your_cv")} placeholder={t("student_registration.cv_placeholder")} isRequired={false} file={studentCV} handleChange={setStudentCV} />
                     <InputText label={t("student_registration.your_github_link")} placeholder={t("student_registration.github_placeholder")} isRequired={true} value={studentGitHubLink} handleChange={setStudentGitHubLink} showValidationErrors={isValidatedValues} />

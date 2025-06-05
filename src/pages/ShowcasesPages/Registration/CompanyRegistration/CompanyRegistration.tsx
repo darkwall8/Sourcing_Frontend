@@ -80,11 +80,11 @@ function CompanyRegistration() {
     stepList[currentStepIndex].subStep[currentSubStepIndex].component;
 
   return (
-    <div className="h-full w-full p-16 overflow-hidden">
-      <h1 className="text-5xl font-semibold">
+    <div className="h-full w-full flex flex-col px-6 py-6 overflow-hidden">
+      <h1 className="text-5xl font-semibold pb-6">
         {stepList[currentStepIndex].stepTitle}
       </h1>
-      <div className="pt-16 relative h-full">
+      <div className="relative h-full w-full overflow-hidden">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             className="h-full"
