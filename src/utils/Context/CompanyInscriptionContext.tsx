@@ -21,6 +21,7 @@ interface CompanyInscriptionContextType {
     companyDescription: string,
     companyInternBenefit: string[],
     hasInternOpportunity: boolean,
+    companyPassword: string,
     setCompanyName: (newValue: string) => void,
     setCompanyPhoneNumber: (newValue: string) => void,
     setCompanyDomain: (newValue: string) => void,
@@ -41,6 +42,7 @@ interface CompanyInscriptionContextType {
     setCompanyDescription: (newValue: string) => void,
     setCompanyInternBenefit: (newValue: string[]) => void,
     setHasInternOpportunity: (newValue: boolean) => void
+    setCompanyPassword: (newValue: string) => void
 }
 
 const CompanyInscriptionContext = createContext<CompanyInscriptionContextType | undefined>(undefined);
@@ -66,6 +68,7 @@ export const CompanyInscriptionProvider = ({ children }: { children: ReactNode }
   const [companyDescription, setCompanyDescription] = useState<string>("")
   const [companyInternBenefit, setCompanyInternBenefit] = useState<string[]>([])
   const [hasInternOpportunity, setHasInternOpportunity] = useState<boolean>(false)
+  const [companyPassword, setCompanyPassword] = useState<string>("")
 
   return (
     <CompanyInscriptionContext.Provider value={{
@@ -89,6 +92,7 @@ export const CompanyInscriptionProvider = ({ children }: { children: ReactNode }
       companyDescription,
       companyInternBenefit,
       hasInternOpportunity,
+      companyPassword,
       setCompanyName,
       setCompanyPhoneNumber,
       setCompanyDomain,
@@ -109,6 +113,7 @@ export const CompanyInscriptionProvider = ({ children }: { children: ReactNode }
       setCompanyDescription,
       setCompanyInternBenefit,
       setHasInternOpportunity,
+      setCompanyPassword
     }}>
       {children}
     </CompanyInscriptionContext.Provider>
