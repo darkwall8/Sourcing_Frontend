@@ -39,7 +39,7 @@ function CompanyRegistrationStep4( { handleSubmit } : { handleSubmit: (stepIndex
                     <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>
             </form>
-            <div className="h-[65vh]">
+            <div className="h-[65vh] md:block hidden">
                 <img className="" src={image} alt="" />
             </div>
         </div>

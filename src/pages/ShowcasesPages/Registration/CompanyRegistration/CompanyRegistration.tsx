@@ -81,7 +81,7 @@ function CompanyRegistration() {
 
   return (
     <div className="h-full w-full flex flex-col px-6 py-6 overflow-hidden">
-      <h1 className="text-5xl font-semibold pb-6">
+      <h1 className="text-2xl md:text-5xl font-semibold pb-6">
         {stepList[currentStepIndex].stepTitle}
       </h1>
       <div className="relative h-full w-full overflow-hidden">

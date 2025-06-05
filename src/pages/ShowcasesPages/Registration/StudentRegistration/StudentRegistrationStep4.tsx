@@ -39,7 +39,7 @@ function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit:
                     <Button label={t("finish")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>
             </form>
-            <div className="">
+            <div className=" md:block hidden">
                 <img src={image} alt="" />
             </div>
         </div>

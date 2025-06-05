@@ -25,10 +25,10 @@ function Header(){
 
     return (
         <>
-            <div className="w-full">
+            <div className="w-full text-xs md:text-base">
                 <div data-canbetest="true" className="sticky top-0 z-20 w-full py-1 flex items-center justify-between p-3 max-md:flex-col max-md:gap-5">
                     <div className='flex items-center hover:cursor-pointer' onClick={redirectHome}>
-                        <div className='lg:w-25 md:w-22.5 w-20'>
+                        <div className='lg:w-25 md:w-22.5 w-10'>
                             <img src={LogoSourcing} alt="sourcing_logo"/>
                         </div>
                         <p className="text-primary text-lg md:text-xl lg:text-3xl font-bold">

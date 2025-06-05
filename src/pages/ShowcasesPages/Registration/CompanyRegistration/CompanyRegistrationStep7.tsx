@@ -92,7 +92,7 @@ function CompanyRegistrationStep7( { handleSubmit } : { handleSubmit: (stepIndex
                     <Button label={t("finish")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>
             </form>
-            <div className="">
+            <div className=" md:block hidden">
                 <img src={image} alt="" />
             </div>
         </div>

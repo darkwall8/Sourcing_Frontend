@@ -70,7 +70,7 @@ function StudentRegistrationStep1( { handleSubmit, stepIndex } : { handleSubmit:
                 </div>
                 <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
             </form>
-            <div className="h-full">
+            <div className="h-full md:block hidden">
                 <img className="h-full" src={image} alt="" />
             </div>
         </div>
