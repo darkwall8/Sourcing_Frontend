@@ -106,7 +106,7 @@ function CompanyProfile() {
     }
 
     return (
-        <div className="py-10 px-32 h-full overflow-scroll">
+        <div className="py-10 px-8 text-xs h-full overflow-scroll">
             <div className="border-b pb-8 border-gray-300 flex items-center gap-4">
                 <div className="relative w-24 h-24 border-2 rounded-full border-primary">
                     <img className="w-full h-full" src={"/icons/chat.svg"} alt={"profile"} />

@@ -40,7 +40,7 @@ function InputText({
   const passwordValidation = type === "password" ? validatePassword(value) : null;
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 w-full">
       <label htmlFor={inputId} className="font-medium">
         {label} {isRequired && <span className="text-red-500">*</span>}
       </label>

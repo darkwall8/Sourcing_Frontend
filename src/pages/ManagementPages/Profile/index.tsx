@@ -1,11 +1,9 @@
-import { useTranslation } from "react-i18next";
 import UserProfile from "./UserProfile";
 import CompanyProfile from "./CompanyProfile";
 import { useAuth } from "../../../utils/Context/AuthContext";
 
 function Profile() {
 
-    const { t } = useTranslation();
     const { accountRole } = useAuth()
 
     return (

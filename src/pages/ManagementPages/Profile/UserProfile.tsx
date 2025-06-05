@@ -110,7 +110,7 @@ function UserProfile() {
     }, [])
 
     return (
-        <div className="py-10 px-32 h-full overflow-y-scroll">
+        <div className="py-10 px-8 text-xs h-full overflow-y-scroll">
             <div className="border-b pb-8 border-gray-300 flex items-center gap-4">
                 <div className="relative w-32 h-32 border-2 rounded-full border-primary">
                     <img className="w-full h-full" src={"/icons/chat.svg"} alt={"profile"} />
@@ -185,10 +185,10 @@ function UserProfile() {
                 <div className="bg-primary text-white px-4 py-2 rounded-md cursor-pointer hover:bg-primary/80" onClick={() => submit()}>{t("dashboard.profile.update")}</div>
             </form>
             <Popup isDisplayed={isDisplayPasswordPopUp} onDisplayChange={setIsDisplayPasswordPopUp} >
-                <form className="flex flex-col gap-4">
+                <form className="flex flex-col gap-4 w-72 h-72 flex items-center justify-center">
                     <InputText label={t("dashboard.profile.your_last_password")} type="password" placeholder={t("dashboard.profile.last_password_placeholder")} isRequired={true} value={studentLastPassword} handleChange={setStudentLastPassword} showValidationErrors={false} />
                     <InputText label={t("dashboard.profile.your_new_password")} type="password" placeholder={t("dashboard.profile.new_password_placeholder")} isRequired={true} value={studentPassword} handleChange={setStudentPassword} showValidationErrors={isValidatedPasswordValues} />
-                    <div className="bg-primary text-white font-semibold flex justify-center items-center rounded-md h-10 cursor-pointer hover:bg-primary/80" onClick={() => handleSubmitPassword()}>{ t("dashboard.profile.update") }</div>
+                    <div className="bg-primary w-full text-white font-semibold flex justify-center items-center rounded-md h-10 cursor-pointer hover:bg-primary/80" onClick={() => handleSubmitPassword()}>{ t("dashboard.profile.update") }</div>
                 </form>
             </Popup>
         </div>
