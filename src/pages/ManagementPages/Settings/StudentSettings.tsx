@@ -5,43 +5,42 @@ import {useState} from "react";
 import Popup from "../../../components/common/PopUp.tsx";
 import Tag from "../../../components/ui/Tag.tsx";
 
-function CompanySettings() {
+function StudentSettings() {
 
     const { t } = useTranslation();
     const domainList= [
-        {title: "Developpement Fullstack"},
+        {title: "Developpement Fullstack", isSelected: false},
         {title: "Devops"},
         {title: "Cyber Sécurité"},
         {title: "Administration Réseaux"},
         {title: "Administration Système"}
     ];
     const [popupDisplay, setPopupDisplay] = useState<boolean>(false);
-    const [notificationProfrile, setNotificationProfrile] = useState<boolean>(true);
+    const [selectedDomains, setSelectedDomains] = useState<string[]>([]);
+    const [notificationProfrile, setnotificationProfrile] = useState<boolean>(true);
     const [notificationNouveaute, setNotificationNouveaute] = useState<boolean>(true);
     const [visibilite, setVisibilite] = useState<boolean>(true);
-    const [selectedDomains, setSelectedDomains] = useState<string[]>([]);
 
     return (
         <div className={"bg-white m-2 rounded-3xl h-full p-5 space-y-5"}>
             <div className={"flex items-center justify-center flex-col mt-5 text-lg"}>
-                <div className={"flex items-center justify-center w-90 gap-1 rounded p-2 "}>
+                <div className={"flex items-center justify-center w-90 gap-1 border border-primary rounded p-2 "}>
                     <img src={settings_icon} alt="icon settings"
                          className={"w-6"}
                     />
-                    <p className={"font-bold"}>PARAMETRES GENERAUX</p>
+                    <p className={"text-primary font-bold"}>PARAMETRES GENERAUX</p>
                 </div>
-                <div className={"w-62 border-2 rounded border-primary -mb-0.5 z-1"}></div>
-                <div className={"w-200 border rounded border-gray-200"}></div>
+                <div className={"w-62 border-3 rounded border-primary -mt-1.5"}></div>
             </div>
 
             <div className={"m-auto flex items-center flex-col gap-4 w-200 p-5 text-sm"}>
                 <div className={"flex items-center justify-between w-full gap-10 h-10"}>
-                    <span>{t("dashboard.enterprise_settings.setting1")}</span>
-                    <div> <Toggle value={notificationProfrile} onChange={setNotificationProfrile}/> </div>
+                    <span>{t("dashboard.student_settings.setting1")}</span>
+                    <div> <Toggle value={notificationProfrile} onChange={setnotificationProfrile}/> </div>
                 </div>
-                <div className={"w-80 border border-gray-200"}></div>
+                <div className={"w-70 border border-gray-200"}></div>
                 <div className={"flex items-center justify-between w-full gap-10 h-20"}>
-                    <span>{t("dashboard.enterprise_settings.setting2")}</span>
+                    <span>{t("dashboard.student_settings.setting2")}</span>
                     <div className="flex w-70 p-1 h-25 flex-wrap items-start overflow-y-auto">
                         {selectedDomains.map((domainTitle) => (
                             <span
@@ -61,18 +60,18 @@ function CompanySettings() {
                         </div>
                     </div>
                 </div>
-                <div className={"w-80 border border-gray-200"}></div>
+                <div className={"w-70 border border-gray-200"}></div>
                 <div className={"flex items-center justify-between w-full gap-10 h-15"}>
-                    <span>{t("dashboard.enterprise_settings.setting3")}</span>
+                    <span>{t("dashboard.student_settings.setting3")}</span>
                     <div> <Toggle value={notificationNouveaute} onChange={setNotificationNouveaute}/> </div>
                 </div>
-                <div className={"w-80 border border-gray-200"}></div>
+                <div className={"w-70 border border-gray-200"}></div>
                 <div className={"flex items-center justify-between w-full gap-10 h-15"}>
-                    <span>{t("dashboard.enterprise_settings.setting4")}</span>
+                    <span>{t("dashboard.student_settings.setting4")}</span>
                     <div> <Toggle value={visibilite} onChange={setVisibilite}/> </div>
                 </div>
-                <div className={"w-80 border border-gray-200"}></div>
             </div>
+            <div className={"w-80 border border-gray-200"}></div>
 
             <div className={"flex items-center justify-center flex-col text-sm"}>
                 <Popup isDisplayed={popupDisplay} onDisplayChange={setPopupDisplay}>
@@ -124,4 +123,4 @@ function CompanySettings() {
     )
 }
 
-export default CompanySettings;
+export default StudentSettings;
