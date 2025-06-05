@@ -13,7 +13,7 @@ function StudentSettings() {
         {title: "Devops"},
         {title: "Cyber Sécurité"},
         {title: "Administration Réseaux"},
-        {title: "Administration système"}
+        {title: "Administration Système"}
     ];
     const [popupDisplay, setPopupDisplay] = useState<boolean>(false);
     const [selectedDomains, setSelectedDomains] = useState<string[]>([]);
@@ -22,7 +22,7 @@ function StudentSettings() {
     const [visibilite, setVisibilite] = useState<boolean>(true);
 
     return (
-        <div className={"bg-white m-2 rounded-3xl h-full p-5 space-y-10"}>
+        <div className={"bg-white m-2 rounded-3xl h-full p-5 space-y-5"}>
             <div className={"flex items-center justify-center flex-col mt-5 text-lg"}>
                 <div className={"flex items-center justify-center w-90 gap-1 border border-primary rounded p-2 "}>
                     <img src={settings_icon} alt="icon settings"
@@ -34,7 +34,7 @@ function StudentSettings() {
             </div>
 
             <div className={"m-auto flex items-center flex-col gap-4 w-200 p-5 text-sm"}>
-                <div className={"flex items-center justify-between w-full gap-10 h-20"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-10"}>
                     <span>{t("dashboard.student_settings.setting1")}</span>
                     <div> <Toggle value={notificationProfrile} onChange={setnotificationProfrile}/> </div>
                 </div>
@@ -61,16 +61,17 @@ function StudentSettings() {
                     </div>
                 </div>
                 <div className={"w-70 border border-gray-200"}></div>
-                <div className={"flex items-center justify-between w-full gap-10 h-20"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-15"}>
                     <span>{t("dashboard.student_settings.setting3")}</span>
                     <div> <Toggle value={notificationNouveaute} onChange={setNotificationNouveaute}/> </div>
                 </div>
                 <div className={"w-70 border border-gray-200"}></div>
-                <div className={"flex items-center justify-between w-full gap-10 h-20"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-15"}>
                     <span>{t("dashboard.student_settings.setting4")}</span>
                     <div> <Toggle value={visibilite} onChange={setVisibilite}/> </div>
                 </div>
             </div>
+            <div className={"w-80 border border-gray-200"}></div>
 
             <div className={"flex items-center justify-center flex-col text-sm"}>
                 <Popup isDisplayed={popupDisplay} onDisplayChange={setPopupDisplay}>
