@@ -24,25 +24,25 @@ function CompanySettings() {
     return (
         <div className={"bg-white m-2 rounded-3xl h-full p-5 space-y-5"}>
             <div className={"flex items-center justify-center flex-col mt-5 text-lg"}>
-                <div className={"flex items-center justify-center w-90 gap-1 rounded p-2 "}>
+                <div className={"flex items-center justify-center w-90 gap-1 rounded p-2 max-lg:w-75"}>
                     <img src={settings_icon} alt="icon settings"
-                         className={"w-6"}
+                         className={"w-6 max-lg:w-5"}
                     />
-                    <p className={"font-bold"}>PARAMETRES GENERAUX</p>
+                    <p className={"font-bold max-lg:text-sm"}>PARAMETRES GENERAUX</p>
                 </div>
-                <div className={"w-62 border-2 rounded border-primary -mb-0.5 z-1"}></div>
-                <div className={"w-200 border rounded border-gray-200"}></div>
+                <div className={"w-62 max-lg:w-49 border-2 rounded border-primary -mb-0.5 z-1"}></div>
+                <div className={"w-200 max-lg:w-150 border rounded border-gray-200"}></div>
             </div>
 
-            <div className={"m-auto flex items-center flex-col gap-4 w-200 p-5 text-sm"}>
-                <div className={"flex items-center justify-between w-full gap-10 h-10"}>
+            <div className={"m-auto flex items-center flex-col gap-4 w-200 max-lg:w-150 p-5 text-sm max-lg:text-xs"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-10 max-lg:h-6"}>
                     <span>{t("dashboard.enterprise_settings.setting1")}</span>
                     <div> <Toggle value={notificationProfrile} onChange={setNotificationProfrile}/> </div>
                 </div>
                 <div className={"w-80 border border-gray-200"}></div>
-                <div className={"flex items-center justify-between w-full gap-10 h-20"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-15 max-lg:h-10"}>
                     <span>{t("dashboard.enterprise_settings.setting2")}</span>
-                    <div className="flex w-70 p-1 h-25 flex-wrap items-start overflow-y-auto">
+                    <div className="flex w-70 p-1 h-20 max-lg:h-15 flex-wrap items-start overflow-y-auto">
                         {selectedDomains.map((domainTitle) => (
                             <span
                                 key={domainTitle}
@@ -62,12 +62,12 @@ function CompanySettings() {
                     </div>
                 </div>
                 <div className={"w-80 border border-gray-200"}></div>
-                <div className={"flex items-center justify-between w-full gap-10 h-15"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-10 max-lg:h-6"}>
                     <span>{t("dashboard.enterprise_settings.setting3")}</span>
                     <div> <Toggle value={notificationNouveaute} onChange={setNotificationNouveaute}/> </div>
                 </div>
                 <div className={"w-80 border border-gray-200"}></div>
-                <div className={"flex items-center justify-between w-full gap-10 h-15"}>
+                <div className={"flex items-center justify-between w-full gap-10 h-10 max-lg:h-6"}>
                     <span>{t("dashboard.enterprise_settings.setting4")}</span>
                     <div> <Toggle value={visibilite} onChange={setVisibilite}/> </div>
                 </div>

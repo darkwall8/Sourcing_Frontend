@@ -52,7 +52,7 @@ createRoot(document.getElementById('root')!).render(
                   <Route path="/dashboard" element={<DashBoard />} />
                   <Route path="/datalist" element={<DataList />} />
                   <Route path="/profile" element={<Profile />} />
-                  <Route path="/setting" element={<Settings />} />
+                  <Route path="/settings" element={<Settings />} />
                   <Route path="/chats" element={<Chats />} />
                 </Route>
               </Route>

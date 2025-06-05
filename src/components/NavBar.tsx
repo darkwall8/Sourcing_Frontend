@@ -18,13 +18,13 @@ function NavBar() {
           { title: "dashboard.navbar.student_nav", icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
           { title: "dashboard.navbar.chat_nav", icon: "/icons/chat.svg", route: "/chats", isSelected: false },
           { title: "dashboard.navbar.profile_nav", icon: "/icons/profile.svg", route: "/profile", isSelected: false },
-          { title: "dashboard.navbar.settings_nav", icon: "/icons/setting.svg", route: "/setting", isSelected: false },
+          { title: "dashboard.navbar.settings_nav", icon: "/icons/setting.svg", route: "/settings", isSelected: false },
         ]
       : [
           { title: "dashboard.navbar.dashboard_nav", icon: "/icons/dashboard.svg", route: "/dashboard", isSelected: false },
           { title: "dashboard.navbar.company_nav", icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
           { title: "dashboard.navbar.profile_nav", icon: "/icons/profile.svg", route: "/profile", isSelected: false },
-          { title: "dashboard.navbar.settings_nav", icon: "/icons/setting.svg", route: "/setting", isSelected: false },
+          { title: "dashboard.navbar.settings_nav", icon: "/icons/setting.svg", route: "/settings", isSelected: false },
         ]
   );
 
