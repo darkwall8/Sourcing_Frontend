@@ -6,7 +6,7 @@ import { MediaQuery } from "./Hooks/MediaQuery.ts"
 import { useState, useEffect } from 'react'; // Ajout
 
 function Home() {
-    const LargeScreen = MediaQuery('(min-width: 1024px)');
+    const LargeScreen = MediaQuery('(min-width: 768px)');
     const { currentPage, scrollToPage } = PageScroll(LargeScreen)
     const [visitedPages, setVisitedPages] = useState<Set<number>>(new Set([0])); // Nouvel état
 
@@ -28,9 +28,9 @@ function Home() {
 
     return (
         LargeScreen ? (
-            <div className="lg:overflow-hidden h-full">
+            <div className="md:overflow-hidden h-full">
                 <div
-                    className={LargeScreen ? "lg:duration-1500 h-full lg:ease-in-out hidden md:block" : ""}
+                    className={"duration-1500 h-full ease-in-out hidden md:block"}
                     style={{
                         transform: LargeScreen ?
 
@@ -53,7 +53,7 @@ function Home() {
                 )}
             </div>
         ) : (
-            <div className="lg:overflow-hidden">
+            <div className="md:overflow-hidden">
                 <div>
                     <EnterpriseSection shouldAnimate={visitedPages.has(0)} />
                     <StudentSection shouldAnimate={visitedPages.has(1)} />

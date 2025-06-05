@@ -11,9 +11,8 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
-  const [accountRole, setAccountRole] = useState<"student" | "company">("company")
-
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [accountRole, setAccountRole] = useState<"student" | "company">("student")
   const login = () => setIsAuthenticated(true);
   const logout = () => setIsAuthenticated(false);
 
