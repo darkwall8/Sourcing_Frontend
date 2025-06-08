@@ -15,6 +15,8 @@ function NavBar() {
     accountRole == "company"
       ? [
           { title: "dashboard.navbar.dashboard_nav", icon: "/icons/dashboard.svg", route: "/dashboard", isSelected: false },
+          { title: "dashboard.navbar.add_offer", icon: "/icons/add.svg", route: "/add_offer", isSelected: false },
+          { title: "dashboard.navbar.request_list", icon: "/icons/list.svg", route: "/offer_request", isSelected: false },
           { title: "dashboard.navbar.student_nav", icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
           { title: "dashboard.navbar.chat_nav", icon: "/icons/chat.svg", route: "/chats", isSelected: false },
           { title: "dashboard.navbar.profile_nav", icon: "/icons/profile.svg", route: "/profile", isSelected: false },
@@ -22,6 +24,7 @@ function NavBar() {
         ]
       : [
           { title: "dashboard.navbar.dashboard_nav", icon: "/icons/dashboard.svg", route: "/dashboard", isSelected: false },
+          { title: "dashboard.navbar.offer_list", icon: "/icons/list.svg", route: "/offer_request", isSelected: false },
           { title: "dashboard.navbar.company_nav", icon: "/icons/datalist.svg", route: "/datalist", isSelected: false },
           { title: "dashboard.navbar.profile_nav", icon: "/icons/profile.svg", route: "/profile", isSelected: false },
           { title: "dashboard.navbar.settings_nav", icon: "/icons/setting.svg", route: "/settings", isSelected: false },
@@ -78,7 +81,7 @@ function NavBar() {
                       }}
                     />
                   </div>
-                  {isExpanded && <p className="">{t(items.title)}</p>}
+                  {isExpanded && <p className="text-nowrap">{t(items.title)}</p>}
                 </NavLink>
               ))}
             </div>

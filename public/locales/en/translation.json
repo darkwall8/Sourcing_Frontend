@@ -131,11 +131,35 @@
             "chat_nav": "Chat",
             "profile_nav": "Profile",
             "settings_nav": "Settings",
+            "add_offer": "Add offer",
+            "request_list": "Request List",
+            "offer_list": "Offer list",
             "": ""
         },
         "chat": {
             "write_your_message": "Write your message",
             "no_message": "No message"
+        },
+        "offer_and_request": {
+            "internship_request": "Received internship requests",
+            "request": "Request",
+            "available_internship_offer": "Available internship offer",
+            "": "",
+            "": ""
+        },
+        "add_offer": {
+            "add_new_offer": "Add new offer",
+            "add_offer": "Add offer",
+            "title": "Offer title",
+            "title_placeholder": "Ex: Backend Developper Node.js",
+            "description": "Description",
+            "description_placeholder": "Describe your mission",
+            "location": "Location",
+            "location_placeholder": "City, country",
+            "duration": "Duration",
+            "duration_placeholder": "Ex: 3 month",
+            "": "",
+            "": ""
         },
         "datalist": {
             "student_list": "Student list",
@@ -183,12 +207,15 @@
             "submit_feedback": "Submit feedback",
             "": ""
         },
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
+        "email": "Email",
+        "country": "Country",
+        "school_level": "School Level",
+        "domain": "Specialization",
+        "preferences": "Preferences",
+        "see_cv": "CV",
+        "see_github": "GitHub",
+        "see_portfolio": "Portfolio",
+        "see_linkedin": "LinkedIn",
         "": ""
     }
 }

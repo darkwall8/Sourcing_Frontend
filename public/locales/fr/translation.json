@@ -128,11 +128,35 @@
             "chat_nav": "Chat",
             "profile_nav": "Profil",
             "settings_nav": "Paramètres",
+            "add_offer": "Ajouter une offre",
+            "request_list": "Liste des requetes",
+            "offer_list": "Liste des offres",
             "": ""
         },
         "chat": {
             "write_your_message": "Ecrivez votre message",
             "no_message": "Aucun message pour le moment"
+        },
+        "offer_and_request": {
+            "internship_request": "Demandes de stage reçues",
+            "request": "Postuler",
+            "available_internship_offer": "Offres de stage disponibles",
+            "": "",
+            "": ""
+        },
+        "add_offer": {
+            "add_new_offer": "Ajouter une nouvelle offre",
+            "add_offer": "Ajouter l'offre",
+            "title": "Titre de l'offre",
+            "title_placeholder": "Ex: Développeur Backend Node.js",
+            "description": "Description",
+            "description_placeholder": "Décrivez brièvement les missions et attentes",
+            "location": "Lieu",
+            "location_placeholder": "Ville, pays",
+            "duration": "Durée",
+            "duration_placeholder": "Ex: 3 mois",
+            "": "",
+            "": ""
         },
         "datalist": {
             "student_list": "Liste des etudiants",
@@ -180,10 +204,15 @@
             "submit_feedback": "Envoyer le commentaire",
             "": ""
         },
-        "": "",
-        "": "",
-        "": "",
-        "": "",
+        "email": "Email",
+        "country": "Pays",
+        "school_level": "Niveau scolaire",
+        "domain": "Spécialisation",
+        "preferences": "Préférences",
+        "see_cv": "Voir le CV",
+        "see_github": "GitHub",
+        "see_portfolio": "Portfolio",
+        "see_linkedin": "LinkedIn",
         "": ""
     }
 }

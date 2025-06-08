@@ -45,7 +45,9 @@ function CompaniesList() {
     return (
         <div className="w-full h-full">
             <DataTable onClickRow={onClickRow} title={t("dashboard.datalist.company_list")} headers={headers} data={data} />
-            <Popup isDisplayed={isDisplayPopUp} onDisplayChange={setIsDisplayPopUp}></Popup>
+            <Popup isDisplayed={isDisplayPopUp} onDisplayChange={setIsDisplayPopUp}>
+                Company card
+            </Popup>
         </div>
     )
 }
