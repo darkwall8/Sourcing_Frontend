@@ -155,8 +155,8 @@
             "location_placeholder": "Ville, pays",
             "duration": "Durée",
             "duration_placeholder": "Ex: 3 mois",
-            "": "",
-            "": ""
+            "domain": "Domaine",
+            "domain_placeholder": "Sélectionnez un domaine"
         },
         "datalist": {
             "student_list": "Liste des etudiants",
@@ -173,6 +173,12 @@
             "company_email": "Email",
             "company_country": "Pays",
             "is_intern_search": "Recherche de stagiaires",
+            "propose_internship": "Proposer un stage",
+            "create_customized_offer": "Souhaitez-vous créer une offre personnalisée ou envoyer une offre existante ?",
+            "create_offer": "Créer une offre personnalisée",
+            "existing_offer": "Choisir une offre existante",
+            "existing_offer_list": "Liste des offres existantes",
+            "": "",
             "": ""
         },
         "enterprise_settings": {
