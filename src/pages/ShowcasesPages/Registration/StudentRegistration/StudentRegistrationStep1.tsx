@@ -40,7 +40,7 @@ function StudentRegistrationStep1( { handleSubmit, stepIndex } : { handleSubmit:
 
     useEffect(() => {
         const api = new API();
-        api.getData("https://restcountries.com/v3.1/all")
+        api.getData("https://restcountries.com/v3.1/all?fields=name,cca2,status,flag,currencies,status")
             .then((res: {
                 name: {
                     common: string,

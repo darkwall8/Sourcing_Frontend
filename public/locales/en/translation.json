@@ -7,6 +7,15 @@
     "register_as_a_student": "Register as a student",
     "register_as_a_company": "Register as a company",
     "continue": "Continue",
+    "legalStatus": {
+        "sarl": "Limited Liability Company",
+        "sa": "Public Limited Company",
+        "sas": "Simplified Joint-stock Company",
+        "snc": "General Partnership",
+        "ei": "Sole Proprietorship",
+        "eurl": "Single-member Limited Liability Company",
+        "gie": "Economic Interest Group"
+    },
     "enterprise": {
         "question": "Are you a company ??",
         "intro": "These features should interest you:",
@@ -115,6 +124,7 @@
         "your_company_intern_preference": "Internship preferences",
         "your_company_internship_type": "Type of internship offered",
         "your_company_internship_duration": "Internship duration",
+        "month": "Month",
         "company_internship_duration_placeholder": "Enter the internship duration",
         "your_company_description": "Company description",
         "your_company_intern_benefit": "Benefits for the intern",

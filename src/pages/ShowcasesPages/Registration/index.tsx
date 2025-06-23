@@ -21,7 +21,7 @@ function Registration(){
             {
                 !isDisplayForm ? (
                     <div className="flex flex-col gap-4 h-full p-4" data-canbetest="true">
-                        <p className="w-full h-1/12 font-semibold text-5xl">{t("student_registration.welcome")} <span className="text-primary">Sourcing</span></p>
+                        <p className="w-full h-1/12 font-semibold text-3xl md:text-5xl">{t("student_registration.welcome")} <span className="text-primary">Sourcing</span></p>
                         <div className="flex flex-col md:flex-row gap-4 w-full h-full">
                             <div className="w-full h-full flex flex-col gap-y-8 items-center justify-between py-8 rounded-xl bg-primary">
                                 <p className="text-2xl text-white w-64 text-center font-semibold">{t("student_registration.register_as_a_student")}</p>
