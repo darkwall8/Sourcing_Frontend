@@ -21,6 +21,8 @@ import ProtectedRoute from './components/layouts/ProtectedRoute.tsx'
 import { AuthProvider } from './utils/Context/AuthContext.tsx'
 import { StudentInscriptionProvider } from "./utils/Context/StudentInscriptionContext.tsx";
 import { CompanyInscriptionProvider } from './utils/Context/CompanyInscriptionContext.tsx';
+import OfferAndRequest from "./pages/ManagementPages/OffersAndRequest/index.tsx";
+import AddOfferForm from "./pages/ManagementPages/AddOfferForm/index.tsx";
 
 createRoot(document.getElementById('root')!).render(
   // <StrictMode>
@@ -52,7 +54,9 @@ createRoot(document.getElementById('root')!).render(
                   <Route path="/dashboard" element={<DashBoard />} />
                   <Route path="/datalist" element={<DataList />} />
                   <Route path="/profile" element={<Profile />} />
-                  <Route path="/setting" element={<Settings />} />
+                  <Route path="/settings" element={<Settings />} />
+                  <Route path="/offer_request" element={<OfferAndRequest />} />
+                  <Route path="/add_offer" element={<AddOfferForm onSubmit={() => null} />} />
                   <Route path="/chats" element={<Chats />} />
                 </Route>
               </Route>

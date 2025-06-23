@@ -131,11 +131,35 @@
             "chat_nav": "Chat",
             "profile_nav": "Profile",
             "settings_nav": "Settings",
+            "add_offer": "Add offer",
+            "request_list": "Request List",
+            "offer_list": "Offer list",
             "": ""
         },
         "chat": {
             "write_your_message": "Write your message",
             "no_message": "No message"
+        },
+        "offer_and_request": {
+            "internship_request": "Received internship requests",
+            "request": "Request",
+            "available_internship_offer": "Available internship offer",
+            "": "",
+            "": ""
+        },
+        "add_offer": {
+            "add_new_offer": "Add new offer",
+            "add_offer": "Add offer",
+            "title": "Offer title",
+            "title_placeholder": "Ex: Backend Developper Node.js",
+            "description": "Description",
+            "description_placeholder": "Describe your mission",
+            "location": "Location",
+            "location_placeholder": "City, country",
+            "duration": "Duration",
+            "duration_placeholder": "Ex: 3 month",
+            "domain": "Domaine",
+            "domain_placeholder": "Select domaine"
         },
         "datalist": {
             "student_list": "Student list",
@@ -152,9 +176,31 @@
             "company_email": "Email",
             "company_country": "Country",
             "is_intern_search": "Looking for interns",
-            "": ""
+            "propose_internship": "Propose internship",
+            "create_customized_offer": "Do you want to create a personalize offer ?",
+            "create_offer": "Create personalize offer",
+            "existing_offer": "To existing offer",
+            "existing_offer_list": "Existing offers list"
         },
-        "profile": {},
+        "enterprise_settings": {
+            "setting1": "Receive notifications from interesting profiles",
+            "setting2": "Receive notifications for these domains",
+            "setting3": "Receive notifications about our new features",
+            "setting4": "Make your profile visible to companies"
+        },
+        "student_settings": {
+            "setting1": "Receive notifications from companies based on your preferences",
+            "setting2": "Receive notifications for these domains",
+            "setting3": "Receive notifications about our new features",
+            "setting4": "Make your profile visible to companies"
+        },
+        "profile": {
+            "update": "Update",
+            "your_last_password": "Last password",
+            "your_new_password": "New password",
+            "last_password_placeholder": "Enter your last password",
+            "new_password_placeholder": "Enter your new password"
+        },
         "settings": {},
         "feedback": {
             "advice": "Give your feedback",
@@ -165,12 +211,15 @@
             "submit_feedback": "Submit feedback",
             "": ""
         },
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
+        "email": "Email",
+        "country": "Country",
+        "school_level": "School Level",
+        "domain": "Specialization",
+        "preferences": "Preferences",
+        "see_cv": "CV",
+        "see_github": "GitHub",
+        "see_portfolio": "Portfolio",
+        "see_linkedin": "LinkedIn",
         "": ""
     }
 }

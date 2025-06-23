@@ -3,7 +3,7 @@ import "./style.css";
 function Logo() {
     return (
         <>
-            <svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
                 <g className="layer" display="inline">
                 <title>Layer 1</title>
                 <line fill="none" id="svg_24" stroke="#0096c7" x1="186.84" x2="210" y1="138.95" y2="113.68"/>

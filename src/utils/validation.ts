@@ -6,8 +6,8 @@ export const isValidEmail = (email: string): boolean => {
 export const isValidPassword = (password: string): boolean => {
     return (
         password.length >= 10 &&
-        /^[A-Z]/.test(password) &&         // commence par une majuscule
-        /[0-9]/.test(password) &&          // contient au moins un chiffre
-        /[^A-Za-z0-9]/.test(password)      // contient au moins un symbole
+        /[A-Z]/.test(password) &&
+        /[0-9]/.test(password) &&
+        /[^A-Za-z0-9]/.test(password)
     );
 };

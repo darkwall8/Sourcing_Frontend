@@ -60,8 +60,8 @@ function CompanyRegistrationStep6( { handleSubmit } : { handleSubmit: (stepIndex
 
 
     return (
-        <div className="flex justify-between h-full">
-            <form className="flex flex-col justify-between h-full">
+        <div className="flex justify-between h-full gap-4">
+            <form className="flex flex-col justify-between h-full text-xs w-full">
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
                         <div className="w-full">
@@ -100,7 +100,7 @@ function CompanyRegistrationStep6( { handleSubmit } : { handleSubmit: (stepIndex
                     <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>
             </form>
-            <div className="">
+            <div className=" md:block hidden">
                 <img src={image} alt="" />
             </div>
         </div>

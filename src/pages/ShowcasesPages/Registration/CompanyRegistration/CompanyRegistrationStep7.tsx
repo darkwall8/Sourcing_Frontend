@@ -44,8 +44,8 @@ function CompanyRegistrationStep7( { handleSubmit } : { handleSubmit: (stepIndex
 
 
     return (
-        <div className="flex justify-between h-full">
-            <form className="flex flex-col justify-between h-full">
+        <div className="flex justify-between h-full gap-4">
+            <form className="flex flex-col justify-between h-full text-xs w-full">
                 <div className="flex flex-col gap-4 justify-between h-full">
                     <div className="flex flex-col gap-4">
                         <InputTextArea label={t("company_registration.your_company_description")} placeholder={t("company_registration.company_description_placeholder")} isRequired={true} value={companyDescription} handleChange={setCompanyDescription} showValidationErrors={isValidatedValues} />
@@ -92,7 +92,7 @@ function CompanyRegistrationStep7( { handleSubmit } : { handleSubmit: (stepIndex
                     <Button label={t("finish")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>
             </form>
-            <div className="">
+            <div className=" md:block hidden">
                 <img src={image} alt="" />
             </div>
         </div>

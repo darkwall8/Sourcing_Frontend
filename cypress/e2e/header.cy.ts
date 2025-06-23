@@ -1,22 +1,26 @@
-describe('header component', () => {
-  it('test header only if exists', () => {
+describe('Header Component', () => {
+  it('Teste le header seulement s\'il existe', () => {
 
-    cy.visit('/')
-    if(cy.url().should("include", "/dashboard")) {
-      //
-    } else {
-      cy.contains("Connectez vous").click();
-      // Should be on a new URL whitch include /login
-      cy.url().should("include", "/login");
-  
-      cy.contains("Sourcing").click();
-      cy.url().should("eq", Cypress.config().baseUrl + "/");
-  
-      cy.contains("Rejoignez nous !").click();
-      // Should be on a new URL whitch include /registration
-      cy.url().should("include", "/registration");
-    }
+    cy.visit('/');
 
+    cy.url().then((currentUrl) => {
+      if (currentUrl.includes("/dashboard")) {
+        // Ajouter ici d'autres vérifications spécifiques au dashboard
+      } else {
+        cy.contains("Connectez vous").should("be.visible").click();
+
+        // Vérifie que l'URL inclut /login
+        cy.url().should("include", "/login");
+
+        cy.contains("Sourcing").should("be.visible").click();
+        cy.url().should("eq", Cypress.config().baseUrl + "/");
+
+        cy.contains("Rejoignez nous !").should("be.visible").click();
+
+        // Vérifie que l'URL inclut /registration
+        cy.url().should("include", "/registration");
+      }
+    });
 
   });
 });
