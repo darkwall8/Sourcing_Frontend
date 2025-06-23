@@ -98,7 +98,7 @@ function CompanyRegistrationStep6( { handleSubmit } : { handleSubmit: (stepIndex
                         <p className="font-semibold text-sm">{t("company_registration.month")}</p>
                     </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 p-2">
                     <Button label={t("preview")} handleClick={() => handleSubmit("prev")} styleIndex={1} isActivated={true} />
                     <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>

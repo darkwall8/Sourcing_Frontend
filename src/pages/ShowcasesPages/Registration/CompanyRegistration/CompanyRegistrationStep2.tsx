@@ -35,7 +35,7 @@ function CompanyRegistrationStep2( { handleSubmit } : { handleSubmit: (stepIndex
                     <InputText label={t("company_registration.your_company_corporate")} placeholder={t("company_registration.company_corporate_placeholder")} isRequired={true} value={companyCorporate} handleChange={setCompanyCorporate} showValidationErrors={isValidatedValues} />
                     <InputText label={t("student_registration.your_password")} type="password" placeholder={t("student_registration.password_placeholder")} isRequired={true} value={companyPassword} handleChange={setCompanyPassword} showValidationErrors={isValidatedValues} />
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 p-2">
                     <Button label={t("preview")} handleClick={() => handleSubmit("prev")} styleIndex={1} isActivated={true} />
                     <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>
