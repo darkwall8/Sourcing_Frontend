@@ -56,7 +56,7 @@ createRoot(document.getElementById('root')!).render(
                   <Route path="/profile" element={<Profile />} />
                   <Route path="/settings" element={<Settings />} />
                   <Route path="/offer_request" element={<OfferAndRequest />} />
-                  <Route path="/add_offer" element={<AddOfferForm />} />
+                  <Route path="/add_offer" element={<AddOfferForm onSubmit={() => null} />} />
                   <Route path="/chats" element={<Chats />} />
                 </Route>
               </Route>
