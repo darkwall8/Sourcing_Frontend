@@ -59,7 +59,7 @@ function NavBar() {
               {menu.map((items, index) => (
                 <NavLink
                   key={index}
-                  className={`flex gap-4 px-2 items-center rounded-md h-12 cursor-pointer transition-colors duration-150 ${
+                  className={`flex gap-4 py-2 items-center rounded-md h-12 cursor-pointer transition-colors duration-150 ${
                     items.isSelected ? "bg-primary text-white" : ""
                   }`}
                   to={items.route}

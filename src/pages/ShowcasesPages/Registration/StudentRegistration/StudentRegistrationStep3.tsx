@@ -39,7 +39,7 @@ function StudentRegistrationStep3( { handleSubmit, stepIndex } : { handleSubmit:
                     <InputText label={t("student_registration.your_portfolio")} placeholder={t("student_registration.portfolio_placeholder")} isRequired={true} value={studentPortfolioLink} handleChange={setStudentPortfolioLink} showValidationErrors={isValidatedValues} />
                     <InputText label={t("student_registration.your_linkedin")} placeholder={t("student_registration.linkedin_placeholder")} isRequired={true} value={studentLinkedInLink} handleChange={setStudentLinkedInLink} showValidationErrors={isValidatedValues} />
                 </div>
-                <div className="flex gap-4 p-2">
+                <div className="flex gap-4 py-2">
                     <Button label={t("preview")} handleClick={() => handleSubmit(stepIndex - 1)} styleIndex={1} isActivated={true} />
                     <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>

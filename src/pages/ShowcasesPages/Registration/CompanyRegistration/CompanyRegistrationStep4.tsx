@@ -44,7 +44,7 @@ function CompanyRegistrationStep4( { handleSubmit } : { handleSubmit: (stepIndex
                     <InputText label={t("company_registration.your_company_commercial_register")} placeholder={t("company_registration.company_commercial_register_placeholder")} isRequired={true} value={companyCommercialRegister} handleChange={setCompanyCommercialRegister} showValidationErrors={isValidatedValues} />
                     <InputDropdown label={t("company_registration.your_company_legal_statut")} placeholder={t("company_registration.company_legal_statut_placeholder")} isRequired={true} value={companyLegalStatut} handleChange={setCompanyLegalStatut} showValidationErrors={isValidatedValues} options={companyLegalStatusList} />
                 </div>
-                <div className="flex gap-4 p-2">
+                <div className="flex gap-4 py-2">
                     <Button label={t("preview")} handleClick={() => handleSubmit("prev")} styleIndex={1} isActivated={true} />
                     <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>
