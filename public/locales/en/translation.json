@@ -124,6 +124,12 @@
     },
     "search": "Search",
     "dashboard": {
+        "student_dashboard": {
+            "key_name": "NAME",
+            "key_probability": "PROBABILITY",
+            "key_post": "POST",
+            "key_date": "DATE"
+        },
         "navbar": {
             "dashboard_nav": "Dashboard",
             "company_nav": "Companies",

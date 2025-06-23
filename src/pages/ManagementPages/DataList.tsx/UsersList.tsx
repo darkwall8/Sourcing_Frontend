@@ -43,6 +43,14 @@ function StudentsList() {
           country: "Israel",
           is_internship_search: false,
         },
+        {
+          name: "KENGNE KENGNE",  
+          surname: "Pierre-Edwin",
+          phone: "(300) 555-1070",
+          email: "pierre.kengne@2027.ucac...",
+          country: "Germany",
+          is_internship_search: true,
+        }
       ];
       const studentExample = {
         name: "Jean",
