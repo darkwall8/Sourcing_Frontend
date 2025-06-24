@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 import DataTable, { HeaderColumn } from "./components/DataTable";
-import { useState } from "react";
-import Popup from "../../../components/common/PopUp";
+// import { useState } from "react";
+// import Popup from "../../../components/common/PopUp";
 
 function CompaniesList() {
 
     const { t } = useTranslation();
-    const [isDisplayPopUp, setIsDisplayPopUp] = useState(false);
+    // const [isDisplayPopUp, setIsDisplayPopUp] = useState(false);
     const headers: HeaderColumn[] = [
         { key: "name", label: t("dashboard.datalist.company_name"), type: "string", searchable: true },
         { key: "domain", label: t("dashboard.datalist.company_domain"), type: "string", searchable: true },
@@ -37,17 +37,17 @@ function CompaniesList() {
         }
     ];
 
-    function onClickRow(rowId: number | string) {
-        setIsDisplayPopUp(true);
-        console.log(rowId);
-    }
+    // function onClickRow(rowId: number | string) {
+    //     setIsDisplayPopUp(true);
+    //     console.log(rowId);
+    // }
 
     return (
         <div className="w-full h-full">
-            <DataTable onClickRow={onClickRow} title={t("dashboard.datalist.company_list")} headers={headers} data={data} />
-            <Popup isDisplayed={isDisplayPopUp} onDisplayChange={setIsDisplayPopUp}>
+            <DataTable onClickRow={() => null} title={t("dashboard.datalist.company_list")} headers={headers} data={data} />
+            {/* <Popup isDisplayed={isDisplayPopUp} onDisplayChange={setIsDisplayPopUp}>
                 Company card
-            </Popup>
+            </Popup> */}
         </div>
     )
 }

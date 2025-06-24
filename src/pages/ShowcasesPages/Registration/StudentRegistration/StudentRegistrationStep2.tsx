@@ -93,7 +93,7 @@ function StudentRegistrationStep2( { handleSubmit, stepIndex } : { handleSubmit:
                         </div>
                     </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 py-2">
                     <Button label={t("preview")} handleClick={() => handleSubmit(stepIndex - 1)} styleIndex={1} isActivated={true} />
                     <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>

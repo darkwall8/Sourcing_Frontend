@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Button from "../../../../components/ui/Button";
-import InputText from "../../../../components/ui/InputText";
 import image from "/images/undraw_new-entries.svg"
 import { useTranslation } from "react-i18next";
 import { useCompanyInscription } from "../../../../utils/Context/CompanyInscriptionContext";
 import AutocompleteInput, { Option } from "../../../../components/ui/AutocompleteInput";
 import Tag from "../../../../components/ui/Tag";
+import InputNumber from "../../../../components/ui/InputNumber";
 
 function CompanyRegistrationStep6( { handleSubmit } : { handleSubmit: (stepIndex: "next" | "prev") => void } ) {
 
@@ -93,9 +93,12 @@ function CompanyRegistrationStep6( { handleSubmit } : { handleSubmit: (stepIndex
                         </div>
                     </div>
                     {/*  */}
-                    <InputText label={t("company_registration.your_company_internship_duration")} placeholder={t("company_registration.company_internship_duration_placeholder")} isRequired={true} value={companyInternShipDuration} handleChange={setCompanyInternShipDuration} showValidationErrors={isValidatedValues} />
+                    <div className="flex items-end gap-2">
+                        <InputNumber label={t("company_registration.your_company_internship_duration")} placeholder={t("company_registration.company_internship_duration_placeholder")} isRequired={true} value={companyInternShipDuration} handleChange={setCompanyInternShipDuration} showValidationErrors={isValidatedValues} />
+                        <p className="font-semibold text-sm">{t("company_registration.month")}</p>
+                    </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 py-2">
                     <Button label={t("preview")} handleClick={() => handleSubmit("prev")} styleIndex={1} isActivated={true} />
                     <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>

@@ -87,7 +87,7 @@ function CompanyRegistrationStep7( { handleSubmit } : { handleSubmit: (stepIndex
                         </div>
                     </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 py-2">
                     <Button label={t("preview")} handleClick={() => handleSubmit("prev")} styleIndex={1} isActivated={true} />
                     <Button label={t("finish")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>

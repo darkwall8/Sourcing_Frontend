@@ -34,7 +34,7 @@ function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit:
                     <InputEmail label={t("student_registration.your_email")} placeholder={t("student_registration.email_placeholder")} isRequired={true} value={studentEmail} handleChange={setStudentEmail} showValidationErrors={isValidatedValues} />
                     <InputText label={t("student_registration.your_password")} type="password" placeholder={t("student_registration.password_placeholder")} isRequired={true} value={studentPassword} handleChange={setStudentPassword} showValidationErrors={isValidatedValues} />
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 py-2">
                     <Button label={t("preview")} handleClick={() => handleSubmit(stepIndex - 1)} styleIndex={1} isActivated={true} />
                     <Button label={t("finish")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>

@@ -33,7 +33,7 @@ function CompanyRegistrationStep5( { handleSubmit } : { handleSubmit: (stepIndex
                     <InputFile label={t("company_registration.your_company_tax__comformity_certificate")} placeholder={t("company_registration.company_tax__comformity_certificate_placeholder")} isRequired={false} file={companyTaxConformityCertificate} handleChange={setCompanyTaxConformityCertificate} />
                     <InputText label={t("company_registration.your_company_statistical_declaration")} placeholder={t("company_registration.company_statistical_declaration_placeholder")} isRequired={true} value={companyStatisticalDeclarationNumber} handleChange={setCompanyStatisticalDeclarationNumber} showValidationErrors={isValidatedValues} />
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 py-2">
                     <Button label={t("preview")} handleClick={() => handleSubmit("prev")} styleIndex={1} isActivated={true} />
                     <Button label={t("continue")} handleClick={() => submit()} styleIndex={0} isActivated={isValid()} />
                 </div>

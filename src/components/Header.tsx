@@ -49,7 +49,7 @@ function Header(){
                             {t("rejoint")}
                         </button>
                     </div>
-                </div> 
+                </div>
             </div>
         </>
     )

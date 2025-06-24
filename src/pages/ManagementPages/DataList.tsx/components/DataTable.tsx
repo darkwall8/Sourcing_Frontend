@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import search from "/icons/search.svg";
 import { useState, useMemo } from "react";
 
@@ -16,8 +17,9 @@ interface TableProps {
 }
 
 function DataTable({ headers, data, title, onClickRow }: TableProps) {
-  const [searchTerm, setSearchTerm] = useState("");
 
+  const  { t } = useTranslation()
+  const [searchTerm, setSearchTerm] = useState("");
   const searchableKeys = headers.filter((h) => h.searchable).map((h) => h.key);
 
   const filteredData = useMemo(() => {
@@ -38,7 +40,7 @@ function DataTable({ headers, data, title, onClickRow }: TableProps) {
             <img className="absolute top-2 left-2" src={search} alt="search" />
             <input
               type="text"
-              placeholder="Rechercher"
+              placeholder={t("search")}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="h-10 pl-10 w-52 border-gray-200 outline-primary border rounded-md"
