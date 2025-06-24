@@ -5,24 +5,24 @@ import StageDomain from './components/StageDomain';
 
 function StudentDashboard() {
   return (
-    <>
-      <div className={"flex m-3 gap-4"}>
+    <div className="overflow-y-auto h-full">
+      <div className={"flex p-3 gap-4 h-1/2"}>
           <div className='w-6/11'>
             <RecentCandidature/>
           </div>
-          <div className="w-5/11 border">
+          <div className="w-5/11">
             <MostAccessibleCompany/>
           </div>
       </div>
-      <div className={"flex w-6/11 -mt-2"}>
-          <div className={"w-3/8 m-3"}>
+      <div className={"flex w-6/11 h-1/2 gap-3 p-3"}>
+          <div className={"w-1/2"}>
             <ComplementInformation/>
           </div>
-          <div className={"w-5/8 m-3"}>
+          <div className={"w-1/2"}>
             <StageDomain/>
           </div>
       </div>
-    </>
+    </div>
   );
 }
 

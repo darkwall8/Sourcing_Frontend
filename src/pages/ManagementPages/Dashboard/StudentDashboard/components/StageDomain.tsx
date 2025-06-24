@@ -12,7 +12,7 @@ function StageDomain() {
 
     return(
         <div className={"bg-white rounded-2xl shadow-md p-3"}>
-            <div className={"flex justify-between items-center"}>
+            <div className={"flex justify-between items-center mb-5.5"}>
                 <p className={"text-[#2B3674] font-medium"}>Stage Domain</p>
                 <div className={"text-[#A3AED0] text-xs border-none"}>
                     <select className={"w-17 outline-none"} value={selectedPeriod} onChange={(e) => setSelectedPeriod(e.target.value)}>
@@ -24,11 +24,11 @@ function StageDomain() {
                     </select>
                 </div>
             </div>
-            <div className={"h-58 flex justify-center items-center"}>
+            <div className={"flex justify-center items-center"}>
                 <PieChart/>
             </div>
         </div>
-)
+    )
 }
 
 export default StageDomain

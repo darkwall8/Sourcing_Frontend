@@ -5,8 +5,8 @@ import file from "/icons/File.svg"
 function ComplementInformation() {
     return(
         <>
-            <div className={"bg-white rounded-2xl shadow-md p-3 pt-5 pb-5 flex items-center gap-2"}>
-                <div className={"w-12 h-12"}>
+            <div className={"bg-white rounded-2xl shadow-md p-3.5 flex items-center gap-4"}>
+                <div className={"w-10 h-10"}>
                     <img src={dollars} alt=""/>
                 </div>
                 <div>
@@ -14,8 +14,8 @@ function ComplementInformation() {
                     <p className={"text-[#2B3674] font-semibold text-xl"}>15</p>
                 </div>
             </div>
-            <div className={"bg-white rounded-2xl shadow-md p-3 pt-5 pb-5 mt-2 mb-2 flex items-center gap-2"}>
-                <div className={"w-12 h-12"}>
+            <div className={"bg-white rounded-2xl shadow-md p-3.5 mt-3 mb-3 flex items-center gap-4"}>
+                <div className={"w-10 h-10"}>
                     <img src={stat} alt=""/>
                 </div>
                 <div>
@@ -23,8 +23,8 @@ function ComplementInformation() {
                     <p className={"text-[#2B3674] font-semibold text-xl"}>8</p>
                 </div>
             </div>
-            <div className={"bg-white rounded-2xl shadow-md p-3 pt-5 pb-5 mt-2 mb-2 flex items-center gap-2"}>
-                <div className={"w-12 h-12"}>
+            <div className={"bg-white rounded-2xl shadow-md p-3.5 mt-3 flex items-center gap-4"}>
+                <div className={"w-10 h-10"}>
                     <img src={file} alt=""/>
                 </div>
                 <div>

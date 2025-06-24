@@ -23,14 +23,14 @@ function RecentCandidature() {
     return(
         <>
             <div className={"bg-white rounded-2xl shadow-md"}>
-                <div className="flex items-center justify-between p-4">
+                <div className="flex items-center justify-between p-3 pb-1">
                     <h1 className="text-[#2B3674] font-medium text-lg">Candidature Recente</h1>
                     <div>
                         <img src={more} alt="more"/>
                     </div>
                 </div>
-                <div>
-                    <DataTable headers={Header} data={enterpriseList} title={""} />
+                <div className="overflow-y-auto">
+                    <DataTable headers={Header} data={enterpriseList} title={""}/>
                 </div>
             </div>
         </>

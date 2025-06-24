@@ -22,7 +22,7 @@ function DataTable({ headers, data }: TableProps) {
                 {headers.map((header) => (
                   <th
                     key={header.key}
-                    className="py-2 text-nowrap font-light px-2 text-sm text-[#A3AED0]"
+                    className="text-nowrap font-light text-sm text-[#A3AED0] py-1 px-2"
                   >
                     {header.label}
                   </th>
@@ -35,7 +35,7 @@ function DataTable({ headers, data }: TableProps) {
                   key={rowIndex}
                 >
                   {headers.map((col) => (
-                    <td key={col.key} className="py-2 px-2">
+                    <td key={col.key} className="py-1 px-2">
                         <span className="text-xs text-nowrap font-semibold text-[#2B3674]">
                           {row[col.key]}
                         </span>
