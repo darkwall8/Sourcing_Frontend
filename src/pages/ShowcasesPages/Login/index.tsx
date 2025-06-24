@@ -32,13 +32,13 @@ function Login() {
                     <p className="font-semibold text-xl text-primary">Sourcing</p>
                 </NavLink>
             </div>
-            <div className="relative md:border-2 md:border-white rounded-full text-xs md:text-base md:p-16">
+            <div className="relative w-full md:w-fit md:border-2 md:border-white rounded-full text-xs md:text-base md:p-16">
                 <div className="hidden w-32 h-32 border-2 z-20 bg-primary border-white md:flex items-center justify-center absolute -top-0 -left-0 rounded-full"><img className="w-16 h-16" src={icon1} alt="icon1" /></div>
                 <div className="hidden w-32 h-32 border-2 z-20 bg-primary border-white md:flex items-center justify-center absolute -top-0 -right-0 rounded-full"><img className="w-16 h-16" src={icon2} alt="icon2" /></div>
                 <div className="hidden w-32 h-32 border-2 z-20 bg-primary border-white md:flex items-center justify-center absolute -bottom-0 -left-0 rounded-full"><img className="w-16 h-16" src={icon3} alt="icon3" /></div>
                 <div className="hidden w-32 h-32 border-2 z-20 bg-primary border-white md:flex items-center justify-center absolute -bottom-0 -right-2 rounded-full"><img className="w-16 h-16" src={icon4} alt="icon4" /></div>
                 {/*  */}
-                <div className="bg-white rounded-2xl p-8 flex flex-col gap-8 relative z-30">
+                <div className="bg-white md:rounded-2xl p-8 flex flex-col gap-8 relative z-30">
                     <img className="absolute -bottom-0 right-0 w-12" src={quaterWorld} alt="icon4" />
                     <p className="text-primary text-3xl font-semibold text-center">{t("login.sign_in")}</p>
                     <form className="flex flex-col gap-4" action="">
