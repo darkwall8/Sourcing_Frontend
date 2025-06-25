@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export interface HeaderColumn {
   key: string;
   label: string;
@@ -7,10 +9,20 @@ export interface HeaderColumn {
 interface TableProps {
   headers: HeaderColumn[];
   data: Record<string, any>[];
-  title: string;
+  onSelectionChange?: (selectedIds: any[]) => void; // facultatif
 }
 
-function DataTable({ headers, data }: TableProps) {
+function DataTable({ headers, data, onSelectionChange }: TableProps) {
+  const [selectedIds, setSelectedIds] = useState<any[]>([]);
+
+  const handleCheckboxChange = (id: any) => {
+    const updated = selectedIds.includes(id)
+      ? selectedIds.filter((i) => i !== id)
+      : [...selectedIds, id];
+
+    setSelectedIds(updated);
+    onSelectionChange?.(updated); // callback vers le parent si défini
+  };
 
   return (
     <div className="flex flex-col h-full justify-between items-end w-full">
@@ -19,6 +31,7 @@ function DataTable({ headers, data }: TableProps) {
           <table className="w-full overflow-hidden">
             <thead className="w-full">
               <tr className="w-full text-left">
+                <th className="py-1 px-2"></th> {/* Colonne checkbox */}
                 {headers.map((header) => (
                   <th
                     key={header.key}
@@ -30,19 +43,28 @@ function DataTable({ headers, data }: TableProps) {
               </tr>
             </thead>
             <tbody className="w-full">
-              {data.map((row, rowIndex) => (
-                <tr
-                  key={rowIndex}
-                >
-                  {headers.map((col) => (
-                    <td key={col.key} className="py-1 px-2">
+              {data.map((row, rowIndex) => {
+                const rowId = row.id || row.Name || rowIndex; // Fallback si pas d’id
+                return (
+                  <tr key={rowId}>
+                    <td className="py-1 px-2">
+                      <input
+                        type="checkbox"
+                        checked={selectedIds.includes(rowId)}
+                        onChange={() => handleCheckboxChange(rowId)}
+                        className="accent-primary"
+                      />
+                    </td>
+                    {headers.map((col) => (
+                      <td key={col.key} className="py-1 px-2">
                         <span className="text-xs text-nowrap font-semibold text-[#2B3674]">
                           {row[col.key]}
                         </span>
-                    </td>
-                  ))}
-                </tr>
-              ))}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

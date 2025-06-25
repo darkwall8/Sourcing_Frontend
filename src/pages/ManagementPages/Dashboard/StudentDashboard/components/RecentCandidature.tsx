@@ -1,4 +1,3 @@
-// import Chart from 'chart.js/auto';
 import more from "/icons/more.svg"
 import {useTranslation} from "react-i18next";
 import DataTable, {HeaderColumn} from "./DataTable";
@@ -13,11 +12,11 @@ function RecentCandidature() {
     ]
 
     const enterpriseList = [
-        {Name: "Camrail", Probability: "17,5%", Post: "DevOps", Date: "24.Jan.2021"},
-        {Name: "Orange", Probability: "10,8%", Post: "Admin système", Date: "12.Jun.2021"},
-        {Name: "Interface", Probability: "21,3%", Post: "Dev junior", Date: "05.Jan.2021"},
-        {Name: "HAVAS", Probability: "31,5%", Post: "Support IT", Date: "07.Mar.2021"},
-        {Name: "Carrefour", Probability: "12,2%", Post: "Consultant IT", Date: "21.Dec.2021"}
+        {id: 1, Name: "Camrail", Probability: "17,5%", Post: "DevOps", Date: "24.Jan.2021"},
+        {id: 2, Name: "Orange", Probability: "10,8%", Post: "Admin système", Date: "12.Jun.2021"},
+        {id: 3, Name: "Interface", Probability: "21,3%", Post: "Dev junior", Date: "05.Jan.2021"},
+        {id: 4, Name: "HAVAS", Probability: "31,5%", Post: "Support IT", Date: "07.Mar.2021"},
+        {id: 5, Name: "Carrefour", Probability: "12,2%", Post: "Consultant IT", Date: "21.Dec.2021"}
     ]
 
     function MoreAction() {
