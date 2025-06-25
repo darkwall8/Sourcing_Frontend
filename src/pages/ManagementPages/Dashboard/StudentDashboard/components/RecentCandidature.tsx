@@ -20,13 +20,20 @@ function RecentCandidature() {
         {Name: "Carrefour", Probability: "12,2%", Post: "Consultant IT", Date: "21.Dec.2021"}
     ]
 
+    function MoreAction() {
+        
+    }
+
     return(
         <>
             <div className={"bg-white rounded-2xl shadow-md"}>
                 <div className="flex items-center justify-between p-3 pb-1">
                     <h1 className="text-[#2B3674] font-medium text-lg">Candidature Recente</h1>
                     <div>
-                        <img src={more} alt="more"/>
+                        <img src={more} alt="more"
+                            className="cursor-pointer"
+                            onClick={MoreAction}
+                        />
                     </div>
                 </div>
                 <div className="overflow-y-auto">
