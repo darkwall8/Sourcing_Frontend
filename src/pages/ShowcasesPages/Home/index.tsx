@@ -53,7 +53,7 @@ function Home() {
                 )}
             </div>
         ) : (
-            <div className="md:overflow-hidden">
+            <div className="md:overflow-hidden max-md:overflow-x-hidden">
                 <div>
                     <EnterpriseSection shouldAnimate={visitedPages.has(0)} />
                     <StudentSection shouldAnimate={visitedPages.has(1)} />
