@@ -47,12 +47,12 @@ function StudentSection({ shouldAnimate }: { shouldAnimate: boolean }) {
                         </div>
                     </div>
                 </div>
-                <div className={`w-90 lg:w-110 aspect-square max-lg:m-auto ${shouldAnimate ? 'lg:animate-fade-left' : ''}`}>
+                <div className={`w-85 lg:w-110 aspect-square max-lg:m-auto ${shouldAnimate ? 'lg:animate-fade-left' : ''}`}>
                     <img src={HomeStudent} alt="Company Image"/>
                 </div>
             </div>
             <div id="student_comment" className={`flex max-md:flex-col justify-between m-auto w-full items-center gap-5 ${shouldAnimate ? 'lg:animate-fade-up' : ''}`}>
-                <div className="flex items-center w-[95vw] m-auto gap-1.5">
+                <div className="flex items-center w-[92vw] m-auto gap-1.5">
                     <div className="w-15 h-15 p-3 aspect-square md:w-20 md:h-20 rounded-full bg-primary-op-40 md:p-4 flex items-center justify-center">
                         <img src={IconStudent} alt="Icon student"/>
                     </div>
@@ -70,7 +70,7 @@ function StudentSection({ shouldAnimate }: { shouldAnimate: boolean }) {
                         <p className="md:text-[13px] lg:text-base"> {t("student.text2")} </p>
                     </div>
                 </div>
-                <div className="flex items-center gap-1.5 w-[95vw] m-auto">
+                <div className="flex items-center gap-1.5 w-[93vw] m-auto">
                     <div className="w-15 h-15 aspect-square p-3 md:w-20 md:h-20 rounded-full bg-primary-op-40 md:p-4 flex items-center justify-center">
                         <img src={IconSchool} alt="Icon school" />
                     </div>
