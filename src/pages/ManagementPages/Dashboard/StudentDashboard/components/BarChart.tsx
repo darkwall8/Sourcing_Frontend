@@ -24,7 +24,7 @@ const BarChart = () => {
                         return gradient;
                     },
                     borderRadius: 5,
-                    barThickness: 30,
+                    barThickness: 8,
                 },
             ]
         }
@@ -69,7 +69,7 @@ const BarChart = () => {
 
     return (
         <>
-            <div className="w-90 h-38.5">
+            <div>
                     <canvas ref={chartRef} />
             </div>
         </>

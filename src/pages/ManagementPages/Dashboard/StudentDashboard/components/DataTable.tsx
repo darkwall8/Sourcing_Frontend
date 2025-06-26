@@ -31,11 +31,11 @@ function DataTable({ headers, data, onSelectionChange }: TableProps) {
           <table className="w-full overflow-hidden">
             <thead className="w-full">
               <tr className="w-full text-left">
-                <th className="py-1 px-2"></th> {/* Colonne checkbox */}
+                <th className="py-1 xl:py-2 px-2"></th> {/* Colonne checkbox */}
                 {headers.map((header) => (
                   <th
                     key={header.key}
-                    className="text-nowrap font-light text-sm text-[#A3AED0] py-1 px-2"
+                    className="text-nowrap font-light text-xs text-[#A3AED0] py-1 px-2"
                   >
                     {header.label}
                   </th>
@@ -47,7 +47,7 @@ function DataTable({ headers, data, onSelectionChange }: TableProps) {
                 const rowId = row.id || row.Name || rowIndex; // Fallback si pas d’id
                 return (
                   <tr key={rowId}>
-                    <td className="py-1 px-2">
+                    <td className="py-1 xl:py-2 px-2">
                       <input
                         type="checkbox"
                         checked={selectedIds.includes(rowId)}
@@ -56,8 +56,8 @@ function DataTable({ headers, data, onSelectionChange }: TableProps) {
                       />
                     </td>
                     {headers.map((col) => (
-                      <td key={col.key} className="py-1 px-2">
-                        <span className="text-xs text-nowrap font-semibold text-[#2B3674]">
+                      <td key={col.key} className="py-1 xl:py-2 px-2">
+                        <span className="text-[10px] text-nowrap font-semibold text-[#2B3674]">
                           {row[col.key]}
                         </span>
                       </td>

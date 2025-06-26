@@ -20,23 +20,23 @@ function RecentCandidature() {
     ]
 
     function MoreAction() {
-        
+
     }
 
     return(
         <>
-            <div className={"bg-white rounded-2xl shadow-md"}>
-                <div className="flex items-center justify-between p-3 pb-1">
-                    <h1 className="text-[#2B3674] font-medium text-lg">Candidature Recente</h1>
+            <div className={""}>
+                <div className="flex items-center justify-between p-3 pb-1 max-lg:pb-0">
+                    <h1 className="text-[#2B3674] font-medium text-lg max-lg:text-base">Candidature Recente</h1>
                     <div>
                         <img src={more} alt="more"
-                            className="cursor-pointer"
-                            onClick={MoreAction}
+                             className="cursor-pointer max-lg:w-7 max-lg:h-7"
+                             onClick={MoreAction}
                         />
                     </div>
                 </div>
-                <div className="overflow-y-auto">
-                    <DataTable headers={Header} data={enterpriseList} title={""}/>
+                <div className="h-fit max-lg:h-37 overflow-auto">
+                    <DataTable headers={Header} data={enterpriseList}/>
                 </div>
             </div>
         </>

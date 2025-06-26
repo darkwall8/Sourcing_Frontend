@@ -45,6 +45,7 @@ const PieChart = () => {
                 li.style.display = 'flex';
                 li.style.flexDirection = 'column';
                 li.style.width= '90px';
+                li.style.width
                 li.style.padding = '4px';
                 li.style.marginTop= '10px';
 
@@ -134,7 +135,7 @@ const PieChart = () => {
     return (
         <>
             <div className="flex justify-center items-center flex-col space-y-1">
-                <div className="w-30">
+                <div className="xl:w-30 max-lg:w-20">
                     <canvas ref={chartRef}/>
                 </div>
                 <div id="legend-container"></div>

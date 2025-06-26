@@ -13,7 +13,7 @@ function StageDomain() {
     return(
         <div className={"bg-white rounded-2xl shadow-md p-3"}>
             <div className={"flex justify-between items-center mb-5.5"}>
-                <p className={"text-[#2B3674] font-medium"}>Stage Domain</p>
+                <p className={"text-[#2B3674] font-medium max-lg:text-sm"}>Stage Domain</p>
                 <div className={"text-[#A3AED0] text-xs border-none"}>
                     <select className={"w-17 outline-none"} value={selectedPeriod} onChange={(e) => setSelectedPeriod(e.target.value)}>
                         {periods.map((p) => (

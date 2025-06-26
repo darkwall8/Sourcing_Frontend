@@ -7,10 +7,10 @@ function MostAccessibleCompany() {
     
 
     return(
-        <div className={"bg-white shadow-md rounded-2xl p-3"}>
+        <div className={""}>
             <div className={"flex flex-col pb-2"}>
                 <div className="flex justify-between items-center">
-                    <p className={"text-[#A3AED0] text-xs"}> Accessible Company </p>
+                    <p className={"text-[#A3AED0] text-xs"}> Most Accessible Company </p>
                     <div className={"flex"}>
                         <div className="flex items-center gap-1">
                             {/* {""="" ? (
@@ -32,10 +32,10 @@ function MostAccessibleCompany() {
                 </div>
                 <div className="flex gap-10">
                     <p className="text-xl text-[#2B3674] font-bold">95</p>
-                    <p className="text-xs text-[#A3AED0] mt-2.5">Candidates</p>
+                    <p className="text-xs text-[#A3AED0] mt-2">Candidates</p>
                 </div>
             </div>
-            <div className="flex justify-center items-center mt-3">
+            <div className=" lg:w-85 xl:w-full max-lg:w-60">
                 <BarChart/>
             </div>
         </div>
