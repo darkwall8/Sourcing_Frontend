@@ -2,15 +2,18 @@ import agl from "/images/agl.jpeg";
 // import drop_up from "/icons/arrow_drop_up.svg";
 // import drop_down from "/icons/arrow_drop_down.svg";
 import BarChart from "./BarChart";
+import { useTranslation } from "react-i18next";
+
 
 function MostAccessibleCompany() {
-    
+
+    const { t } = useTranslation();
 
     return(
-        <div className={""}>
+        <div className={"h-full"}>
             <div className={"flex flex-col pb-2"}>
                 <div className="flex justify-between items-center">
-                    <p className={"text-[#A3AED0] text-xs"}> Most Accessible Company </p>
+                    <p className={"text-[#A3AED0] text-xs"}> {t("dashboard.student_dashboard.Accessible_company.title")} </p>
                     <div className={"flex"}>
                         <div className="flex items-center gap-1">
                             {/* {""="" ? (
@@ -32,10 +35,10 @@ function MostAccessibleCompany() {
                 </div>
                 <div className="flex gap-10">
                     <p className="text-xl text-[#2B3674] font-bold">95</p>
-                    <p className="text-xs text-[#A3AED0] mt-2">Candidates</p>
+                    <p className="text-xs text-[#A3AED0] mt-2">{t("dashboard.student_dashboard.Accessible_company.under_title")} </p>
                 </div>
             </div>
-            <div className=" lg:w-85 xl:w-full max-lg:w-60">
+            <div className=" lg:w-85 xl:w-full max-lg:w-70 h-full">
                 <BarChart/>
             </div>
         </div>

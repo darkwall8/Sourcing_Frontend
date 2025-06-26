@@ -132,10 +132,35 @@
     "search": "Rechercher",
     "dashboard": {
         "student_dashboard": {
-            "key_name": "NOM",
-            "key_probability": "PROBALITE",
-            "key_post": "POSTE",
-            "key_date": "DATE"
+            "Recent_candidature": {
+                "title": "Candidatures Recentes",
+                "key_name": "NOM",
+                "key_probability": "PROBABILITE",
+                "key_post": "POSTE",
+                "key_date": "DATE"
+            },
+            "Accessible_company": {
+                "title": "Companie la plus accessible",
+                "under_title": "Candidats"
+            },
+            "other_information": {
+                "title1": "Stages payant",
+                "title2": "Favoris",
+                "title3": "Requêtes Totales"
+            },
+            "stage_domain": {
+                "period": {
+                    "day": "Journalier",
+                    "week": "Hebdomadaire",
+                    "month": "Mensuel"
+                },
+                "title": "Domaine de stage",
+                "chart": {
+                    "yours": "Votre domaine",
+                    "auxiliary": "Domaine additionnel",
+                    "others": "autres"
+                }
+            }
         },
         "navbar": {
             "dashboard_nav": "Dashboard",

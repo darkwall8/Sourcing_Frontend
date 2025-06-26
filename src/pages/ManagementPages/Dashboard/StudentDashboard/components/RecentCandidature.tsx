@@ -5,10 +5,10 @@ import DataTable, {HeaderColumn} from "./DataTable";
 function RecentCandidature() {
     const { t } = useTranslation();
     const Header: HeaderColumn[] = [
-        {key: "Name", label: t("dashboard.student_dashboard.key_name"), type: "string"},
-        {key: "Probability", label: t("dashboard.student_dashboard.key_probability"), type: "string"},
-        {key: "Post", label: t("dashboard.student_dashboard.key_post"), type: "string"},
-        {key: "Date", label: t("dashboard.student_dashboard.key_date"), type: "string"},
+        {key: "Name", label: t("dashboard.student_dashboard.Recent_candidature.key_name"), type: "string"},
+        {key: "Probability", label: t("dashboard.student_dashboard.Recent_candidature.key_probability"), type: "string"},
+        {key: "Post", label: t("dashboard.student_dashboard.Recent_candidature.key_post"), type: "string"},
+        {key: "Date", label: t("dashboard.student_dashboard.Recent_candidature.key_date"), type: "string"},
     ]
 
     const enterpriseList = [
@@ -27,7 +27,7 @@ function RecentCandidature() {
         <>
             <div className={""}>
                 <div className="flex items-center justify-between p-3 pb-1 max-lg:pb-0">
-                    <h1 className="text-[#2B3674] font-medium text-lg max-lg:text-base">Candidature Recente</h1>
+                    <h1 className="text-[#2B3674] font-medium text-lg max-lg:text-base">{t("dashboard.student_dashboard.Recent_candidature.title")}</h1>
                     <div>
                         <img src={more} alt="more"
                              className="cursor-pointer max-lg:w-7 max-lg:h-7"
@@ -35,7 +35,7 @@ function RecentCandidature() {
                         />
                     </div>
                 </div>
-                <div className="h-fit max-lg:h-37 overflow-auto">
+                <div className="h-full overflow-auto max-md:h-fit">
                     <DataTable headers={Header} data={enterpriseList}/>
                 </div>
             </div>

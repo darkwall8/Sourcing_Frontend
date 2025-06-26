@@ -1,9 +1,13 @@
 import { useEffect, useRef } from "react";
 import { Chart, PieController, ArcElement, Tooltip, Legend } from "chart.js";
+import {useTranslation} from "react-i18next";
 
 Chart.register(PieController, ArcElement, Tooltip, Legend);
 
 const PieChart = () => {
+
+    const { t }= useTranslation()
+
     const chartRef = useRef<HTMLCanvasElement>(null);
     const chartInstance = useRef<Chart<"pie"> | null>(null);
 
@@ -43,10 +47,8 @@ const PieChart = () => {
                 li.style.justifyContent= 'center';
                 li.style.cursor = 'pointer';
                 li.style.display = 'flex';
-                li.style.flexDirection = 'column';
-                li.style.width= '90px';
-                li.style.width
-                li.style.padding = '4px';
+                li.style.width= 'fit-content';
+                li.style.padding = '2px';
                 li.style.marginTop= '10px';
 
                 li.onclick = () => {
@@ -92,7 +94,11 @@ const PieChart = () => {
     useEffect(() => {
 
         const data = {
-            labels: ["Your domain", "Auxiliary domain", "Other"],
+            labels: [
+                t("dashboard.student_dashboard.stage_domain.chart.yours"),
+                t("dashboard.student_dashboard.stage_domain.chart.auxiliary"),
+                t("dashboard.student_dashboard.stage_domain.chart.others")
+            ],
             datasets: [
                 {
                     data: [68, 25, 7],
@@ -135,7 +141,7 @@ const PieChart = () => {
     return (
         <>
             <div className="flex justify-center items-center flex-col space-y-1">
-                <div className="xl:w-30 max-lg:w-20">
+                <div className="xl:w-30 max-xl:w-20">
                     <canvas ref={chartRef}/>
                 </div>
                 <div id="legend-container"></div>

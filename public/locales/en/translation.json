@@ -135,11 +135,37 @@
     "search": "Search",
     "dashboard": {
         "student_dashboard": {
-            "key_name": "NAME",
-            "key_probability": "PROBABILITY",
-            "key_post": "POST",
-            "key_date": "DATE"
+            "Recent_candidature": {
+                "title": "Recents Candidatures",
+                "key_name": "NAME",
+                "key_probability": "PROBABILITY",
+                "key_post": "POST",
+                "key_date": "DATE"
+            },
+            "Accessible_company": {
+                "title": "Most Accessible Company",
+                "under_title": "Candidates"
+            },
+            "other_information": {
+                "title1": "Paid internship",
+                "title2": "Favorites",
+                "title3": "Total Request"
+            },
+            "stage_domain": {
+                "period": {
+                    "day": "Daily",
+                    "week": "Weekly",
+                    "month": "Monthly"
+                },
+                "title": "Stage Domain",
+                "chart": {
+                    "yours": "Your domain",
+                    "auxiliary": "Auxiliary domain",
+                    "others": "others"
+                }
+            }
         },
+        "company_dashboard": {},
         "navbar": {
             "dashboard_nav": "Dashboard",
             "company_nav": "Companies",
