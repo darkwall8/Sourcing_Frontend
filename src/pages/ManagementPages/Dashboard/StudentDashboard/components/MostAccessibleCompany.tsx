@@ -10,10 +10,10 @@ function MostAccessibleCompany() {
     const { t } = useTranslation();
 
     return(
-        <div className={"h-full"}>
+        <div className={"h-full w-full"}>
             <div className={"flex flex-col pb-2"}>
                 <div className="flex justify-between items-center">
-                    <p className={"text-[#A3AED0] text-xs"}> {t("dashboard.student_dashboard.Accessible_company.title")} </p>
+                    <p className={"text-[#A3AED0] text-xs 2xl:text-base"}> {t("dashboard.student_dashboard.Accessible_company.title")} </p>
                     <div className={"flex"}>
                         <div className="flex items-center gap-1">
                             {/* {""="" ? (
@@ -34,11 +34,11 @@ function MostAccessibleCompany() {
                     </div>
                 </div>
                 <div className="flex gap-10">
-                    <p className="text-xl text-[#2B3674] font-bold">95</p>
-                    <p className="text-xs text-[#A3AED0] mt-2">{t("dashboard.student_dashboard.Accessible_company.under_title")} </p>
+                    <p className="text-xl text-[#2B3674] font-bold 2xl:text-2xl ">95</p>
+                    <p className="text-xs text-[#A3AED0] mt-2 2xl:text-base">{t("dashboard.student_dashboard.Accessible_company.under_title")} </p>
                 </div>
             </div>
-            <div className=" lg:w-85 xl:w-full max-lg:w-70 h-full">
+            <div className=" lg:w-85 2xl:w-full max-lg:w-70 p-2">
                 <BarChart/>
             </div>
         </div>

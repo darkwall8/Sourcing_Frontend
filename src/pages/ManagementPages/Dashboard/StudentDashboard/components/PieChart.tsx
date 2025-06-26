@@ -43,14 +43,7 @@ const PieChart = () => {
 
             items.forEach((item: any) => {
                 const li = document.createElement('li');
-                li.style.alignItems = 'center';
-                li.style.justifyContent= 'center';
-                li.style.cursor = 'pointer';
-                li.style.display = 'flex';
-                li.style.width= 'fit-content';
-                li.style.padding = '2px';
-                li.style.marginTop= '10px';
-
+                li.className = 'flex items-center justify-center cursor-pointer w-fit p-1 mt-2 sm:flex-col';
                 li.onclick = () => {
                     const {type} = chart.config;
                     if (type === 'pie' || type === 'doughnut') {
@@ -70,16 +63,12 @@ const PieChart = () => {
                 boxSpan.style.borderWidth = item.lineWidth + 'px';
                 boxSpan.style.display = 'inline-block';
                 boxSpan.style.flexShrink = "0";
-                boxSpan.style.height = '13px';
-                boxSpan.style.width = '13px';
+                boxSpan.style.width = window.innerHeight < 1536 ? '13px': '15px';
+                boxSpan.style.height = window.innerWidth < 1536 ? '13px': '15px';
 
                 // Text
                 const textContainer = document.createElement('p');
-                textContainer.style.color = item.fontColor;
-                textContainer.style.fontSize= "9.5px";
-                textContainer.style.margin = "0";
-                textContainer.style.padding = "0";
-                textContainer.style.textDecoration = item.hidden ? 'line-through' : '';
+                textContainer.className = 'text-[9.5px] m-0 p-0 2xl:text-base 2xl:p-1';
 
                 const text = document.createTextNode(item.text);
                 textContainer.appendChild(text);
@@ -141,7 +130,7 @@ const PieChart = () => {
     return (
         <>
             <div className="flex justify-center items-center flex-col space-y-1">
-                <div className="xl:w-30 max-xl:w-20">
+                <div className="xl:w-30 max-xl:w-20 2xl:w-40">
                     <canvas ref={chartRef}/>
                 </div>
                 <div id="legend-container"></div>

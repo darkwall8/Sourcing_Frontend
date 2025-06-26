@@ -16,9 +16,9 @@ function StageDomain() {
 
     return(
         <div className={"bg-white rounded-2xl shadow-md p-3"}>
-            <div className={"flex justify-between items-center mb-5.5"}>
-                <p className={"text-[#2B3674] font-medium max-lg:text-sm"}>{t("dashboard.student_dashboard.stage_domain.title")}</p>
-                <div className={"text-[#A3AED0] text-xs border-none"}>
+            <div className={"flex justify-between items-center mb-5.5 2xl:mb-7"}>
+                <p className={"text-[#2B3674] font-medium max-lg:text-sm 2xl:text-xl"}>{t("dashboard.student_dashboard.stage_domain.title")}</p>
+                <div className={"text-[#A3AED0] text-xs border-none 2xl:text-base"}>
                     <select className={"w-fit outline-none"} value={selectedPeriod} onChange={(e) => setSelectedPeriod(e.target.value)}>
                         {periods.map((p) => (
                             <option key={p.id} value={p.name}>

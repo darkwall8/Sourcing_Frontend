@@ -223,12 +223,14 @@
             "": ""
         },
         "enterprise_settings": {
+            "title": "PARAMETRES GENERAUX",
             "setting1": "Recevoir des notifications des profils interessants",
             "setting2": "Recevoir des notifications pour ces domaines",
             "setting3": "Recevoir des notification de nos nouveautes",
             "setting4": "Rendre votre profil visible par les entreprises"
         },
         "student_settings": {
+            "title": "PARAMETRES GENERAUX",
             "setting1": "Recevoir des notifications d'entreprises selon vos préférences",
             "setting2": "Recevoir des notifications pour ces domaines",
             "setting3": "Recevoir des notification de nos nouveautes",

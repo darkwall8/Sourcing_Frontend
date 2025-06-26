@@ -28,7 +28,7 @@ function CompanySettings() {
                     <img src={settings_icon} alt="icon settings"
                          className={"w-6 max-lg:w-5"}
                     />
-                    <p className={"font-bold max-lg:text-sm"}>PARAMETRES GENERAUX</p>
+                    <p className={"font-bold max-lg:text-sm"}>{t("dashboard.enterprise_settings.title")}</p>
                 </div>
                 <div className={"w-62 max-lg:w-49 border-2 rounded border-primary -mb-0.5 z-1"}></div>
                 <div className={"w-200 max-lg:w-150 border rounded border-gray-200"}></div>

@@ -28,7 +28,7 @@ function StudentSettings() {
                     <img src={settings_icon} alt="icon settings"
                          className={"w-6 max-lg:w-5"}
                     />
-                    <p className={"text-primary font-bold max-lg:text-sm"}>PARAMETRES GENERAUX</p>
+                    <p className={"text-primary font-bold max-lg:text-sm"}>{t("dashboard.student_settings.title")}</p>
                 </div>
                 <div className={"w-62 max-lg:w-49 max-lg:border-2 max-lg:-mt-1 border-3 rounded border-primary -mt-1.5"}></div>
             </div>

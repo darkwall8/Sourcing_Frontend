@@ -27,7 +27,7 @@ function RecentCandidature() {
         <>
             <div className={""}>
                 <div className="flex items-center justify-between p-3 pb-1 max-lg:pb-0">
-                    <h1 className="text-[#2B3674] font-medium text-lg max-lg:text-base">{t("dashboard.student_dashboard.Recent_candidature.title")}</h1>
+                    <h1 className="text-[#2B3674] font-medium text-lg max-lg:text-base 2xl:text-2xl">{t("dashboard.student_dashboard.Recent_candidature.title")}</h1>
                     <div>
                         <img src={more} alt="more"
                              className="cursor-pointer max-lg:w-7 max-lg:h-7"

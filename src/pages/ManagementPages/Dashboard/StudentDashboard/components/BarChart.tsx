@@ -69,7 +69,7 @@ const BarChart = () => {
 
     return (
         <>
-            <div>
+            <div className={"2xl:w-xl"}>
                     <canvas ref={chartRef} />
             </div>
         </>

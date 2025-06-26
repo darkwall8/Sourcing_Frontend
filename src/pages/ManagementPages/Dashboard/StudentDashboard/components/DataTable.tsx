@@ -35,7 +35,7 @@ function DataTable({ headers, data, onSelectionChange }: TableProps) {
                 {headers.map((header) => (
                   <th
                     key={header.key}
-                    className="text-nowrap font-light text-xs text-[#A3AED0] py-1 px-2"
+                    className="text-nowrap font-light text-xs 2xl:text-base text-[#A3AED0] py-1 px-2"
                   >
                     {header.label}
                   </th>
@@ -57,7 +57,7 @@ function DataTable({ headers, data, onSelectionChange }: TableProps) {
                     </td>
                     {headers.map((col) => (
                       <td key={col.key} className="py-1 xl:py-2 px-2">
-                        <span className="text-[10px] text-nowrap font-semibold text-[#2B3674]">
+                        <span className="text-[10px] 2xl:text-sm text-nowrap font-semibold text-[#2B3674]">
                           {row[col.key]}
                         </span>
                       </td>
