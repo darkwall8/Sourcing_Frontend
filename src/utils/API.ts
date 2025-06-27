@@ -1,11 +1,15 @@
 import { LocalStorageManager } from "./functions/LocalStorageManager";
 
 export default class API {
-  private _devApiUrl: string = "http://localhost:";
-  private _imagePath: string = "http://localhost:/"
+  private _devApiUrl: string = "https://api-gatewaysourcing-production.up.railway.app";
+  private _imagePath: string = "https://api-gatewaysourcing-production.up.railway.app/";
+  private _authUrl: string = "https://ftd-auth-gateway-production.up.railway.app";
 
   public get apiUrl() {
     return this._devApiUrl;
+  }
+  public get authUrl() {
+    return this._authUrl;
   }
   public get imagePath() {
     return this._imagePath;
@@ -28,7 +32,7 @@ export default class API {
 
   async postData(
     url: string,
-    data?: JSON | FormData,
+    data?: Record<string, unknown> | FormData,
     isMultipart?: boolean
   ) {
     let response: Response;
@@ -57,7 +61,7 @@ export default class API {
 
   async putData(
     url: string,
-    data: JSON | FormData,
+    data: Record<string, unknown> | FormData,
     isMultipart?: boolean
   ) {
     let response: Response;

@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
+import API from "../API";
 
 interface AuthContextType {
   isAuthenticated: boolean;
@@ -11,10 +12,29 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [accountRole, setAccountRole] = useState<"student" | "company">("student")
   const login = () => setIsAuthenticated(true);
   const logout = () => setIsAuthenticated(false);
+  const api = new API();
+
+  useEffect(() => {
+    // api.postData(api.authUrl + "/api/auth/register", {
+
+    // }, false)
+    fetch(api.authUrl + "/api/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-api-key": "sourcing_key_ftd237sourcingkey"
+      }
+    })
+      .then((res) => {
+        console.log(res)
+      }).catch((err) => {
+        throw new Error(err);
+      })
+  }, []);
 
   return (
     <AuthContext.Provider value={{ isAuthenticated, login, logout, accountRole, setAccountRole }}>
