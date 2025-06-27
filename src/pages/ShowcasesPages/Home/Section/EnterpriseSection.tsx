@@ -9,10 +9,9 @@ function EnterpriseSection({ shouldAnimate }: { shouldAnimate: boolean }) {
     const { t } = useTranslation();
 
     return (
-        <div id="enterprise" className="flex flex-col justify-between h-full px-6 py-4">
-
+        <div id="enterprise" className="flex flex-col justify-between h-full px-6 py-4 max-md:space-y-15">
             <div id="enterprise_presentation" className="flex flex-col justify-between items-center lg:space-x-15 xl:space-x-50 md:flex-row">
-                <div className={`w-100 lg:w-120 aspect-square max-md:m-auto ${shouldAnimate ? 'xl:animate-fade-right' : ''}`}>
+                <div className={`w-90 lg:w-120 aspect-square max-md:m-auto ${shouldAnimate ? 'xl:animate-fade-right' : ''}`}>
                     <img src={HomeCompany} alt="Company Image"/>
                 </div>
                 <div id="enterprise_text" className={`flex flex-col gap-7 justify-center max-lg:items-center max-lg:m-auto md:w-100 lg:w-150 ${shouldAnimate ? 'xl:animate-fade-left' : ''}`}>
@@ -55,7 +54,7 @@ function EnterpriseSection({ shouldAnimate }: { shouldAnimate: boolean }) {
                         <p className="md:text-[13px] lg:text-base"> {t("enterprise.text1")} </p>
                     </div>
                 </div>
-                <div className="flex items-center w-[95vw] m-auto gap-1.5">
+                <div className="flex items-center w-[92vw] m-auto gap-1.5">
                     <div className="aspect-square w-15 h-15 p-3 md:w-20 md:h-20 rounded-full bg-primary-op-40 md:p-4 flex items-center justify-center">
                         <img src={IconHappy} alt="Icon happy" />
                     </div>
