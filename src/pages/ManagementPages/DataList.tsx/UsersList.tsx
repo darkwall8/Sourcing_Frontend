@@ -12,7 +12,7 @@ function StudentsList() {
   const [isDisplayOfferChoicePopup, setIsDisplayOfferChoicePopup] = useState(false);
   const [isDisplayOfferFormPopup, setIsDisplayOfferFormPopup] = useState(false);
   const [isDisplayOfferListPopup, setIsDisplayOfferListPopup] = useState(false);
-  const [selectedStudentName, setSelectedStudentName] = useState("");
+  // const [selectedStudentName, setSelectedStudentName] = useState("");
   const [selectedStudentEmail, setSelectedStudentEmail] = useState("");
 
   const headers: HeaderColumn[] = [
@@ -70,7 +70,7 @@ function StudentsList() {
     setIsDisplayProfilePopup(true);
     const student = data.find((_, idx) => idx === Number(rowId));
     if (student) {
-      setSelectedStudentName(`${student.name} ${student.surname}`);
+      // setSelectedStudentName(`${student.name} ${student.surname}`);
       setSelectedStudentEmail(student.email);
     }
   }
@@ -83,7 +83,7 @@ function StudentsList() {
 
   function handleSendExistingOffer(offerId: number) {
     console.log(`Offre existante ${offerId} envoyée à ${selectedStudentEmail}`);
-    setIsDisplayOfferListPopup(false);
+    // setIsDisplayOfferListPopup(false);
   }
 
   return (

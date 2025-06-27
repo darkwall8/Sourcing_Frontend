@@ -103,6 +103,8 @@
         "company_email_placeholder": "Enter the email address",
         "your_company_addresse": "Company address",
         "your_company_website": "Website (optional)",
+        "your_company_size": "Employee Size",
+        "company_size_placeholder": "Enter employee Size",
         "your_company_corporate": "Company representative",
         "company_addresse_placeholder": "Enter the company address",
         "company_website_placeholder": "Enter the website URL",

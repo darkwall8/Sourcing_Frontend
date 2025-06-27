@@ -8,16 +8,43 @@ import { useCompanyInscription } from "../../../../utils/Context/CompanyInscript
 import Tag from "../../../../components/ui/Tag";
 import AutocompleteInput, { Option } from "../../../../components/ui/AutocompleteInput";
 import InputTextArea from "../../../../components/ui/InputTextarea";
+import API from "../../../../utils/API";
+import { useNavigate } from "react-router-dom";
 
-function CompanyRegistrationStep7( { handleSubmit } : { handleSubmit: (stepIndex: "next" | "prev") => void } ) {
+function CompanyRegistrationStep7({ handleSubmit }: { handleSubmit: (stepIndex: "next" | "prev") => void }) {
 
     const { t } = useTranslation();
-    const { companyDescription, companyInternBenefit, hasInternOpportunity, setCompanyDescription, setCompanyInternBenefit, setHasInternOpportunity } = useCompanyInscription();
+    const {
+        companyName,
+        companyPhoneNumber,
+        companyDomain,
+        companyEmail,
+        companyAdresse,
+        companyWebSite,
+        companyCorporate,
+        companyRCCM,
+        companyNIU,
+        companyCommercialRegister,
+        companyLegalStatut,
+        companyTaxConformityCertificate,
+        companyStatisticalDeclarationNumber,
+        companyInternShipDuration,
+        companyDescription,
+        companyInternBenefit,
+        hasInternOpportunity,
+        companyPassword,
+        companySize,
+        setCompanyDescription,
+        setCompanyInternBenefit,
+        setHasInternOpportunity
+    } = useCompanyInscription();
 
-    const [isValidatedValues, setIsValidatedValues] =useState(false);
+    const [isValidatedValues, setIsValidatedValues] = useState(false);
     const isValid = () => {
         return !!companyDescription.trim() && companyInternBenefit.length > 0;
     };
+    const naviguate = useNavigate();
+    const api = new API();
     const internBenefitList = [
         {
             label: "frontend",
@@ -29,13 +56,62 @@ function CompanyRegistrationStep7( { handleSubmit } : { handleSubmit: (stepIndex
         setIsValidatedValues(true);
         if (isValid()) {
             handleSubmit("next");
+            api.postData(api.authUrl + "/api/auth/register", {
+                email: companyEmail,
+                password: companyPassword,
+                userName: companyName
+            }, false).then((res) => {
+                console.log(res)
+                if (res.token) {
+                    const data = {
+                        user: {
+                            name: companyName,
+                            email: companyEmail,
+                            profile: companyDomain,
+                            roleId: "5caea3d5-8e64-4ee4-9b7c-2fb8ac77f94f",
+                            hasPremium: false,
+                            isActivated: true
+                        },
+                        companyInfo: {
+                         userEmail: companyEmail,
+                         companyName: companyName,
+                         companyActivitySectorId: companyDomain,
+                         companySize: companySize,
+                         website: companyWebSite,
+                         description: companyDescription,
+                         address: companyAdresse,
+                         contactPhone: companyPhoneNumber,
+                         companyCorporate: companyCorporate,
+                         companyRCCM: companyRCCM,
+                         companyNIU: companyNIU,
+                         companyCommercialRegister: companyCommercialRegister,
+                         companyLegalStatus: companyLegalStatut,
+                         companyTaxConformityCertificate: companyTaxConformityCertificate,
+                         companyStaticDeclarationNumber: companyStatisticalDeclarationNumber,
+                         companyInternshipDuration: companyInternShipDuration,
+                         companyHasInternOpportunity: companyInternBenefit
+                        }
+                    }
+                    api.postData(api.apiUrl + "/api/service/database/new/company", data, false)
+                        .then((res) => {
+                            console.log(res);
+                            // 
+                            alert("Compte cree avec success")
+                            naviguate("/login")
+                        }).catch((err) => {
+                            throw new Error(err);
+                        })
+                }
+            }).catch((err) => {
+                throw new Error(err);
+            })
         } else {
             console.warn("Validation failed");
         }
     }
 
     function updatePreferenceList(option: Option) {
-        if(!companyInternBenefit.includes(option.value)){
+        if (!companyInternBenefit.includes(option.value)) {
             setCompanyInternBenefit([...companyInternBenefit, option.value]);
         } else {
             setCompanyInternBenefit([...companyInternBenefit.filter(item => item !== option.value)]);
@@ -50,7 +126,7 @@ function CompanyRegistrationStep7( { handleSubmit } : { handleSubmit: (stepIndex
                     <div className="flex flex-col gap-4">
                         <InputTextArea label={t("company_registration.your_company_description")} placeholder={t("company_registration.company_description_placeholder")} isRequired={true} value={companyDescription} handleChange={setCompanyDescription} showValidationErrors={isValidatedValues} />
                         <div>
-                            <p>{ t("company_registration.your_company_intern_benefit") }</p>
+                            <p>{t("company_registration.your_company_intern_benefit")}</p>
                             {/*  */}
                             <div className="flex flex-col gap-2">
                                 <div className="w-full">
@@ -61,7 +137,7 @@ function CompanyRegistrationStep7( { handleSubmit } : { handleSubmit: (stepIndex
                                         internBenefitList.filter((offer) => companyInternBenefit.some((studentOffer => offer.value.includes(studentOffer)))).map((element) => (
                                             <Tag isCloseButton={true} onClick={() => {
                                                 setCompanyInternBenefit([...companyInternBenefit.filter(item => item !== element.value)]);
-                                            }}  key={element.value} label={t(element.label)} />
+                                            }} key={element.value} label={t(element.label)} />
                                         ))
                                     }
                                 </div>
@@ -69,17 +145,17 @@ function CompanyRegistrationStep7( { handleSubmit } : { handleSubmit: (stepIndex
                         </div>
                     </div>
                     <div className="py-8">
-                        <p>{ t("company_registration.your_company_has_opportunity_after_internship") }</p>
+                        <p>{t("company_registration.your_company_has_opportunity_after_internship")}</p>
                         <div className="flex gap-8">
                             <div onClick={() => setHasInternOpportunity(true)} className="flex gap-2 justify-center items-center cursor-pointer">
-                                <p>{ t("yes") }</p>
+                                <p>{t("yes")}</p>
                                 <div className={`${hasInternOpportunity ? "bg-primary" : "bg-white border-2"} w-6 h-6 flex items-center justify-center rounded-md transition-all duration-150 ease-in-out`}>
                                     <img src={check} alt="check" />
                                 </div>
                             </div>
                             {/*  */}
                             <div onClick={() => setHasInternOpportunity(false)} className="flex gap-2 justify-center items-center cursor-pointer">
-                                <p>{ t("no") }</p>
+                                <p>{t("no")}</p>
                                 <div className={`${!hasInternOpportunity ? "bg-primary" : "bg-white border-2"} w-6 h-6 flex items-center justify-center rounded-md transition-all duration-150 ease-in-out`}>
                                     <img src={check} alt="check" />
                                 </div>

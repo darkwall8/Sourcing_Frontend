@@ -108,6 +108,8 @@
         "company_location_placeholder": "Entrez la localisation de l'entreprise",
         "your_company_RCCM": "Numéro RCCM",
         "your_company_NIU": "Numéro NIU",
+        "your_company_size": "Nombre d'employee",
+        "company_size_placeholder": "Entrez le nombre d'employees",
         "your_company_commercial_register": "Registre de commerce",
         "your_company_legal_statut": "Statut juridique",
         "company_RCCM_placeholder": "Entrez le numéro RCCM",

@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 import API from "../API";
+import { LocalStorageManager } from "../functions/LocalStorageManager";
 
 interface AuthContextType {
   isAuthenticated: boolean;
@@ -22,18 +23,29 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     // api.postData(api.authUrl + "/api/auth/register", {
 
     // }, false)
-    fetch(api.authUrl + "/api/auth/register", {
+    fetch(api.authUrl + "/authenticate/app", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "X-api-key": "sourcing_key_ftd237sourcingkey"
       }
     })
-      .then((res) => {
-        console.log(res)
-      }).catch((err) => {
-        throw new Error(err);
-      })
+    .then((res) => res.json())
+    .then((res: {
+      data: {
+        expiresAt: number;
+        expiresIn: number;
+        token: string;
+      },
+      message: string;
+      status: string;
+    }) => {
+      console.log(res);
+      LocalStorageManager.setItem("token", res.data.token);
+    })
+    .catch((err) => {
+      throw new Error(err);
+    });
   }, []);
 
   return (

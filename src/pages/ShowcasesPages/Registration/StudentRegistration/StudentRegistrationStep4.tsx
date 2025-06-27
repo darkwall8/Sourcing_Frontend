@@ -7,11 +7,12 @@ import { useTranslation } from "react-i18next";
 import InputEmail from "../../../../components/ui/InputEmail";
 import { isValidEmail, isValidPassword } from "../../../../utils/validation";
 import API from "../../../../utils/API";
-import { LocalStorageManager } from "../../../../utils/functions/LocalStorageManager";
+import { useNavigate } from "react-router-dom";
 
 function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit: (stepIndex: number) => void, stepIndex: number } ) {
 
     const { t } = useTranslation();
+    const naviguate = useNavigate();
     const api = new API();
     const {
         studentName,
@@ -37,6 +38,7 @@ function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit:
 
     function submit() {
         setIsValidatedValues(true);
+        console.log(isValid())
         if (isValid()) {
             handleSubmit(stepIndex + 1);
             api.postData(api.authUrl + "/api/auth/register", {
@@ -44,7 +46,6 @@ function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit:
                 password: studentPassword,
                 userName: studentName
             }, false).then((res) => {
-                LocalStorageManager.setItem("token", res.token)
                 console.log(res)
                 if(res.token) {
                     const data = {
@@ -71,6 +72,9 @@ function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit:
                     api.postData(api.apiUrl + "/api/service/database/new/student", data, false)
                     .then((res) => {
                         console.log(res);
+                        // TO DO
+                        alert("Compte cree avec success")
+                        naviguate("/login")
                     }).catch((err) => {
                         throw new Error(err);
                     })
@@ -79,6 +83,7 @@ function StudentRegistrationStep4( { handleSubmit, stepIndex } : { handleSubmit:
                 throw new Error(err);
             })
         } else {
+            setIsValidatedValues(false);
             console.warn("Validation failed");
         }
     }
