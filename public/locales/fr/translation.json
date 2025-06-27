@@ -131,6 +131,37 @@
     },
     "search": "Rechercher",
     "dashboard": {
+        "student_dashboard": {
+            "Recent_candidature": {
+                "title": "Candidatures Recentes",
+                "key_name": "NOM",
+                "key_probability": "PROBABILITE",
+                "key_post": "POSTE",
+                "key_date": "DATE"
+            },
+            "Accessible_company": {
+                "title": "Companie la plus accessible",
+                "under_title": "Candidats"
+            },
+            "other_information": {
+                "title1": "Stages payant",
+                "title2": "Favoris",
+                "title3": "Requêtes Totales"
+            },
+            "stage_domain": {
+                "period": {
+                    "day": "Journalier",
+                    "week": "Hebdomadaire",
+                    "month": "Mensuel"
+                },
+                "title": "Domaine de stage",
+                "chart": {
+                    "yours": "Votre domaine",
+                    "auxiliary": "Domaine additionnel",
+                    "others": "autres"
+                }
+            }
+        },
         "navbar": {
             "dashboard_nav": "Dashboard",
             "company_nav": "Entreprises",
@@ -192,12 +223,14 @@
             "": ""
         },
         "enterprise_settings": {
+            "title": "PARAMETRES GENERAUX",
             "setting1": "Recevoir des notifications des profils interessants",
             "setting2": "Recevoir des notifications pour ces domaines",
             "setting3": "Recevoir des notification de nos nouveautes",
             "setting4": "Rendre votre profil visible par les entreprises"
         },
         "student_settings": {
+            "title": "PARAMETRES GENERAUX",
             "setting1": "Recevoir des notifications d'entreprises selon vos préférences",
             "setting2": "Recevoir des notifications pour ces domaines",
             "setting3": "Recevoir des notification de nos nouveautes",

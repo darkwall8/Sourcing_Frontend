@@ -1,11 +1,9 @@
-// import { useTranslation } from "react-i18next";
-import StudentSettings from "../Settings/StudentSettings.tsx";
-import CompanySettings from "../Settings/CompanySettings.tsx";
+import StudentSettings from "./StudentSettings.tsx";
+import CompanySettings from "./CompanySettings.tsx";
 import {useAuth} from "../../../utils/Context/AuthContext.tsx";
 
 function Settings() {
     const { accountRole } = useAuth();
-    // const { t } = useTranslation();
 
     return (
         <>

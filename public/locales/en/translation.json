@@ -134,6 +134,38 @@
     },
     "search": "Search",
     "dashboard": {
+        "student_dashboard": {
+            "Recent_candidature": {
+                "title": "Recents Candidatures",
+                "key_name": "NAME",
+                "key_probability": "PROBABILITY",
+                "key_post": "POST",
+                "key_date": "DATE"
+            },
+            "Accessible_company": {
+                "title": "Most Accessible Company",
+                "under_title": "Candidates"
+            },
+            "other_information": {
+                "title1": "Paid internship",
+                "title2": "Favorites",
+                "title3": "Total Request"
+            },
+            "stage_domain": {
+                "period": {
+                    "day": "Daily",
+                    "week": "Weekly",
+                    "month": "Monthly"
+                },
+                "title": "Stage Domain",
+                "chart": {
+                    "yours": "Your domain",
+                    "auxiliary": "Auxiliary domain",
+                    "others": "others"
+                }
+            }
+        },
+        "company_dashboard": {},
         "navbar": {
             "dashboard_nav": "Dashboard",
             "company_nav": "Companies",
@@ -193,12 +225,14 @@
             "existing_offer_list": "Existing offers list"
         },
         "enterprise_settings": {
+            "title": "GENERALS SETTINGS",
             "setting1": "Receive notifications from interesting profiles",
             "setting2": "Receive notifications for these domains",
             "setting3": "Receive notifications about our new features",
             "setting4": "Make your profile visible to companies"
         },
         "student_settings": {
+            "title": "GENERALS SETTINGS",
             "setting1": "Receive notifications from companies based on your preferences",
             "setting2": "Receive notifications for these domains",
             "setting3": "Receive notifications about our new features",

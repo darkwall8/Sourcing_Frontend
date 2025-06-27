@@ -1,14 +1,18 @@
-// import { useTranslation } from "react-i18next";
-// import { useAuth } from "../../../utils/Context/AuthContext";
+import { useAuth } from "../../../utils/Context/AuthContext";
+import CompanyDashboard from "./CompanyDashboard/CompanyIndexDashboard";
+import StudentDashboard from "./StudentDashboard/StudentIndexDashboard";
 
 function DashBoard() {
-
-    // const { t } = useTranslation();
-    // const { accountRole } = useAuth();
+    const { accountRole } = useAuth();
 
     return (
         <>
-            {/* <div className="bg-usual_gray" data-canbetest="true">DashBoard</div> */}
+            {accountRole == "company" ? (
+                <CompanyDashboard />
+                ) : (
+                <StudentDashboard />
+                )
+            }
         </>
     )
 }
