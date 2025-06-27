@@ -8,32 +8,30 @@ import { useCompanyInscription } from "../../../../utils/Context/CompanyInscript
 import Tag from "../../../../components/ui/Tag";
 import AutocompleteInput, { Option } from "../../../../components/ui/AutocompleteInput";
 import InputTextArea from "../../../../components/ui/InputTextarea";
-import API from "../../../../utils/API";
-import { useNavigate } from "react-router-dom";
 
 function CompanyRegistrationStep7({ handleSubmit }: { handleSubmit: (stepIndex: "next" | "prev") => void }) {
 
     const { t } = useTranslation();
     const {
-        companyName,
-        companyPhoneNumber,
-        companyDomain,
-        companyEmail,
-        companyAdresse,
-        companyWebSite,
-        companyCorporate,
-        companyRCCM,
-        companyNIU,
-        companyCommercialRegister,
-        companyLegalStatut,
-        companyTaxConformityCertificate,
-        companyStatisticalDeclarationNumber,
-        companyInternShipDuration,
+        // companyName,
+        // companyPhoneNumber,
+        // companyDomain,
+        // companyEmail,
+        // companyAdresse,
+        // companyWebSite,
+        // companyCorporate,
+        // companyRCCM,
+        // companyNIU,
+        // companyCommercialRegister,
+        // companyLegalStatut,
+        // companyTaxConformityCertificate,
+        // companyStatisticalDeclarationNumber,
+        // companyInternShipDuration,
         companyDescription,
         companyInternBenefit,
         hasInternOpportunity,
-        companyPassword,
-        companySize,
+        // companyPassword,
+        // companySize,
         setCompanyDescription,
         setCompanyInternBenefit,
         setHasInternOpportunity
@@ -43,8 +41,6 @@ function CompanyRegistrationStep7({ handleSubmit }: { handleSubmit: (stepIndex: 
     const isValid = () => {
         return !!companyDescription.trim() && companyInternBenefit.length > 0;
     };
-    const naviguate = useNavigate();
-    const api = new API();
     const internBenefitList = [
         {
             label: "frontend",
@@ -56,55 +52,6 @@ function CompanyRegistrationStep7({ handleSubmit }: { handleSubmit: (stepIndex: 
         setIsValidatedValues(true);
         if (isValid()) {
             handleSubmit("next");
-            api.postData(api.authUrl + "/api/auth/register", {
-                email: companyEmail,
-                password: companyPassword,
-                userName: companyName
-            }, false).then((res) => {
-                console.log(res)
-                if (res.token) {
-                    const data = {
-                        user: {
-                            name: companyName,
-                            email: companyEmail,
-                            profile: companyDomain,
-                            roleId: "5caea3d5-8e64-4ee4-9b7c-2fb8ac77f94f",
-                            hasPremium: false,
-                            isActivated: true
-                        },
-                        companyInfo: {
-                         userEmail: companyEmail,
-                         companyName: companyName,
-                         companyActivitySectorId: companyDomain,
-                         companySize: companySize,
-                         website: companyWebSite,
-                         description: companyDescription,
-                         address: companyAdresse,
-                         contactPhone: companyPhoneNumber,
-                         companyCorporate: companyCorporate,
-                         companyRCCM: companyRCCM,
-                         companyNIU: companyNIU,
-                         companyCommercialRegister: companyCommercialRegister,
-                         companyLegalStatus: companyLegalStatut,
-                         companyTaxConformityCertificate: companyTaxConformityCertificate,
-                         companyStaticDeclarationNumber: companyStatisticalDeclarationNumber,
-                         companyInternshipDuration: companyInternShipDuration,
-                         companyHasInternOpportunity: companyInternBenefit
-                        }
-                    }
-                    api.postData(api.apiUrl + "/api/service/database/new/company", data, false)
-                        .then((res) => {
-                            console.log(res);
-                            // 
-                            alert("Compte cree avec success")
-                            naviguate("/login")
-                        }).catch((err) => {
-                            throw new Error(err);
-                        })
-                }
-            }).catch((err) => {
-                throw new Error(err);
-            })
         } else {
             console.warn("Validation failed");
         }

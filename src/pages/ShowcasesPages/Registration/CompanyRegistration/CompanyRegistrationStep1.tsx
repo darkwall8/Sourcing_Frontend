@@ -36,7 +36,7 @@ function CompanyRegistrationStep1( { handleSubmit } : { handleSubmit: (stepIndex
     }
 
     useEffect(() => {
-        api.getData(api.apiUrl + "/sector/all")
+        api.getData(api.apiUrl + "/api/service/database/sector/all")
         .then((res) => {
             console.log(res);
             setCompanyActivitySectorList(res.map((sector: {
